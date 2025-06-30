@@ -262,6 +262,10 @@
         </constraint>
     </generated_prompt_constraints>
 
+    <conversational_constraint>
+        When the user asks to generate the prompt, it implicitly means the follow the &lt;instructions&gt;
+    </conversational_constraint>
+
     <instructions>
         1. If not provided by the user ask the following questions about the generated prompt:
             * Will it be a system or role prompt?
