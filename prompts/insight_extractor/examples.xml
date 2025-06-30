@@ -1,0 +1,106 @@
+<examples>
+    <example>
+        <user>
+            Extract the main insights to answer the following question: What are the emerging trends in remote work productivity tools for 2025?
+            
+            <article_1>
+                {{CONTENT_THAT_WE_WILL_NOT_WRITE}}
+            </article_1>
+            
+            <article_2>
+                {{CONTENT_THAT_WE_WILL_NOT_WRITE}}
+            </article_2>
+            
+            <article_3>
+                {{CONTENT_THAT_WE_WILL_NOT_WRITE}}
+            </article_3>
+        </user>
+        <assistant>
+            <thinking>
+                I need to scan these articles for trends related to remote work productivity tools. I'll look for patterns, new technologies, and repeated themes across sources.
+            </thinking>
+
+            **Key Insights:**
+
+            • **AI-powered meeting assistants** are becoming standard: "74% of companies plan to implement AI note-taking and action item tracking by Q2 2025" (Article 1)
+
+            • **Async-first collaboration** is replacing real-time meetings: "Companies report 40% fewer meetings after adopting asynchronous video messaging tools" (Article 2) - Multiple sources confirm this trend
+
+            • **Virtual coworking spaces** show surprising adoption: "Platforms simulating office presence grew 300% in 2024" (Article 3)
+
+            • **Wellness integration** in productivity apps: "New tools now track burnout indicators and suggest breaks based on keystroke patterns" (Article 1)
+
+            • **Cross-platform unified dashboards** emerging as essential: References Article 2's section on productivity losses from app-switching, citing 2.5 hour daily waste
+        </assistant>
+    </example>
+
+    <example>
+        <user>
+            Extract the main insights to answer the following question: What are users saying about the latest iPhone model's battery life issues?
+            
+            <forum_post_1>
+                {{CONTENT_THAT_WE_WILL_NOT_WRITE}}
+            </forum_post_1>
+            
+            <reddit_thread_1>
+                {{CONTENT_THAT_WE_WILL_NOT_WRITE}}
+            </reddit_thread_1>
+            
+            <tech_article_1>
+                {{CONTENT_THAT_WE_WILL_NOT_WRITE}}
+            </tech_article_1>
+            
+            <forum_post_2>
+                {{CONTENT_THAT_WE_WILL_NOT_WRITE}}
+            </forum_post_2>
+        </user>
+        <assistant>
+            <thinking>
+                I'll focus on common complaints, patterns in user experiences, and any technical explanations from the sources.
+            </thinking>
+
+            **Key Insights:**
+
+            • **5G connectivity** identified as main culprit: "Disabling 5G increased my battery life by 35%" - Consistent finding across multiple forum posts
+
+            • **iOS 17.3 update** worsened the issue: "Battery drain started exactly after the 17.3 update" (Reddit thread, 847 upvotes)
+
+            • **Background app refresh** unusually aggressive: "Weather and News apps consuming 40% battery while closed" (Forum Post 1)
+
+            • **Heat issues** correlate with battery drain: References Forum Post 2's detailed temperature logs showing correlation between heat and rapid battery depletion
+
+            • **Official Apple response** acknowledges issue: "Apple confirms investigating 'unexpected battery performance' affecting 15 Pro models" (Tech Article)
+
+            • **User solutions** show conflicting results: Factory reset helped some users (25% improvement reported) while others saw no change - divergent experiences across forums
+        </assistant>
+    </example>
+
+    <example>
+        <user>
+            Extract the main insights to answer the following question: What are the key findings about the impact of artificial sweeteners on gut health?
+            
+            <article_1>
+                {{CONTENT_THAT_WE_WILL_NOT_WRITE}}
+            </article_1>
+        </user>
+        <assistant>
+            <thinking>
+                Single article - I'll extract the most important findings and conclusions about artificial sweeteners and gut health, focusing on specific research results and expert quotes.
+            </thinking>
+
+            **Key Insights:**
+
+            • **Microbiome disruption** confirmed in new study: "Sucralose and saccharin altered gut bacteria composition in 70% of participants within 2 weeks" 
+
+            • **Glucose tolerance** affected: "4 of 7 tested sweeteners impaired glycemic response in healthy adults who previously avoided them"
+
+            • **Individual variation** is significant: References the study's methodology section explaining personalized microbiome responses
+
+            • **Dose-dependent effects**: "Negative impacts only observed at doses exceeding 5mg/kg body weight daily"
+
+            • **Recovery timeline** documented: "Gut microbiome returned to baseline within 3 weeks of discontinuation in most cases"
+
+            • **Natural vs synthetic** comparison: Cites comparative analysis showing stevia and monk fruit had minimal impact versus synthetic alternatives
+        </assistant>
+    </example>
+</examples>
