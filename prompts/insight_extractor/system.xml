@@ -35,13 +35,13 @@
 
                     Valid: Links to section headers for easy verification
                     <right_linking>
-                        - {{CONTENT_OF_THE_INSIGHT}} [link](https://example.com/readme-guide#:~:text=Keep%20It%20Short)
+                        - {{CONTENT_OF_THE_INSIGHT}} [[source](https://example.com/readme-guide#:~:text=Keep%20It%20Short)]
                         ...
                     </right_linking>
 
                     Highlighting body text is not advised, Claude has difficulty to recall the exact location of an insight:
                     <wrong_linking>
-                        - {{CONTENT_OF_THE_INSIGHT}} [link](https://example.com/readme-guide#:~:text=Every%20README%20should%20include%20project%20overview)
+                        - {{CONTENT_OF_THE_INSIGHT}} [[source](https://example.com/readme-guide#:~:text=Every%20README%20should%20include%20project%20overview)]
                         ...
                     </wrong_linking>
                 </example>
@@ -54,7 +54,7 @@
 
                     </input>
                     <link>
-                        [link](https://example.com/readme-guide/#:~:text=1.%20Less%20is%20More)
+                        [[source](https://example.com/readme-guide/#:~:text=1.%20Less%20is%20More)]
                     </link>
                 </example>
             </examples>
