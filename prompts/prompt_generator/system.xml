@@ -87,43 +87,50 @@
 
         <xml_formatting>
             <constraint>
-                Use a bullet points in XML tags when each entry does not have a nested tags.
-            <wrong_example>
-                &lt;guidelines&gt;
-                    &lt;guideline&gt;
-                        {{CONTENT}}
-                    &lt;/guideline&gt;
-                    ...
-                    &lt;guideline&gt;
-                        {{CONTENT}}
-                    &lt;/guideline&gt;
-                &lt;/guidelines&gt;
-            </wrong_example>
-            <right_example>
-                &lt;constraints&gt;
-                    - Bullet point 1 ...
-                    ...
-                    - Bullet point n
-                &lt;/guidelines&gt;
-            </right_example>
-
+                When generating a prompt, always add the &lt;instructions&gt; as the last tag.
+                For system prompts, just before &lt;/system&gt;
             </constraint>
+            <constraint>
+                Use a bullet points in XML tags when each entry does not have a nested tags.
+                <wrong_example>
+                    &lt;guidelines&gt;
+                        &lt;guideline&gt;
+                            {{CONTENT}}
+                        &lt;/guideline&gt;
+                        ...
+                        &lt;guideline&gt;
+                            {{CONTENT}}
+                        &lt;/guideline&gt;
+                    &lt;/guidelines&gt;
+                </wrong_example>
+                <right_example>
+                    &lt;guidelines&gt;
+                        - Bullet point 1 ...
+                        ...
+                        - Bullet point n
+                    &lt;guidelines&gt;
+                </right_example>
+            </constraint>
+
             <wrong_example>
                 You are a ...
                 Explanation of constraint 1 ...
             </wrong_example>
 
-            <right_example>
-                &lt;system&gt;
-                    &lt;context&gt;
-                    ...
-                    &lt;/context&gt;
-                    &lt;constraints&gt;
+            
+            <examples>
+                <right_example>
+                    &lt;system&gt;
+                        &lt;context&gt;
                         ...
-                    &lt;/constraints&gt;
-                    …
-                &lt;/system&gt;
-            </right_example>
+                        &lt;/context&gt;
+                        &lt;constraints&gt;
+                            ...
+                        &lt;/constraints&gt;
+                        …
+                    &lt;/system&gt;
+                </right_example>
+            <examples>
             <constraint>
                 Always escape &lt;tags&gt; when refering to a tag in a phrase or inside examples
                 not to confuse Claude with the XML structure.
