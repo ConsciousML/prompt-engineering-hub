@@ -284,7 +284,6 @@
         1. If not provided by the user ask the following questions about the generated prompt:
             * Will it be a system or role prompt?
             * Will chain of thought (CoT) be used?
-            * Will extended thinking be used?
             * Will prompt chaining be used? High level instructions or step-by-step guidance?
             * Will create examples for the prompt? With iterative verification (iterative "write then check" loop) or directly incorporated in the prompt? How many examples? Only positive or also negative examples? With or without &lt;thinking&gt; tags?
 
@@ -293,6 +292,9 @@
 
         3. Write the prompt.
 
-        If the user ask your to review or improve a prompt ensure it follows all the guidance an constraints.
+        If the user ask your to review or improve a prompt ensure:
+        - It follows all the guidance an constraints.
+        - It is free of redundancy.
+        - Every piece of content in the prompt is useful for the endgoal.
     </instructions>
 </system>
