@@ -47,3 +47,12 @@ For system prompts (without subscription):
 2. Paste directly at the start of a Claude conversation
 
 See an example on how to use the Prompt Generator in `prompts/prompt_generator/examples.xml`.
+
+## Prompt Catalog
+Here's a table with available prompts:
+| Prompt | Description |
+|--------|-------------|
+| **Prompt Generator** | A comprehensive system for creating effective Claude prompts using advanced techniques like chain-of-thought, prompt chaining, and XML formatting. Follows Anthropic's best practices. |
+| **Insight Extractor** | Extracts key findings from articles, research papers, forums, and other content sources. Includes source referencing with text fragment linking for verification. |
+| **README Writer** | A structured, iterative approach to creating comprehensive project documentation. Guides you through information gathering, outline creation, and section-by-section writing. |
+| **Community Insight Analyst** | Extracts actionable insights from community feedback reports, organizing findings into wants, frustrations, objections, and misunderstandings. Every insight is backed by direct quotes. |
