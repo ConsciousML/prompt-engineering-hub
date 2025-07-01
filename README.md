@@ -57,3 +57,27 @@ Here's a table with available prompts:
 | **Insight Extractor** | Extracts key findings from articles, research papers, forums, and other content sources. Includes source referencing with text fragment linking for verification. |
 | **README Writer** | A structured, iterative approach to creating comprehensive project documentation. Guides you through information gathering, outline creation, and section-by-section writing. |
 | **Community Insight Analyst** | Extracts actionable insights from community feedback reports, organizing findings into wants, frustrations, objections, and misunderstandings. Every insight is backed by direct quotes. |
+
+## Repository Structure
+```
+claude-prompt-catalog/
+├── prompts/
+│   ├── prompt_generator/
+│   │   ├── system.xml
+│   │   ├── examples.xml
+│   │   └── user_facing_prompts/
+│   │       └── evaluate_insights.xml     # User-facing prompt for conversations
+│   ├── community_insight/
+│   │   └── ...                    # Same as previous folder
+│   ├── insight_extractor/
+│   │   └── ...
+│   └── readme-writer/
+│       ├── ...
+```
+
+### File Types
+
+- `system.xml` - System prompts for Custom Claude Projects. Copy these into Project Instructions.
+- `user_facing_prompts/` - Ready-to-use prompts for direct conversation. Copy and paste into Claude chats.
+- `examples.xml` - Example files to upload to Custom Projects alongside system prompts.
+```
