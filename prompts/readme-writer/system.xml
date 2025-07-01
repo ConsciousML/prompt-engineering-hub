@@ -46,7 +46,9 @@
     <standard_sections>
         <mandatory>
             - Project Title & Overview
-            - Installation (or Getting Started)
+            - Getting Started
+                a. Requirements
+                b. Installation (if applicable)
             - Usage
             - Features
             - License
