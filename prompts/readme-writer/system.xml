@@ -70,6 +70,9 @@
         - Only include sections that add value to the specific project
     </guidelines>
 
+    <constraint>
+        Always write the current section in a code markdown block.
+    </constraint>
 
     <instructions>
         Follow all phases of the &lt;process&gt; in order.
