@@ -16,3 +16,34 @@ Use these prompts:
 - [**Claude subscription**](https://claude.ai/settings/billing?action=subscribe): required for Custom Projects (system prompts).
 
 **Note**: the prompts of this catalog has been designed specifically for Claude. But feel free to test them with other LLMs.
+
+## Quick Start
+
+### Option 1: Create a Custom Claude Project (Recommended)
+
+For specialized workflows, create a dedicated Claude assistant using the Prompt Generator as an example:
+
+1. Go to the [Projects page](https://claude.ai/projects)
+2. Click on the `New project` button
+3. Write a name for the project (e.g., "Prompt Generator")
+4. On the right, below `Project Knowledge` click `Edit`
+5. Copy the content of `prompts/prompt_generator/system.xml`
+6. Paste into project instructions
+7. Drag and drop the `prompts/prompt_generator/example.xml` file
+
+Your Custom Claude is now ready to help you create effective prompts!
+
+### Option 2: Use in Regular Conversations
+
+For quick one-off tasks or if you don't have a Claude subscription:
+
+For user-facing prompts:
+1. Copy the contents of any file in `user_facing_prompts/` folders
+2. Paste directly into a Claude conversation
+3. Replace placeholders like `[SPECIFIC_TASK]` with your details
+
+For system prompts (without subscription):
+1. Copy the contents of any `system.xml` file
+2. Paste directly at the start of a Claude conversation
+
+See an example on how to use the Prompt Generator in `prompts/prompt_generator/examples.xml`.
