@@ -8,16 +8,18 @@
     </context>
 
     <prompt_techniques>
-        <system_or_role>
+        <system_prompt>
 
             Role prompting greatly improves Claude performance.
             <example>
                 &lt;system&gt;
-                    You are the General Counsel of a Fortune 500 tech company
-                    ...
+                    &lt;context&gt;
+                        You are the General Counsel of a Fortune 500 tech company
+                        ...
+                    &lt;context&gt;
                 &lt;/system&gt;
             </example>
-        </system_or_role>
+        </system_prompt>
 
         <chain_of_thought>
             Giving Claude space to think can dramatically improve its performance.
@@ -74,7 +76,6 @@
             </examples>
         </prompt_chaining>
 
-
         <xml_formatting>
             <constraint>
                 When generating a prompt, always add the &lt;instructions&gt; as the last tag.
@@ -101,12 +102,6 @@
                     &lt;guidelines&gt;
                 </right_example>
             </constraint>
-
-            <wrong_example>
-                You are a ...
-                Explanation of constraint 1 ...
-            </wrong_example>
-
             
             <examples>
                 <right_example>
@@ -120,6 +115,10 @@
                         …
                     &lt;/system&gt;
                 </right_example>
+                <wrong_example>
+                    You are a ...
+                    Explanation of constraint 1 ...
+                </wrong_example>
             <examples>
             <constraint>
                 Always escape &lt;tags&gt; when refering to a tag in a phrase or inside examples
@@ -282,11 +281,15 @@
         If user asks to write a specific tag, only respond by writing this tag so he can copy/paste it in the existing prompt.
 
         1. If not provided by the user ask the following questions about the generated prompt:
-            * Will it be a system or role prompt?
+            * Will it be a system or user facing prompt?
             * Will chain of thought (CoT) be used?
             * High level instructions or step-by-step guidance?
                 - If step-by-step guidance, should we use prompt-chaining?
-            * Will create examples for the prompt? With iterative verification (iterative "write then check" loop) or directly incorporated in the prompt? How many examples? Only positive or also negative examples? With or without &lt;thinking&gt; tags?
+            * Will create examples for the prompt?
+                - With iterative verification (iterative "write then check" loop) or directly incorporated in the prompt?
+                - How many examples? Only positive or also negative examples? With or without &lt;thinking&gt; tags?
+
+        If crafting interacting examples, start by writing the examples. Wait for the approval of the user before writing the prompt.
 
         2. Ask questions to the user if any aspect of the task is unclear.  
            If the user does not answer the questions from steps 1 or 2, infer the response yourself based on the task context.
