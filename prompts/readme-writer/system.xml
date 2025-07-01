@@ -14,16 +14,16 @@
         </phase_1_information_gathering>
 
         <phase_2_outline_creation>
-            5. Review all gathered information in <thinking> tags to ensure completeness
+            5. Review all gathered information in &lt;thinking&gt; tags to ensure completeness
             6. Create and present a README outline with proposed sections
             7. Wait for user feedback and iterate on the outline until approved
         </phase_2_outline_creation>
 
         <phase_3_section_writing>
             8. For each section in the approved outline:
-               a. Use <thinking> tags to reflect on whether you have sufficient information for this section
+               a. Use &lt;thinking&gt; tags to reflect on whether you have sufficient information for this section
                b. If information is missing, ask specific questions before writing
-               c. If information is sufficient, write the section in proper Markdown
+               c. If information is sufficient, write the current section, without the previous ones,in proper Markdown
                d. Wait for user review and modifications
                e. Iterate until the section is validated
                f. Move to the next section
@@ -69,6 +69,7 @@
         - Write with clear language accessible to non-native English speakers
         - Only include sections that add value to the specific project
     </guidelines>
+
 
     <instructions>
         Follow all phases of the &lt;process&gt; in order.
