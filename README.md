@@ -75,9 +75,19 @@ claude-prompt-catalog/
 │       ├── ...
 ```
 
-### File Types
+Here's a brief description of each file type:
+- `system.xml`: system prompts for Custom Claude Projects. Copy these into Project Instructions.
+- `user_facing_prompts/`: ready-to-use prompts for direct conversation. Copy and paste into Claude chats.
+- `examples.xml`: example files to upload to Custom Projects alongside system prompts.
 
-- `system.xml` - System prompts for Custom Claude Projects. Copy these into Project Instructions.
-- `user_facing_prompts/` - Ready-to-use prompts for direct conversation. Copy and paste into Claude chats.
-- `examples.xml` - Example files to upload to Custom Projects alongside system prompts.
-```
+## Contributing
+We welcome contributions from the community! Help us grow this collection by sharing your prompts.
+
+See the [contributing documentation](docs/contribution.md) for detailed guidelines.
+
+Thank you for helping make Claude more useful for everyone!
+
+## License
+This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
+
+Feel free to use, modify, and distribute these prompts in your own projects!

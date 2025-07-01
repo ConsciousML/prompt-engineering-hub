@@ -25,8 +25,3 @@ prompts/your_prompt_name/
 5. Submit a pull request with a clear description
 
 Thank you for helping make Claude more useful for everyone!
-
-## License
-This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
-
-Feel free to use, modify, and distribute these prompts in your own projects!
