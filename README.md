@@ -1,3 +1,4 @@
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 # Claude Prompt Catalog
 
 A curated collection of prompts for [Claude](https://claude.ai/), designed to help users get the most out of their favorite AI assistant.
