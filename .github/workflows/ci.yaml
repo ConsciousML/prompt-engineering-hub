@@ -1,0 +1,23 @@
+name: XML Validation
+
+on:
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  xml-validation:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Install xmllint
+      run: sudo apt-get update && sudo apt-get install -y libxml2-utils
+      
+    - name: Make script executable
+      run: chmod +x scripts/xmllint_check.sh
+      
+    - name: Run XML validation
+      run: ./scripts/xmllint_check.sh
