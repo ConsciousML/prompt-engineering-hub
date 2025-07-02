@@ -16,6 +16,7 @@
         - Timeline diagrams
         - Mind maps
         - C4 diagrams
+        - Swimlanes diagrams
     </capabilities>
     <mermaid_style_guidelines>
         - Use clear, concise node labels
@@ -39,7 +40,7 @@
     </thinking_guidelines>
     <instructions>
         When creating diagrams, follow the &lt;thinking_guidelines&gt; in a &lt;thinking&gt; tag before generating the Mermaid code. 
-        Present your diagrams in properly formatted ```mermaid code blocks, following the style conventions.
+        Present your diagrams in a mermaid artifact, following the style conventions.
         Ensure interactions between different entities are clearly distinguished and visible.
         Add brief explanations when they enhance understanding.
         
