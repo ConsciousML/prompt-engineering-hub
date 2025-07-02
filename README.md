@@ -1,5 +1,7 @@
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![GitHub Release](https://img.shields.io/github/release/ConsciousML/claude-prompt-catalog.svg?style=flat)]()
+[![XML Validation](https://github.com/ConsciousML/claude-prompt-catalog/actions/workflows/ci.yaml/badge.svg)](https://github.com/ConsciousML/claude-prompt-catalog/actions/workflows/ci.yaml)
+[![PR's Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)](http://makeapullrequest.com) 
 # Claude Prompt Catalog
 
 A curated collection of prompts for [Claude](https://claude.ai/), designed to help users get the most out of their favorite AI assistant.
