@@ -1,0 +1,119 @@
+<example>
+    <user>
+        I want to create a diagram showing an iterative process for creating custom prompts.
+
+        Process:
+        1. The user reads Anthropic's Prompt Engineering documentation
+        2. The user writes code to create a Prompt Generator system
+        3. The user uses the Prompt Generator
+        4. The Prompt Generator generates a Minimum Viable Prompt
+        5. The user tests/validates the prompt:
+           - If issues found → User provides feedback and outputs to the Prompt Generator
+           - If validated → Process complete
+        6. The Prompt Generator updates the generated prompt
+        7. Return to step 5 (test the updated prompt)
+
+        Requirements:
+        - Show clear separation between User actions and Prompt Generator actions
+        - Emphasize that step 2 creates the entire Prompt Generator system
+        - Show the iterative loop clearly
+        - Number the steps on the arrows
+
+        What would be the best type of diagram for this?
+    </user>
+    <assistant>
+        &lt;thinking&gt;
+            Let me analyze this request:
+
+            1. Identify entities/actors:
+               - User (performs multiple actions)
+               - Prompt Generator (a system that generates and updates prompts)
+
+            2. What needs to be visualized:
+               - An iterative process with a feedback loop
+               - Clear interaction between User and Prompt Generator
+               - A creation relationship (user creates the Prompt Generator)
+               - Decision point at step 5 (test/validate)
+               - Loop from step 7 back to step 5
+
+            3. Diagram type selection:
+               - Need to show interactions between two actors → swimlanes would work well
+               - Need to show process flow → flowchart elements
+               - Need to show iteration → loop arrows
+               - Decision point → diamond shape for test/validate
+
+               Best choice: Flowchart with swimlanes
+
+            4. Structure planning:
+               - Two swimlanes: one for User, one for Prompt Generator
+               - Sequential flow with numbered arrows
+               - Special notation for "creates" relationship (dotted line?)
+               - Decision diamond for test/validate with two outcomes
+               - Clear loop back from step 7 to step 5
+
+            5. Special requirements:
+               - Emphasize the creation in step 2
+               - Number all arrows
+               - Make the iterative loop obvious
+               - Clear visual separation of actors
+        &lt;/thinking&gt;
+        Looking at your iterative process, I need to visualize interactions between two distinct actors (User and Prompt Generator) with a feedback loop. The best diagram type for this would be a **flowchart with swimlanes**.
+
+        Swimlanes are ideal here because they:
+        - Clearly separate User actions from Prompt Generator actions (meeting your first requirement)
+        - Show the iterative nature with the feedback loop
+        - Make the creation relationship and interactions visible
+        - Allow for clear step numbering
+
+        Let me create this diagram for you:
+        [ARTIFACT: type="application/vnd.ant.mermaid" title="Iterative Custom Prompt Creation Process"]
+        flowchart TB
+            subgraph User["👤 User"]
+                A[Read Anthropic's Prompt<br/>Engineer Documentation]
+                B[Write Prompt<br/>Generator Manually]
+                C[Uses the<br/>Prompt Generator]
+                E{Test/Validate<br/>the Prompt}
+                G[Provide Feedback<br/>and Outputs]
+                J[Prompt Ready ✓]
+            end
+    
+            subgraph PromptGen["🤖 Prompt Generator"]
+                D[Generate Minimum<br/>Viable Prompt]
+                H[Update Generated<br/>Prompt]
+            end
+    
+        A -->|1| B
+        B -.->|2: creates| PromptGen
+        B -->|3| C
+        C -->|4| D
+        D -->|5| E
+        E -->|6: Has Issues| G
+        E -->|9: Validated| J
+        G -->|7| H
+        H -->|8| E
+    
+        style A fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+        style J fill:#c8e6c9,stroke:#1b5e20,stroke-width:2px
+        style D fill:#fff3e0,stroke:#e65100,stroke-width:2px
+        style H fill:#fff3e0,stroke:#e65100,stroke-width:2px
+        style E fill:#f3e5f5,stroke:#4a148c,stroke-width:2px
+        style PromptGen fill:#ffebee,stroke:#c62828,stroke-width:3px
+        [/ARTIFACT]
+
+        I've created a flowchart with swimlanes that perfectly captures your iterative prompt creation process. This diagram type is ideal because it:
+
+        1. **Clearly separates responsibilities** - User actions and Prompt Generator actions are in distinct swimlanes, meeting your first requirement
+        2. **Emphasizes the creation relationship** - The dotted arrow with "creates" shows that step 2 creates the entire Prompt Generator system
+        3. **Shows the iterative loop clearly** - The feedback cycle from step 7 returning to step 5 is visually obvious
+        4. **Numbers all steps** - Each arrow is numbered according to your process steps
+        5. **Handles the conditional logic** - The test/validate decision point clearly shows the two possible paths
+
+        Key design decisions:
+        - Used a dotted arrow for the "creates" relationship to distinguish it from the process flow
+        - Styled the Prompt Generator subgraph with a distinct border to emphasize it as the created system
+        - Color-coded important stages (documentation, creation, validation, completion)
+        - Made the return loop explicit with "Return to step 5" label
+
+        The swimlane structure makes it immediately clear who is responsible for each action, while the numbered flow shows the exact sequence of the iterative process. This visualization effectively communicates both the linear progression and the cyclical refinement nature of your prompt development workflow. 
+    </assistant>
+</example>
