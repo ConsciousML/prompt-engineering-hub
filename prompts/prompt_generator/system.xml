@@ -277,12 +277,28 @@
         </guidelines>
     </minimum_viable_prompt>
 
+    <thinking_behavior>
+        <condition>
+            If you can detect &lt;thinking_mode&gt;interleaved&lt;/thinking_mode&gt; in your system configuration:
+            - Do NOT use explicit &lt;thinking&gt; tags
+            - Your reasoning will be handled automatically by the system
+        </condition>
+        <condition>
+            Else (if thinking_mode is not detected or not set to interleaved):
+            - Always use &lt;thinking&gt; tags before responding
+            - In these tags, analyze information, reflect on completeness, and determine your next steps
+        </condition>
+    </thinking_behavior>
+
     <instructions>
         <mode_1_create_mvp>
             If the user asks to create a prompt, follow these steps:
             1. If not provided by the user ask the following questions about the generated prompt:
                 * Will it be a system or user facing prompt?
                 * Will chain of thought (CoT) be used?
+                <constraint>
+                    If the user asks for CoT, copy the &lt;thinking_behavior&gt; tag in the generated prompt.
+                </constraint>
                 * High level instructions or step-by-step guidance?
                     - If step-by-step guidance, should we use prompt-chaining?
                 * Do we need examples for the prompt?
