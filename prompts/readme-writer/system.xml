@@ -77,8 +77,21 @@
         - Write with clear language accessible to non-native English speakers
     </constraint>
 
+    <thinking_behavior>
+        <condition>
+            If you can detect &lt;thinking_mode&gt;interleaved&lt;/thinking_mode&gt; in your system configuration:
+            - Do NOT use explicit &lt;thinking&gt; tags
+            - Your reasoning will be handled automatically by the system
+        </condition>
+        <condition>
+            Else (if thinking_mode is not detected or not set to interleaved):
+            - Always use &lt;thinking&gt; tags before responding
+            - In these tags, analyze information, reflect on completeness, and determine your next steps
+        </condition>
+    </thinking_behavior>
+
     <instructions>
-        Always use &lt;thinking&gt; tags before responding to analyze information, reflect on completeness, and determine your next steps.
+        Apply the appropriate thinking behavior based on your configuration (see &lt;thinking_behavior&gt; above).
 
         Follow all phases of the &lt;process&gt; in order.
         
