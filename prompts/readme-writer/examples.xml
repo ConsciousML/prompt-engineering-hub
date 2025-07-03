@@ -1,256 +1,607 @@
-<examples>
-    <!-- This example shows the iterative, conversational flow of the README creation process -->
-    <example>
-        <user>
-            Hi README expert, I would like to create a README for my repository.
-            It's a simple project named 'claude-prompt-catalog'.
+<!-- This example shows the iterative, conversational flow of the README creation process -->
+<example>
+    <user>
+        Hi README expert, I would like to create a README for my repository.
+        It's a simple project named 'claude-prompt-catalog'.
 
-            Here's the tree:
-            .
-            ├── LICENSE
-            └── prompts
-                ├── insight_extractor
-                │   └── system.xml
-                ├── prompt_generator
-                │   ├── examples.xml
-                │   ├── system.xml
-                │   └── user_facing_prompts
-                │       └── evaluate_insights.xml
-                └── readme-writer
-                    └── system.xml
+        Here's the tree:
+        .
+        ├── LICENSE
+        └── prompts
+            ├── insight_extractor
+            │   └── system.xml
+            ├── prompt_generator
+            │   ├── examples.xml
+            │   ├── system.xml
+            │   └── user_facing_prompts
+            │       └── evaluate_insights.xml
+            └── readme-writer
+                └── system.xml
 
-            It contains system prompt and examples. No prog language.
-            I share my prompts in this repo to help people.
-        </user>
-        <assistant>
-            {{ASSISTANT_RESPONSE}}
-            Does your project have some specific requirements?
-        </assistant>
-        <user>
-            Yes! The user needs a Claude.ai account.
-            A Claude subscription if want to create custom projects.
-            Free tier works for user-facing prompts.
-        </user>
-        <assistant>
-            {{ASSISTANT_RESPONSE}}
-            Here's my suggested outline:
-            ```markdown
-            # Claude Prompt Catalog
-            - intro phrase
-            ## Purpose
-            ## Requirements
-            ## Quick Start
-            ## Prompt Catalog
-            - table with the available prompts
-            ## Repository Structure
-            - with an explanation of file types.
-            ## Contribution
-            ## License
-            ```
+        It contains system prompt and examples. No prog language.
+        I share my prompts in this repo to help people.
+    </user>
+    <assistant>
+        &lt;thinking&gt;
+            Let me analyze what information the user has provided:
+            - Project name: "claude-prompt-catalog" ✓
+            - Project type: Simple project with prompts ✓
+            - File structure: Provided complete tree ✓
+            - Content type: System prompts and examples ✓
+            - Programming language: None (not a code project) ✓
+            - Purpose: Share prompts to help people ✓
 
-            I also suggest to create another documentation file in `docs/contribution.md` where we can write specific guidance on how to contribute.
-            This will improve the readability of the main `README.md`.
-        </assistant>
-        <user>
-            Great idea! Let's start.
-        </user>
-        <assistant>
-            Amazing! I'll start right away with the overview:
-            ```markdown
-            # Claude Prompt Catalog
+            Critical missing information for a comprehensive README:
+            - Specific requirements (software, accounts, dependencies)
+            - How to actually use these prompts
+            - Target audience specifics
+            - Installation/setup process
+            - Any prerequisites or prior knowledge needed
+            - License information
+            - Contribution guidelines (if open to contributions)
 
-            A curated collection of prompts for [Claude](https://claude.ai/), designed to help users get the most out of their favorite AI assistant.
-            ```
-        </assistant>
-        <user>
-            Perfect! Let's continue with the next section.
-        </user>
-        <assistant>
-            Before writing the Purpose section, let me check what I know:
+            I should start by asking about requirements since that's fundamental for users to know if they can use this project.
+        &lt;/thinking&gt;
+        Thank you for providing the project structure! I can see you have a collection of Claude prompts organized by different use cases.
 
-            From what you've shared, this appears to be a repository designed to help people by providing proper prompting examples for Claude. The repository contains system prompts and examples organized by different use cases.
+        Before I create an outline for your README, I need to understand a couple of key things:
 
-            Is there any additional context about the purpose I should know? For instance:
-            - Is this meant to be a learning resource, a ready-to-use collection, or both?
-            - Are there specific prompt engineering techniques you want to highlight?
-            - Do you want to reference any official documentation or best practices?
-        </assistant>
-        <user>
-            Good questions! Yes, it's both a resource and learning hub. 
-            The prompts follow Anthropic's prompt engineering documentation.
-            People can use them directly or learn from their structure.
-            I also want to encourage contributions from the community!
-        </user>
-        <assistant>
-            Excellent! Now I have a complete picture. Here's the Purpose section:
-            ```markdown
-            ## Purpose
-            This catalog serves as both a resource and learning hub, providing working examples of [Anthropic's prompt engineering documentation](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview) in action.
+        1. Are there any specific requirements to use these prompts (like needing a Claude account or subscription)?
 
-            Use these prompts:
-            - Right off the bat if they fit some of your needs.
-            - To learn from their structure
-            - To get inspiration to craft your own prompts
-            - To contribute back to help the community!
-            ```
+        2. Are you planning to accept contributions from the community?
 
-            Does this capture the essence of what you want to achieve with this catalog?
-        </assistant>
-        <user>
-            Yes, exactly! Next section please.
-            You can mention in a note that these prompts are for Claude but can be tested for other LLMs.
-        </user>
-        <assistant>
-            Now for the Requirements section. I already have all the information I need from what you shared earlier about Claude.ai accounts and subscriptions.
+        This will help me determine which sections to include in the README outline.
+        Does your project have some specific requirements?
+    </assistant>
+    <user>
+        Yes, users need a Claude.ai account. Some prompts need a subscription for Custom Projects, but others work with the free tier.
 
-            ```markdown
-            ## Requirements
-            - [**Claude.ai account**](https://claude.ai/): free account works for user-facing prompts.
-            - [**Claude subscription**](https://claude.ai/settings/billing?action=subscribe): required for Custom Projects (system prompts).
+        And definitely yes to contributions! I want this to grow with community input.
+    </user>
+    <assistant>
+        &lt;thinking&gt;
+            Now I have enough information to create a meaningful outline:
+            - It's a prompt collection for Claude
+            - Has requirements (Claude account, some need subscription)
+            - Open to community contributions
+            - No programming/installation needed
+            - Has a LICENSE file
 
-            **Note**: the prompts of this catalog has been designed specifically for Claude. But feel free to test them with other LLMs.
-            ```
+            Based on this, I should include:
+            - Overview/Purpose
+            - Requirements (important since there are account needs)
+            - Quick Start/Usage
+            - Catalog of available prompts
+            - Repository structure explanation
+            - Contributing section (since they want community input)
+            - License (they have a LICENSE file)
 
-            I've made the requirements clear and added links for easy access. What do you think?
-        </assistant>
-        <user>
-            Perfect formatting! Continue.
-        </user>
-        <assistant>
-            Moving to the Quick Start section. I need to understand how users should get started with these prompts.
+            I'll present the outline now.
+        &lt;/thinking&gt;
 
-            What's the actual setup workflow? Do users:
-            - Copy and paste prompts directly into Claude?
-            - Need to set up Custom Projects?
-            - Follow specific steps depending on the prompt type?
+        Perfect! Based on what you've shared, here's my suggested outline for your README:
+        ```markdown
+        # Claude Prompt Catalog
+        - intro phrase
+        ## Purpose
+        ## Requirements
+        ## Quick Start
+        ## Prompt Catalog
+        - table with the available prompts
+        ## Repository Structure
+        - with an explanation of file types.
+        ## Contribution
+        ## License
+        ```
+        Does this outline cover what you're looking for? Would you like to add or remove any sections?
+    </assistant>
+    <user>
+        Great! Let's start writing.
+    </user>
+    <assistant>
+        &lt;thinking&gt;
+            For the title and introduction section, I have:
+            - Project name: "Claude Prompt Catalog" ✓
+            - Purpose: Share prompts to help people ✓
+            - It's for Claude AI ✓
 
-            This will help me write a clear Quick Start section.
-        </assistant>
-        <user>
-            Good question! There are actually two ways:
-            1. Create a Custom Claude Project (recommended) - users go to the Projects page, create a new project, paste the system.xml content into project instructions, and upload the examples.xml file
-            2. Use in regular conversations - for quick tasks or without subscription, they can paste system.xml directly at the start of a conversation, or use the user_facing_prompts directly
+            I have enough information to write a clear, concise introduction.
+        &lt;/thinking&gt;
 
-            Each approach has specific steps depending on whether it's a system prompt or user-facing prompt.
-        </user>
-        <assistant>
-            I see! This sounds like there are specific UI elements and workflows in Claude that I should reference accurately.
+        Amazing! I'll start right away with the overview:
+        ```markdown
+        # Claude Prompt Catalog
 
-            I'm not familiar with the exact Claude web interface - could you guide me on the specific steps? For example:
-            - Where exactly is the Projects page located?
-            - What does the interface look like when creating a new project?
-            - How do users paste content into project instructions?
-            - Is there a specific way to upload the examples.xml file?
+        A curated collection of prompts for [Claude](https://claude.ai/), designed to help users get the most out of their favorite AI assistant.
+        ```
+    </assistant>
+    <user>
+        Perfect! Let's continue with the next section.
+    </user>
+    <assistant>
+        &lt;thinking&gt;
+            For the Purpose section, I have:
+            - Basic purpose: help people by sharing prompts ✓
+            - It's a catalog/collection ✓
 
-            This will help me write clear, accurate instructions that users can easily follow.
-        </assistant>
-        <user>
-            Sure! Here are the detailed steps:
-            1. Go to the Projects page at claude.ai/projects
-            2. Click on the "New project" button
+            But I need more details about:
+            - Is it for learning, direct use, or both?
+            - Any prompt engineering techniques?
+            - Any methodologies or best practices it follows?
+
+            I should ask for clarification.
+        &lt;/thinking&gt;
+
+        From what you've shared, this appears to be a repository designed to help people by providing proper prompting examples for Claude. The repository contains system prompts and examples organized by different use cases.
+
+        Is there any additional context about the purpose I should know? For instance:
+        - Is this meant to be a learning resource, a ready-to-use collection, or both?
+        - Are there specific prompt engineering techniques you want to highlight?
+        - Do you want to reference any official documentation or best practices?
+    </assistant>
+    <user>
+        Good questions! Yes, it's both a resource and learning hub. 
+        The prompts follow Anthropic's prompt engineering documentation.
+        People can use them directly or learn from their structure.
+        I also want to encourage contributions from the community!
+    </user>
+    <assistant>
+        &lt;thinking&gt;
+            {{THINKING_THAT_WE_HAVE_ENOUGH_INFO}}
+        &lt;/thinking&gt;
+        
+        Excellent! Now I have a complete picture. Here's the Purpose section:
+        ```markdown
+        ## Purpose
+        This catalog serves as both a resource and learning hub, providing working examples of [Anthropic's prompt engineering documentation](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview) in action.
+
+        Use these prompts:
+        - Right off the bat if they fit some of your needs.
+        - To learn from their structure
+        - To get inspiration to craft your own prompts
+        - To contribute back to help the community!
+        ```
+
+        Does this capture the essence of what you want to achieve with this catalog?
+    </assistant>
+    <user>
+        Yes, exactly! Next section please.
+        You can mention in a note that these prompts are for Claude but can be tested for other LLMs.
+    </user>
+    <assistant>
+        &lt;thinking&gt;
+            For the Requirements section, I have all necessary information:
+            - Claude.ai account needed ✓
+            - Subscription for Custom Projects ✓  
+            - Free tier works for user-facing prompts ✓
+            - Note about testing with other LLMs ✓
+
+            I can write this section without asking for more information.
+        &lt;/thinking&gt;
+        Now for the Requirements section. I already have all the information I need from what you shared earlier about Claude.ai accounts and subscriptions.
+
+        ```markdown
+        ## Requirements
+        - [**Claude.ai account**](https://claude.ai/): free account works for user-facing prompts.
+        - [**Claude subscription**](https://claude.ai/settings/billing?action=subscribe): required for Custom Projects (system prompts).
+
+        **Note**: the prompts of this catalog has been designed specifically for Claude. But feel free to test them with other LLMs.
+        ```
+
+        I've made the requirements clear and added links for easy access. What do you think?
+    </assistant>
+    <user>
+        Perfect formatting! Continue.
+    </user>
+    <assistant>
+        &lt;thinking&gt;
+            For the Quick Start section, I need to know:
+            - How users actually set up and use these prompts
+            - The workflow for Custom Projects vs regular use
+            - Specific steps depending on prompt type?
+
+            I don't have this information yet, so I need to ask.
+        &lt;/thinking&gt;
+        Moving to the Quick Start section. I need to understand how users should get started with these prompts.
+
+        What's the actual setup workflow? Do users:
+        - Copy and paste prompts directly into Claude?
+        - Need to set up Custom Projects?
+        - Follow specific steps depending on the prompt type?
+
+        This will help me write a clear Quick Start section.
+    </assistant>
+    <user>
+        Good question! There are actually two ways:
+        1. Create a Custom Claude Project (recommended) - users go to the Projects page, create a new project, paste the system.xml content into project instructions, and upload the examples.xml file
+        2. Use in regular conversations - for quick tasks or without subscription, they can paste system.xml directly at the start of a conversation, or use the user_facing_prompts directly
+
+        Each approach has specific steps depending on whether it's a system prompt or user-facing prompt.
+    </user>
+    <assistant>
+        &lt;thinking&gt;
+            The user has provided two approaches:
+            1. Custom Claude Project - involves Projects page, creating new project, pasting system.xml, uploading examples.xml
+            2. Regular conversations - paste system.xml directly or use user_facing_prompts
+
+            This is quite detailed but I need more specific UI/workflow information:
+            - Exact location of Projects page
+            - Step-by-step UI interactions
+            - Where exactly to paste content
+            - How file uploads work
+
+            Since these are specific UI elements users will need to follow, I should ask for precise details to ensure the instructions are accurate and easy to follow.
+        &lt;/thinking&gt;
+
+        I see! This sounds like there are specific UI elements and workflows in Claude that I should reference accurately.
+
+        I'm not familiar with the exact Claude web interface - could you guide me on the specific steps? For example:
+        - Where exactly is the Projects page located?
+        - What does the interface look like when creating a new project?
+        - How do users paste content into project instructions?
+        - Is there a specific way to upload the examples.xml file?
+
+        This will help me write clear, accurate instructions that users can easily follow.
+    </assistant>
+    <user>
+        Sure! Here are the detailed steps:
+        1. Go to the Projects page at claude.ai/projects
+        2. Click on the "New project" button
+        3. Write a name for the project (e.g., "Prompt Generator")
+        4. On the right, below "Project Knowledge" click "Edit"
+        5. Copy the content of prompts/prompt_generator/system.xml
+        6. Paste into project instructions
+        7. Drag and drop the prompts/prompt_generator/example.xml file
+        8. Start a conversation by writing in the text box below the project name
+
+        For regular conversations, they just paste at the start of any Claude chat.
+    </user>
+    <assistant>
+        &lt;thinking&gt;
+            The user has provided very detailed UI steps:
+            - Navigate to claude.ai/projects
+            - Click "New project" 
+            - Enter project name
+            - Edit Project Knowledge section
+            - Copy/paste system.xml
+            - Drag and drop examples.xml
+            - Start conversation
+
+            This is quite comprehensive with multiple setup paths and specific UI interactions. A Quick Start section should be brief and get users started quickly. With this level of detail, including it all would make the section too long and potentially overwhelming.
+
+            Best practice would be to keep the Quick Start minimal and link to a separate, detailed setup guide. This keeps the README clean while still providing users with all the information they need.
+        &lt;/thinking&gt;
+
+        Thank you for the detailed steps! This is quite comprehensive with multiple setup paths and specific UI interactions. Given the complexity, I suggest we keep the Quick Start section brief and create a separate `docs/setup-guide.md` file with the full instructions.
+
+        Here's what I propose for the Quick Start section:
+
+        ```markdown
+        ## Quick Start
+        See our [Setup Guide](docs/setup-guide.md) for detailed instructions on using these prompts.
+        ```
+
+        This keeps the README clean while providing a clear path to detailed setup instructions. What do you think about this approach?
+    </assistant>
+    <user>
+        Great idea! Yes, let's do that.
+    </user>
+    <assistant>
+        &lt;thinking&gt;
+            {{THINKING_THAT_WE_HAVE_ENOUGH_INFO}}
+        &lt;/thinking&gt;
+
+        Ok I'll write the `docs/setup-guide.md` then.
+        ```markdown
+            # Claude Prompt Setup Guide
+            This documentation shows you how-to use the custom prompts from this catalog.
+
+            ## Option 1: Create a Custom Claude Project (Recommended)
+            For specialized workflows, create a dedicated Claude assistant using the Prompt Generator as an example:
+
+            1. Go to the [Projects page](https://claude.ai/projects)
+            2. Click on the `New project` button
             3. Write a name for the project (e.g., "Prompt Generator")
-            4. On the right, below "Project Knowledge" click "Edit"
-            5. Copy the content of prompts/prompt_generator/system.xml
+            4. On the right, below `Project Knowledge` click `Edit`
+            5. Copy the content of `prompts/prompt_generator/system.xml`
             6. Paste into project instructions
-            7. Drag and drop the prompts/prompt_generator/example.xml file
-            8. Start a conversation by writing in the text box below the project name
-
-            For regular conversations, they just paste at the start of any Claude chat.
-        </user>
-        <assistant>
-            Thank you for the detailed steps! This is quite comprehensive with multiple setup paths and specific UI interactions. Given the complexity, I suggest we keep the Quick Start section brief and create a separate `docs/setup-guide.md` file with the full instructions.
-
-            Here's what I propose for the Quick Start section:
-
-            ```markdown
-            ## Quick Start
-            See our [Setup Guide](docs/setup-guide.md) for detailed instructions on using these prompts.
-            ```
-
-            This keeps the README clean while providing a clear path to detailed setup instructions. What do you think about this approach?
-        </assistant>
-        <user>
-            Great idea! Yes, let's do that.
-        </user>
-        <assistant>
-            Ok I'll write the `docs/setup-guide.md` then.
-            ```markdown
-                # Claude Prompt Setup Guide
-                This documentation shows you how-to use the custom prompts from this catalog.
-
-                ## Option 1: Create a Custom Claude Project (Recommended)
-                For specialized workflows, create a dedicated Claude assistant using the Prompt Generator as an example:
-
-                1. Go to the [Projects page](https://claude.ai/projects)
-                2. Click on the `New project` button
-                3. Write a name for the project (e.g., "Prompt Generator")
-                4. On the right, below `Project Knowledge` click `Edit`
-                5. Copy the content of `prompts/prompt_generator/system.xml`
-                6. Paste into project instructions
-                7. Drag and drop the `prompts/prompt_generator/example.xml` file
-                8. See this [example](prompts/prompt_generator/examples.xml) for guidance on how to use the Prompt Generator.
-                9. Start a conversation on by writing your first prompt in the text box below `Prompt Generator`.
+            7. Drag and drop the `prompts/prompt_generator/example.xml` file
+            8. See this [example](prompts/prompt_generator/examples.xml) for guidance on how to use the Prompt Generator.
+            9. Start a conversation on by writing your first prompt in the text box below `Prompt Generator`.
 
 
-                ## Option 2: Use in Regular Conversations
-                Use this option for quick one-off tasks or if you don't have a Claude subscription.
+            ## Option 2: Use in Regular Conversations
+            Use this option for quick one-off tasks or if you don't have a Claude subscription.
 
-                For system prompts (without subscription):
-                1. Copy the contents of any `system.xml` file
-                2. Paste directly at the start of a Claude conversation
-                3. See this [example](prompts/prompt_generator/examples.xml) for guidance on how to use the Prompt Generator.
+            For system prompts (without subscription):
+            1. Copy the contents of any `system.xml` file
+            2. Paste directly at the start of a Claude conversation
+            3. See this [example](prompts/prompt_generator/examples.xml) for guidance on how to use the Prompt Generator.
 
-                For user-facing prompts:
-                1. Copy the contents of any file in `user_facing_prompts/` folders
-                2. Paste directly into a Claude conversation
-                3. Replace placeholders like `[SPECIFIC_TASK]` with your details
-            ```
-        </assistant>
-        <user>
-            That is awesome! Let's continue.
-        </user>
-        <assistant>
-            Ok! Let's proceed with the Prompt Catalog section.
-            I can see from your repository structure that you have three prompts:
-            - insight_extractor
-            - prompt_generator  
-            - readme-writer
+            For user-facing prompts:
+            1. Copy the contents of any file in `user_facing_prompts/` folders
+            2. Paste directly into a Claude conversation
+            3. Replace placeholders like `[SPECIFIC_TASK]` with your details
+        ```
+    </assistant>
+    <user>
+        That is awesome! Let's continue.
+    </user>
+    <assistant>
+        &lt;thinking&gt;
+            For the Prompt Catalog section, I know:
+            - Three prompts exist: insight_extractor, prompt_generator, readme-writer ✓
+            - Their file structure from the initial tree ✓
 
-            To create a useful catalog, I'd need to know:
-            - What does each prompt do?
-            - Should we present them in a table format?
-            - Do you want to include links to more detailed documentation for each?
-            - Are there any additional prompts I should know about?
-        </assistant>
-        <user>
-            Yes, table format would be perfect! Let me share the system prompts so you can understand what each one does.
+            But I don't know:
+            - What each prompt actually does
+            - How to best present them (table, list, cards?)
+            - Whether there's more documentation for each
+            - If there are other prompts not shown in the tree
 
-            Here's the prompt_generator system prompt:
-            [shares prompts/prompt_generator/system.xml content]
+            I need descriptions of each prompt to create a meaningful catalog that helps users choose the right prompt for their needs.
+        &lt;/thinking&gt;
+        Ok! Let's proceed with the Prompt Catalog section.
+        I can see from your repository structure that you have three prompts:
+        - insight_extractor
+        - prompt_generator  
+        - readme-writer
 
-            Here's the insight_extractor:
-            [shares prompts/insight_extractor/system.xml content]
+        To create a useful catalog, I'd need to know:
+        - What does each prompt do?
+        - Should we present them in a table format?
+        - Do you want to include links to more detailed documentation for each?
+        - Are there any additional prompts I should know about?
+    </assistant>
+    <user>
+        Yes, table format would be perfect! Let me share the system prompts so you can understand what each one does.
 
-            And here's the readme-writer:
-            [shares prompts/readme-writer/system.xml content]
-        </user>
-        <assistant>
-            Thank you for sharing those system prompts! After reviewing each one, I can see their distinct purposes. Here's the Prompt Catalog section:
+        Here's the prompt_generator system prompt:
+        [shares prompts/prompt_generator/system.xml content]
 
-            ```markdown
-            ## Prompt Catalog
-            Here's a table with available prompts:
-            | Assistant | Description |
-            |--------|-------------|
-            | **Prompt Generator** | A comprehensive system for creating effective Claude prompts using advanced techniques like chain-of-thought, prompt chaining, and XML formatting. Follows Anthropic's best practices. |
-            | **Insight Extractor** | Extracts key findings from articles, research papers, forums, and other content sources. Includes source referencing with text fragment linking for verification. |
-            | **README Writer** | A structured, iterative approach to creating comprehensive project documentation. Guides you through information gathering, outline creation, and section-by-section writing. |
-            | **Community Insight Analyst** | Extracts actionable insights from community feedback reports, organizing findings into wants, frustrations, objections, and misunderstandings. Every insight is backed by direct quotes. |
+        Here's the insight_extractor:
+        [shares prompts/insight_extractor/system.xml content]
 
-            For guidance on how to use an assistant, click on the respective link under the `Assistant` tab.
-            ```
+        And here's the readme-writer:
+        [shares prompts/readme-writer/system.xml content]
+    </user>
+    <assistant>
+        &lt;thinking&gt;
+            {{THINKING_THAT_WE_HAVE_ENOUGH_INFO}}
+        &lt;/thinking&gt;
+        Thank you for sharing those system prompts! After reviewing each one, I can see their distinct purposes. Here's the Prompt Catalog section:
 
-            Would you like me to add links to the individual README files for the prompts that have them?
-        </assistant>
+        ```markdown
+        ## Prompt Catalog
+        Here's a table with available prompts:
+        | Assistant | Description |
+        |--------|-------------|
+        | **Prompt Generator** | A comprehensive system for creating effective Claude prompts using advanced techniques like chain-of-thought, prompt chaining, and XML formatting. Follows Anthropic's best practices. |
+        | **Insight Extractor** | Extracts key findings from articles, research papers, forums, and other content sources. Includes source referencing with text fragment linking for verification. |
+        | **README Writer** | A structured, iterative approach to creating comprehensive project documentation. Guides you through information gathering, outline creation, and section-by-section writing. |
+        ```
+
+        Would you like me to add links to the individual README files for the prompts that have them?
+    </assistant>
     </example>
-</examples>
+    <user>
+        Looks great! Let's proceed.
+    </user>
+    <assistant>
+        &lt;thinking&gt;
+            For the Repository Structure section, I have:
+            - Complete file tree from the user's initial message ✓
+            - Understanding of file types (system.xml, examples.xml, user_facing_prompts) ✓
+            - Knowledge of how these files are used from previous discussions ✓
+
+            I should:
+            - Present the structure clearly
+            - Explain what each file type is for
+            - Help users understand the organization pattern
+
+            I have all the information needed to write this section.
+        &lt;/thinking&gt;
+        Now for the Repository Structure section. Based on the tree structure you showed me earlier, here's how the project is organized:
+
+        ```markdown
+        ## Repository Structure
+        ```
+        claude-prompt-catalog/
+        ├── prompts/
+        │   ├── prompt_generator/
+        │   │   ├── system.xml
+        │   │   ├── examples.xml
+        │   │   └── user_facing_prompts/
+        │   │       └── evaluate_insights.xml
+        │   ├── insight_extractor/
+        │   │   └── ...             # same structure
+        │   └── readme_writer/
+        │       └── ...             # same structure 
+        ```
+
+        Here's a brief description of each file type:
+        - `system.xml`: system prompts for Custom Claude Projects. Copy these into Project Instructions.
+        - `user_facing_prompts/`: ready-to-use prompts for direct conversation. Copy and paste into Claude chats.
+        - `examples.xml`: example files to upload to Custom Projects alongside system prompts.
+        ```
+    </assistant>
+    <user>
+        Perfect! Continue to the next section.
+    </user>
+    <assistant>
+        &lt;thinking&gt;
+            For the Contributing section, I know:
+            - The user wants community contributions ✓
+            - They mentioned this earlier when asked ✓
+
+            But I don't have:
+            - Specific contribution guidelines
+            - Format requirements
+            - Types of prompts accepted
+            - Quality standards
+            - Submission process (PRs, issues, etc.)
+
+            Since this is an important section for a community-driven project, I should ask for these details rather than assuming standard practices.
+        &lt;/thinking&gt;
+        Moving on to the Contributing section.
+
+        You mentioned earlier that you want to encourage contributions from the community. Do you have any specific guidelines for contributions? For example:
+        - What format should contributors follow?
+        - Should they submit system prompts, user-facing prompts, or both?
+        - Any quality standards or testing requirements?
+        - How should they submit contributions (pull requests, issues)?
+    </assistant>
+    <user>
+        I trust you to use common contribution guidelines. Just make sure it's clear and welcoming!
+    </user>
+    <assistant>
+        &lt;thinking&gt;
+            The user trusts me to create standard contribution guidelines and wants them to be:
+            - Clear ✓
+            - Welcoming ✓
+
+            Contribution sections can include many details:
+            - How to submit (PRs, branches, etc.)
+            - File structure requirements
+            - Testing guidelines
+            - Code of conduct
+            - Review process
+
+            Including all of this in the README would make it lengthy. Best practice is to have a brief, welcoming section in the README that links to detailed guidelines. This follows the same pattern we used for the setup guide.
+        &lt;/thinking&gt;
+        Since contribution guidelines can be quite detailed, I suggest keeping the Contributing section in the README brief and creating a separate `docs/contribution.md` file with comprehensive guidelines. This keeps the README clean while providing contributors with all the information they need.
+
+        Would you like me to create both the brief Contributing section for the README and the detailed contribution guidelines file?
+    </assistant>
+    <user>
+        Yes, that's a great idea! Go ahead.
+    </user>
+    <assistant>
+        &lt;thinking&gt;
+            I need to create two things:
+            1. A brief Contributing section for the README - should be welcoming and point to detailed docs
+            2. A detailed contribution.md file with comprehensive guidelines
+
+            For the README section:
+            - Keep it brief and welcoming ✓
+            - Link to detailed documentation ✓
+            - Thank contributors ✓
+
+            For the detailed guidelines, I should include:
+            - Reference to Anthropic's best practices
+            - Clear file structure requirements
+            - Submission process (standard GitHub workflow)
+            - Testing requirements
+            - How to organize new prompts
+
+            I'll use standard open-source contribution practices while keeping the tone welcoming and clear.
+        &lt;/thinking&gt;
+        Perfect! First, here's the Contributing section for the README:
+
+        ```markdown
+        ## Contributing
+        We welcome contributions from the community! Help us grow this collection by sharing your prompts.
+
+        See the [contributing documentation](docs/contribution.md) for detailed guidelines.
+
+        Thank you for helping make Claude more useful for everyone!
+        ```
+
+        And here's the detailed `docs/contribution.md` file:
+
+        ```markdown
+        # Contribution Guidelines
+        Please familiarize yourself with [Anthropic's Prompt Engineering Documentation](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview) to ensure your prompts follow best practices.
+
+        ## Submission Guidelines
+
+        1. Create a new folder under `prompts/` with a descriptive name (e.g., `data_analyzer`, `meeting_summarizer`)
+        2. Include a `system.xml` file with your system prompt
+        3. Add `user_facing_prompts/` folder if your prompt includes prompt templates.
+        4. Follow XML formatting as shown in existing prompts
+        5. Test your prompt thoroughly before submitting
+
+        ## File Structure Requirements
+        ```
+        prompts/your_prompt_name/
+        ├── system.xml
+        └── user_facing_prompts/          # Optional: Conversational examples
+        ├── examples.xml
+        ```
+
+        ## How to Submit
+        1. Fork this repository
+        2. Create a new branch for your prompt
+        3. Add your prompt following the guidelines above
+        4. Update this README's Prompt Catalog table
+        5. Submit a pull request with a clear description
+
+        Thank you for helping make Claude more useful for everyone!
+        ```
+
+        Does this provide clear guidance for contributors?
+    </assistant>
+    <user>
+        That's perfect! Very clear and welcoming. Let's finish with the License section.
+    </user> 
+    <assistant>
+        &lt;thinking&gt;
+            For the License section, I need:
+            - The specific license type - NOT PROVIDED
+            - Any special attribution requirements - NOT PROVIDED
+
+            I can see from the initial tree structure that there's a LICENSE file in the repository, but I don't know which license it contains. I should ask rather than assume.
+        &lt;/thinking&gt;
+        For the final License section, I can see you have a LICENSE file in your repository. What type of license are you using? This will help me write the appropriate text and attribution.
+    </assistant>
+    <user>
+        It's Apache License 2.0
+    </user>
+    <assistant>
+        &lt;thinking&gt;
+            {{THINKING_THAT_WE_HAVE_ENOUGH_INFO}}
+        &lt;/thinking&gt;
+        Great! Here's the License section:
+
+        ```markdown
+        ## License
+        This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
+
+        Feel free to use, modify, and distribute these prompts in your own projects!
+        ```
+    </assistant>
+    <user>
+        Perfect! That completes our README. Thank you for helping me create this comprehensive documentation!
+    </user>
+    <assistant>
+        &lt;thinking&gt;
+            Let me verify we've completed all sections from our outline:
+            - Project Title and Overview ✓
+            - Purpose ✓
+            - Requirements ✓
+            - Quick Start ✓
+            - Prompt Catalog ✓
+            - Repository Structure ✓
+            - Contributing ✓
+            - License ✓
+
+            We've also created two additional documentation files:
+            - docs/setup-guide.md
+            - docs/contribution.md
+
+            All sections have been written, reviewed, and validated by the user. The README is complete and ready to use.
+        &lt;/thinking&gt;
+        You're welcome! We've successfully created a complete README with all the sections from our outline:
+
+        ✓ Project Title and Overview
+        ✓ Purpose
+        ✓ Requirements  
+        ✓ Quick Start
+        ✓ Prompt Catalog
+        ✓ Repository Structure
+        ✓ Contributing (with separate detailed guidelines)
+        ✓ License
+
+        The README is now ready to help users understand and use your Claude Prompt Catalog effectively. Is there anything else you'd like to add or modify?
+    </assistant>
+</example>
