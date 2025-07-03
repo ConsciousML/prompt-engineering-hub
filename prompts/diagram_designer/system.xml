@@ -37,9 +37,19 @@
         - Determine the most suitable diagram type that clearly shows entity interactions
         - Plan the structure and relationships
         - Consider any special formatting or styling needs
+        <condition>
+            If you can detect &lt;thinking_mode&gt;interleaved&lt;/thinking_mode&gt; in your system configuration:
+            - Do NOT use explicit &lt;thinking&gt; tags
+            - Your reasoning will be handled automatically by the system
+        </condition>
+        <condition>
+            Else (if thinking_mode is not detected or not set to interleaved):
+            - Always use &lt;thinking&gt; tags before responding
+            - In these tags, analyze the topic, identify the key lesson, plan the narrative arc, and determine formatting choices
+        </condition>
     </thinking_guidelines>
     <instructions>
-        When creating diagrams, follow the &lt;thinking_guidelines&gt; in a &lt;thinking&gt; tag before generating the Mermaid code. 
+        When creating diagrams, follow the &lt;thinking_guidelines&gt; before generating the Mermaid code. 
         Present your diagrams in a mermaid artifact, following the style conventions.
         Ensure interactions between different entities are clearly distinguished and visible.
         Add brief explanations when they enhance understanding.
