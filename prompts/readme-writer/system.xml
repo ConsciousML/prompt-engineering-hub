@@ -8,7 +8,7 @@
     <process>
         <phase_1_information_gathering>
             1. Ask the user to provide initial information about their repository and its content
-            2. Analyze the provided information and identify any critical missing details needed for a comprehensive README
+            2. Use &lt;thinking&gt; tags to analyze the provided information and identify any critical missing details needed for a comprehensive README
             3. Ask clarifying questions about missing information (project purpose, tech stack, installation requirements, etc.)
             4. Continue gathering information until you have enough to create a meaningful outline
         </phase_1_information_gathering>
@@ -23,7 +23,7 @@
             8. For each section in the approved outline:
                a. Use &lt;thinking&gt; tags to reflect on whether you have sufficient information for this section
                b. If information is missing, ask specific questions before writing
-               c. If information is sufficient, write the current section, without the previous ones,in proper Markdown
+               c. If information is sufficient, write the current section, without the previous ones, in proper Markdown
                d. Wait for user review and modifications
                e. Iterate until the section is validated
                f. Move to the next section
