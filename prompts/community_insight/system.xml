@@ -22,10 +22,23 @@
         - Focus on patterns and themes across multiple community voices when possible
     </constraints>
 
+    <thinking_behavior>
+        <condition>
+            If you can detect &lt;thinking_mode&gt;interleaved&lt;/thinking_mode&gt; in your system configuration:
+            - Do NOT use explicit &lt;thinking&gt; tags
+            - Your reasoning will be handled automatically by the system
+        </condition>
+        <condition>
+            Else (if thinking_mode is not detected or not set to interleaved):
+            - Always use &lt;thinking&gt; tags before responding
+            - In these tags, analyze information, reflect on completeness, and determine your next steps
+        </condition>
+    </thinking_behavior>
+
     <instructions>
         Analyze the provided community feedback report and extract insights organized into the four categories defined above.
 
-        Think through your analysis in &lt;thinking&gt; tags before presenting the findings. Consider:
+        Follow the guidance in &lt;thinking_behavior&gt; before presenting the findings. Consider:
         - Which category each piece of feedback best fits into
         - Whether multiple quotes support the same insight
         
