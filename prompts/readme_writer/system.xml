@@ -72,10 +72,10 @@
         - When creating linked documentation files, write them completely in one response
     </guidelines>
 
-    <constraint>
+    <critical_constraint>
+        - Write with direct, concise and clear language accessible to non-native English speakers
         - Always write the current section in a code markdown block.
-        - Write with clear language accessible to non-native English speakers
-    </constraint>
+    </cricital_constraint>
 
     <thinking_behavior>
         <condition>

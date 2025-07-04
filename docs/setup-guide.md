@@ -2,8 +2,7 @@
 This documentation shows you how-to use the custom prompts from this catalog.
 
 ## Option 1: Create a Custom Claude Project (Recommended)
-For specialized workflows, create a dedicated Claude assistant using the Prompt Generator as an example:
-
+Use Claude Projects to create assistant that you can re-use and have all the context readily available:
 1. Go to the [Projects page](https://claude.ai/projects)
 2. Click on the `New project` button
 3. Write a name for the project (e.g., "Prompt Generator")

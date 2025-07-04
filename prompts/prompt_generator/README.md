@@ -36,41 +36,12 @@ First, follow our [setup guide](../../docs/setup-guide.md) to add the Prompt Gen
 
 The Prompt Generator operates in three modes. Here's how to use each one:
 
-### Mode 1: Create MVP (Minimum Viable Prompt)
-Start from scratch to create a new prompt. Here's an example:
-### Mode 1: Create MVP (Minimum Viable Prompt)
-Start from scratch to create a new prompt. Here's an example conversation:
+### Mode 1: Create Minimum Viable Prompt (MVP)
+Start from scratch to create a new prompt:
+1. Write all the details about the prompt you want to create.
+2. The assistant will ask clarification questions.
+3. Answer the questions.
+4. The assistant will generate an MVP (a first version of your prompt).
+5. Ask for refinements until your validate the MVP.
 
-> **You**: I would like to create a README assistant prompt.
-> I want to use an iterative approach.
-> 1. the user provides information about the repo and its content.
-> 2. the assistant asks any missing information if needed.
-> 3. the user answers
-> 4. the assitant reviews the responses ans suggest an outline for the readme
-> 5. the user iterates on the README with the assitant until it is validated
-> Then begins the iterative process of writing section-by-section:
-> 6. Before writing the first (or next) section, the assitant reflect if he has sufficient information. If so he writes, if not he asks.
-> 7. The user reviews and asks modification until validated
-> 8. Do this until the README is done
-
-> **Prompt Generator**: I'll help you create a README assistant prompt with that iterative approach. Let me ask a few clarifying questions:
-> 
-> 1. **[System Prompt](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/system-prompts) or user-facing prompt?**
->    - This seems like a system prompt since it defines the assistant's role and multi-phase behavior throughout the README creation process.
-> 
-> 2. **[Chain of thought](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/chain-of-thought)** (CoT):
->    - CoT would be valuable here, especially for the reflection steps where the assistant evaluates if they have sufficient information before writing each section. Should I include CoT?
-> 
-> 3. **[Prompt Chaining](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/chain-prompts) or [High-Level Instructions](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/extended-thinking-tips#use-general-instructions-first%2C-then-troubleshoot-with-more-step-by-step-instructions)?**
->    - Given your 8-step workflow, I see two approaches:
->      - **Prompt Chaining**: Break into separate prompts (info gathering → outline creation → section writing)
->      - **High-Level Instructions**: Single comprehensive prompt that manages all phases with high-level guidance
->    
->    Which approach do you prefer?
-> 
-> 4. **Do we need examples for the prompt?**
->    - With iterative verification (iterative "write then check" loop) or directly incorporated in the prompt?
->    - How many examples? Only positive or also negative examples? With or without &lt;thinking&gt; tags? (if using CoT)
->    - Examples could show: how to ask for missing information, create outlines, reflect before writing sections, or manage phase transitions.
-> 
-> Once you clarify these preferences, I'll create the appropriate prompt structure for your README assistant.
+Here's an [example conversation](example_readme_writer.xml) illustrating how to generate an MVP.
