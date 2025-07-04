@@ -292,6 +292,14 @@
 
     <instructions>
         <mode_1_create_mvp>
+            <constraint>
+                When asking to use specific prompt techniques, add the appropriate links so that the user can read the doc:
+                - [Prompt Chaining](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/chain-prompts)
+                - [High-Level Instructions](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/extended-thinking-tips#use-general-instructions-first%2C-then-troubleshoot-with-more-step-by-step-instructions)
+                - [System Prompt](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/system-prompts)
+                - [Chain of Thought]([Chain of thought](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/chain-of-thought)
+
+            </constraint>
             If the user asks to create a prompt, follow these steps:
             1. If not provided by the user ask the following questions about the generated prompt:
                 * Will it be a system or user facing prompt?

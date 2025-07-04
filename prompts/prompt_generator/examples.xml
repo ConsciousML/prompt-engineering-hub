@@ -12,134 +12,52 @@
         6. Before writing the first (or next) section, the assitant reflect if he has sufficient information. If so he writes, if not he asks.
         7. The user reviews and asks modification until validated
         8. Do this until the README is done
-
-        Use a system prompt.
-        Use chain of thought.
-        Use step-by-step guidance.
-        Let's use prompt chaining: create separate prompts for each major phase.
-        No examples.
     
         Use README best practices.
         Use Markdown conventions.
     </user>
     <assistant>
         &lt;thinking&gt;
-            Let me review the mandatory information needed to create custom prompts based on the example:
-
-            1. **Will it be a system or user facing prompt?**
-               - ✓ The user specified "Use a system prompt"
-
-            2. **Will chain of thought (CoT) be used?**
-               - ✓ The user specified "Use chain of thought"
-
-            3. **High level instructions or step-by-step guidance?**
-               - ✓ The user specified "Use step-by-step guidance"
-               - If step-by-step, should we use prompt-chaining?
-                 - ✓ The user specified "Let's use prompt chaining: create separate prompts for each major phase"
-
-            4. **Do we need examples for the prompt?**
-               - ✓ The user specified "No examples"
-
-            5. **Context and task description**
-               - ✓ The user provided detailed context about creating a README assistant prompt with a clear iterative approach (8 steps across 3 phases)
-               - ✓ They specified the domain (README documentation) and best practices to follow
-
-            All mandatory information has been provided by the user. They clearly specified:
-            - System prompt
-            - Chain of thought (CoT) to be used
-            - Step-by-step guidance with prompt chaining
-            - No examples needed
-            - Complete context and task requirements
-
-            The user has provided all necessary information to create the custom prompt.
+            Let me review what information I have and what I still need to create the README assistant prompt:
+   
+            1. **Context and task description**
+               - ✓ The user provided detailed context about creating a README assistant prompt with a clear 8-step iterative approach across 3 phases (info gathering → outline creation → section-by-section writing)
+               - ✓ They specified the iterative workflow with validation at each step
+   
+            2. **Will it be a system or user facing prompt?**
+               - ❓ Given the complex multi-phase behavior and role definition, this seems like a system prompt, but I should confirm
+   
+            3. **Will chain of thought (CoT) be used?**
+               - ❓ CoT would be valuable for the reflection steps where the assistant evaluates information sufficiency, but I need user confirmation
+   
+            4. **High level instructions or step-by-step guidance?**
+               - ❓ The 8-step workflow suggests two possible approaches: prompt chaining (separate prompts for each phase) or a single comprehensive prompt with high-level instructions. This is a key architectural decision.
+   
+            5. **Do we need examples for the prompt?**
+               - ❓ I need to ask about: iterative verification vs direct incorporation, number of examples, positive/negative examples, and whether to include &lt;thinking&gt; tags
+   
+            I have good context but need to clarify these key structural decisions before creating the optimal prompt.
         &lt;/thinking&gt;
-        Great! I have all the required information.
-        Here's the Minimum Viable Prompt (MVP) for your README assistant:
-        ```xml
-        &lt;system&gt;
-            &lt;context&gt;
-                You are a README documentation expert. Your role is to help users create comprehensive, well-structured README files for their projects through an iterative, collaborative process.
-
-                You follow README best practices and produce clean, professional Markdown documentation.
-            &lt;/context&gt;
-
-            &lt;process&gt;
-                &lt;phase_1_information_gathering&gt;
-                    1. Ask the user to provide initial information about their repository and its content
-                    2. Analyze the provided information and identify any critical missing details needed for a comprehensive README
-                    3. Ask clarifying questions about missing information (project purpose, tech stack, installation requirements, etc.)
-                    4. Continue gathering information until you have enough to create a meaningful outline
-                &lt;/phase_1_information_gathering&gt;
-
-                &lt;phase_2_outline_creation&gt;
-                    5. Review all gathered information in &amp;lt;thinking&amp;gt; tags to ensure completeness
-                    6. Create and present a README outline with proposed sections
-                    7. Wait for user feedback and iterate on the outline until approved
-                &lt;/phase_2_outline_creation&gt;
-
-                &lt;phase_3_section_writing&gt;
-                    8. For each section in the approved outline:
-                       a. Use &amp;lt;thinking&amp;gt; tags to reflect on whether you have sufficient information for this section
-                       b. If information is missing, ask specific questions before writing
-                       c. If information is sufficient, write the current section, without the previous ones,in proper Markdown
-                       d. Wait for user review and modifications
-                       e. Iterate until the section is validated
-                       f. Move to the next section
-                &lt;/phase_3_section_writing&gt;
-            &lt;/process&gt;
-
-            &lt;readme_best_practices&gt;
-                - Include a clear project title and description
-                - Add badges for build status, version, license when applicable
-                - Provide clear installation instructions
-                - Include usage examples with code blocks
-                - Document API/CLI options if relevant
-                - Add contribution guidelines
-                - Include license information
-                - Use proper Markdown formatting (headers, lists, code blocks, links)
-                - Keep sections concise but informative
-                - Use a logical flow from overview to detailed information
-            &lt;/readme_best_practices&gt;
-
-            &lt;standard_sections&gt;
-                &lt;mandatory&gt;
-                    - Project Title &amp; Overview
-                    - Getting Started
-                        a. Requirements
-                        b. Installation (if applicable)
-                    - Usage
-                    - Features
-                    - License
-                    - Contact Information
-                &lt;/mandatory&gt;
-                &lt;optional&gt;
-                    - Table of Contents (for longer READMEs)
-                    - Testing (if tests exist)
-                    - Configuration
-                    - API Documentation
-                    - Deployment
-                    - Contributing
-                    - Credits/Acknowledgments
-                &lt;/optional&gt;
-            &lt;/standard_sections&gt;
-
-            &lt;guidelines&gt;
-                - Write with clear language accessible to non-native English speakers
-                - Only include sections that add value to the specific project
-            &lt;/guidelines&gt;
-
-            &lt;constraint&gt;
-                Always write the current section in a code markdown block.
-            &lt;/constraint&gt;
-
-            &lt;instructions&gt;
-                Follow all phases of the &amp;lt;process&amp;gt; in order.
-
-                When writing sections, apply the &amp;lt;readme_best_practices&amp;gt; to ensure professional documentation.
-
-                Always wait for explicit user validation before proceeding to the next phase or section. 
-            &lt;/instructions&gt;
-        &lt;/system&gt;
+        I'll help you create a README assistant prompt with that iterative approach. Let me ask a few clarifying questions:
+    
+        1. **[System Prompt](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/system-prompts) or user-facing prompt?**
+           - This seems like a system prompt since it defines the assistant's role and multi-phase behavior throughout the README creation process.
+    
+        2. **[Chain of thought](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/chain-of-thought)** (CoT):
+           - CoT would be valuable here, especially for the reflection steps where the assistant evaluates if they have sufficient information before writing each section. Should I include CoT?
+        3. **[Prompt Chaining](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/chain-prompts) or [High-Level Instructions](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/extended-thinking-tips#use-general-instructions-first%2C-then-troubleshoot-with-more-step-by-step-instructions)?**
+           - Given your 8-step workflow, I see two approaches:
+             - **Prompt Chaining**: Break into separate prompts (info gathering → outline creation → section writing)
+             - **High-Level Instructions**: Single comprehensive prompt that manages all phases with high-level guidance
+    
+           Which approach do you prefer?
+    
+        4. **Do we need examples for the prompt?**
+           - With iterative verification (iterative "write then check" loop) or directly incorporated in the prompt?
+           - How many examples? Only positive or also negative examples? With or without &lt;thinking&gt; tags? (if using CoT)
+           - Examples could show: how to ask for missing information, create outlines, reflect before writing sections, or manage phase transitions.
+    
+        Once you clarify these preferences, I'll create the appropriate prompt structure for your README assistant. 
         ```
     </assistant>
 </example>

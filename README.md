@@ -19,7 +19,7 @@ Use these prompts:
 - [**Claude.ai account**](https://claude.ai/): free account works for user-facing prompts.
 - [**Claude subscription**](https://claude.ai/settings/billing?action=subscribe): required for Custom Projects (system prompts).
 
-**Note**: the prompts of this catalog has been designed specifically for Claude. But feel free to test them with other LLMs.
+**Note**: the prompts of this catalog have been designed specifically for Claude. But feel free to test them with other LLMs.
 
 ## Quick Start
 See our [Setup Guide](docs/setup-guide.md) for detailed instructions on using these prompts.
@@ -28,10 +28,10 @@ See our [Setup Guide](docs/setup-guide.md) for detailed instructions on using th
 Here's a table with available prompts:
 | Assistant | Usage | Description |
 |--------|-------|-------------|
-| **Prompt Generator** | Prompt Engineering | A comprehensive system for creating effective Claude prompts using advanced techniques like chain-of-thought, prompt chaining, and XML formatting. Follows Anthropic's best practices. |
+| **Prompt Generator** | Prompt Engineering | Creating optimized Claude prompts using advanced techniques like chain-of-thought, prompt chaining, and XML formatting. Follows Anthropic's best practices. |
 | **Insight Extractor** | Research | Extracts key findings from articles, research papers, forums, and other content sources. Includes source referencing with text fragment linking for verification. |
-| **README Writer** | Documentation | A structured, iterative approach to creating comprehensive project documentation. Guides you through information gathering, outline creation, and section-by-section writing. |
-| **Community Insight Analyst** | Research | Extracts actionable insights from community feedback reports, organizing findings into wants, frustrations, objections, and misunderstandings. Every insight is backed by direct quotes. |
+| **README Writer** | Documentation | Assists you section by section to write README.md files. Guides you through information gathering, outline creation, and section-by-section writing. |
+| **Community Insight Analyst** | Research | Extracts insights from community feedback reports, organizing findings into wants, frustrations, objections, and misunderstandings. Every insight is backed by direct quotes. |
 | [**Mermaid Diagram Designer**](prompts/diagram_designer/README.md) | Diagrams | Creates clear, well-structured diagrams using Mermaid syntax. It automatically selects the most appropriate diagram type for your needs and follows best practices for visual clarity. |
 
 For guidance on how to use an assitant, click on the respective link under the `Assistant` tab.
