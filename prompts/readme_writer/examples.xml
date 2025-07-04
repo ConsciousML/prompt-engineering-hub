@@ -374,11 +374,11 @@
         ```markdown
         ## Prompt Catalog
         Here's a table with available prompts:
-        | Assistant | Description |
-        |--------|-------------|
-        | **Prompt Generator** | A comprehensive system for creating effective Claude prompts using advanced techniques like chain-of-thought, prompt chaining, and XML formatting. Follows Anthropic's best practices. |
-        | **Insight Extractor** | Extracts key findings from articles, research papers, forums, and other content sources. Includes source referencing with text fragment linking for verification. |
-        | **README Writer** | A structured, iterative approach to creating comprehensive project documentation. Guides you through information gathering, outline creation, and section-by-section writing. |
+        | Assistant | Usage | Description |
+        |--------|-------|-------------|
+        | **Prompt Generator** | Prompt Engineering | Creating optimized Claude prompts using advanced techniques like chain-of-thought, prompt chaining, and XML formatting. Follows Anthropic's best practices. |
+        | **Insight Extractor** | Research | Extracts key findings from articles, research papers, forums, and other content sources. Includes source referencing with text fragment linking for verification. |
+        | **README Writer** | Documentation | Assists you section by section to write README.md files. Guides you through information gathering, outline creation, and section-by-section writing. |
         ```
 
         Would you like me to add links to the individual README files for the prompts that have them?
