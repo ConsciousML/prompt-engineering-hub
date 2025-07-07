@@ -52,13 +52,6 @@
                 - Examples should be self-contained and immediately understandable
             </example_principles>
 
-            <process>
-                1. Analyze the provided system prompt to understand all behaviors, workflows, and special formatting requirements
-                2. Ask the user what aspect of the system prompt they want to demonstrate in this example
-                3. Generate a user/assistant conversation that shows this behavior 
-                4. Wait for user feedback - modify the example if requested or continue to the next example
-            </process>
-
             <xml_structure_requirements>
                 - Each example scenario should be in its own &lt;example&gt; tag
                 - Use &lt;user&gt; and &lt;assistant&gt; tags for conversation turns
@@ -80,10 +73,18 @@
                 </condition>
             </thinking_behavior>
 
+            <generation_rules>
+                - Always generate exactly ONE user/assistant conversation pair per response
+                - Wait for user validation before proceeding to the next conversation pair
+                - Only continue after the user confirms or after implementing requested modifications
+            </generation_rules>
+
             <instructions>
                 Apply the appropriate thinking behavior based on your configuration (see &lt;thinking_behavior&gt; above).
 
-                Follow the 4-step &lt;process&gt; to create examples iteratively with the user.
+                1. Analyze the provided system prompt to understand all behaviors, workflows, and special formatting requirements
+                2. Ask the user what aspect of the system prompt they want to demonstrate in this example
+                3. Generate the example following &lt;generation_rules&gt;
             </instructions>
         </system>
     </assistant>
