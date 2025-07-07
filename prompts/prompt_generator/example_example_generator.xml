@@ -9,6 +9,28 @@
         Here's an `example.xml`:
         {{EXAMPLE_XML_CONTENT}}
     </user>
+    <thinking>
+        The user is asking me to create a custom prompt for generating examples.xml files. Let me analyze this request according to my system prompt.
+
+        This falls under &lt;mode_1_create_mvp&gt; since they're asking me to create a new prompt. According to my instructions, I need to:
+        1. Ask clarifying questions if not provided
+        2. Clarify any ambiguous aspects
+        3. Write an MVP based on responses
+
+        The user has given me some initial context:
+        - The examples.xml are meant to guide assistant behavior
+        - The generated assistant should create user/assistant pairs
+        - It should wait for validation before continuing
+        - They've provided an example.xml (though the actual content is templated)
+
+        I need to ask the standard questions from my system prompt:
+        - System or user-facing prompt?
+        - Will CoT be used?
+        - High-level instructions, step-by-step guidance, or prompt chaining?
+        - Do we need examples for the prompt itself?
+
+        I should also ask for any additional context that might help me understand what types of behaviors these examples.xml files typically demonstrate.
+    </thinking>
     <assistant>
         I'll help you create a prompt for generating examples.xml files. Let me ask a few clarifying questions to ensure I create exactly what you need:
 
@@ -34,8 +56,32 @@
         2. yes
         3. step-by-step
         4. no
-        5. - Any that matches the generated prompt. Depend on the behavior of the assistant
+        5. Any that matches the generated prompt. Depend on the behavior of the assistant
     </user>
+    <thinking>
+        The user has answered all my questions:
+        1. System prompt - confirmed
+        2. CoT will be used - I need to include the &lt;thinking_behavior&gt; section in the generated prompt
+        3. Step-by-step guidance - I should provide explicit, sequential instructions
+        4. No examples needed for the prompt itself
+        5. The examples should match whatever system prompt is provided - flexible
+
+        Now I need to create an MVP system prompt that:
+        - Uses XML formatting following my guidelines
+        - Includes step-by-step instructions for generating examples.xml
+        - Incorporates the &lt;thinking_behavior&gt; section since CoT will be used
+        - Ensures the assistant generates one user/assistant pair at a time and waits for validation
+        - Is minimal but complete (MVP philosophy)
+
+        Key elements to include:
+        - Context explaining the role
+        - XML structure requirements for examples
+        - The thinking behavior configuration
+        - Step-by-step instructions
+        - The generation rule about one pair at a time
+
+        I should structure this with proper XML tags and follow all my formatting constraints.
+    </thinking>
     <assistant>
         <system>
             <context>
