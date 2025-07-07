@@ -21,27 +21,27 @@
         It contains system prompt and examples. No prog language.
         I share my prompts in this repo to help people.
     </user>
+    <thinking>
+        Let me analyze what information the user has provided:
+        - Project name: "claude-prompt-catalog" ✓
+        - Project type: Simple project with prompts ✓
+        - File structure: Provided complete tree ✓
+        - Content type: System prompts and examples ✓
+        - Programming language: None (not a code project) ✓
+        - Purpose: Share prompts to help people ✓
+
+        Critical missing information for a comprehensive README:
+        - Specific requirements (software, accounts, dependencies)
+        - How to actually use these prompts
+        - Target audience specifics
+        - Installation/setup process
+        - Any prerequisites or prior knowledge needed
+        - License information
+        - Contribution guidelines (if open to contributions)
+
+        I should start by asking about requirements since that's fundamental for users to know if they can use this project.
+    </thinking>
     <assistant>
-        &lt;thinking&gt;
-            Let me analyze what information the user has provided:
-            - Project name: "claude-prompt-catalog" ✓
-            - Project type: Simple project with prompts ✓
-            - File structure: Provided complete tree ✓
-            - Content type: System prompts and examples ✓
-            - Programming language: None (not a code project) ✓
-            - Purpose: Share prompts to help people ✓
-
-            Critical missing information for a comprehensive README:
-            - Specific requirements (software, accounts, dependencies)
-            - How to actually use these prompts
-            - Target audience specifics
-            - Installation/setup process
-            - Any prerequisites or prior knowledge needed
-            - License information
-            - Contribution guidelines (if open to contributions)
-
-            I should start by asking about requirements since that's fundamental for users to know if they can use this project.
-        &lt;/thinking&gt;
         Thank you for providing the project structure! I can see you have a collection of Claude prompts organized by different use cases.
 
         Before I create an outline for your README, I need to understand a couple of key things:
@@ -58,26 +58,26 @@
 
         And definitely yes to contributions! I want this to grow with community input.
     </user>
+    <thinking>
+        Now I have enough information to create a meaningful outline:
+        - It's a prompt collection for Claude
+        - Has requirements (Claude account, some need subscription)
+        - Open to community contributions
+        - No programming/installation needed
+        - Has a LICENSE file
+
+        Based on this, I should include:
+        - Overview/Purpose
+        - Requirements (important since there are account needs)
+        - Quick Start/Usage
+        - Catalog of available prompts
+        - Repository structure explanation
+        - Contributing section (since they want community input)
+        - License (they have a LICENSE file)
+
+        I'll present the outline now.
+    </thinking>
     <assistant>
-        &lt;thinking&gt;
-            Now I have enough information to create a meaningful outline:
-            - It's a prompt collection for Claude
-            - Has requirements (Claude account, some need subscription)
-            - Open to community contributions
-            - No programming/installation needed
-            - Has a LICENSE file
-
-            Based on this, I should include:
-            - Overview/Purpose
-            - Requirements (important since there are account needs)
-            - Quick Start/Usage
-            - Catalog of available prompts
-            - Repository structure explanation
-            - Contributing section (since they want community input)
-            - License (they have a LICENSE file)
-
-            I'll present the outline now.
-        &lt;/thinking&gt;
 
         Perfect! Based on what you've shared, here's my suggested outline for your README:
         ```markdown
@@ -98,15 +98,15 @@
     <user>
         Great! Let's start writing.
     </user>
-    <assistant>
-        &lt;thinking&gt;
-            For the title and introduction section, I have:
-            - Project name: "Claude Prompt Catalog" ✓
-            - Purpose: Share prompts to help people ✓
-            - It's for Claude AI ✓
+    <thinking>
+        For the title and introduction section, I have:
+        - Project name: "Claude Prompt Catalog" ✓
+        - Purpose: Share prompts to help people ✓
+        - It's for Claude AI ✓
 
-            I have enough information to write a clear, concise introduction.
-        &lt;/thinking&gt;
+        I have enough information to write a clear, concise introduction.
+    </thinking>
+    <assistant>
 
         Amazing! I'll start right away with the overview:
         ```markdown
@@ -118,19 +118,19 @@
     <user>
         Perfect! Let's continue with the next section.
     </user>
+    <thinking>
+        For the Purpose section, I have:
+        - Basic purpose: help people by sharing prompts ✓
+        - It's a catalog/collection ✓
+
+        But I need more details about:
+        - Is it for learning, direct use, or both?
+        - Any prompt engineering techniques?
+        - Any methodologies or best practices it follows?
+
+        I should ask for clarification.
+    </thinking>
     <assistant>
-        &lt;thinking&gt;
-            For the Purpose section, I have:
-            - Basic purpose: help people by sharing prompts ✓
-            - It's a catalog/collection ✓
-
-            But I need more details about:
-            - Is it for learning, direct use, or both?
-            - Any prompt engineering techniques?
-            - Any methodologies or best practices it follows?
-
-            I should ask for clarification.
-        &lt;/thinking&gt;
 
         From what you've shared, this appears to be a repository designed to help people by providing proper prompting examples for Claude. The repository contains system prompts and examples organized by different use cases.
 
@@ -145,10 +145,10 @@
         People can use them directly or learn from their structure.
         I also want to encourage contributions from the community!
     </user>
+    <thinking>
+        {{THINKING_THAT_WE_HAVE_ENOUGH_INFO}}
+    </thinking>
     <assistant>
-        &lt;thinking&gt;
-            {{THINKING_THAT_WE_HAVE_ENOUGH_INFO}}
-        &lt;/thinking&gt;
         
         Excellent! Now I have a complete picture. Here's the Purpose section:
         ```markdown
@@ -168,16 +168,16 @@
         Yes, exactly! Next section please.
         You can mention in a note that these prompts are for Claude but can be tested for other LLMs.
     </user>
-    <assistant>
-        &lt;thinking&gt;
-            For the Requirements section, I have all necessary information:
-            - Claude.ai account needed ✓
-            - Subscription for Custom Projects ✓  
-            - Free tier works for user-facing prompts ✓
-            - Note about testing with other LLMs ✓
+    <thinking>
+        For the Requirements section, I have all necessary information:
+        - Claude.ai account needed ✓
+        - Subscription for Custom Projects ✓  
+        - Free tier works for user-facing prompts ✓
+        - Note about testing with other LLMs ✓
 
-            I can write this section without asking for more information.
-        &lt;/thinking&gt;
+        I can write this section without asking for more information.
+    </thinking>
+    <assistant>
         Now for the Requirements section. I already have all the information I need from what you shared earlier about Claude.ai accounts and subscriptions.
 
         ```markdown
@@ -193,15 +193,15 @@
     <user>
         Perfect formatting! Continue.
     </user>
-    <assistant>
-        &lt;thinking&gt;
-            For the Quick Start section, I need to know:
-            - How users actually set up and use these prompts
-            - The workflow for Custom Projects vs regular use
-            - Specific steps depending on prompt type?
+    <thinking>
+        For the Quick Start section, I need to know:
+        - How users actually set up and use these prompts
+        - The workflow for Custom Projects vs regular use
+        - Specific steps depending on prompt type?
 
-            I don't have this information yet, so I need to ask.
-        &lt;/thinking&gt;
+        I don't have this information yet, so I need to ask.
+    </thinking>
+    <assistant>
         Moving to the Quick Start section. I need to understand how users should get started with these prompts.
 
         What's the actual setup workflow? Do users:
@@ -218,20 +218,20 @@
 
         Each approach has specific steps depending on whether it's a system prompt or user-facing prompt.
     </user>
+    <thinking>
+        The user has provided two approaches:
+        1. Custom Claude Project - involves Projects page, creating new project, pasting system.xml, uploading examples.xml
+        2. Regular conversations - paste system.xml directly or use user_facing_prompts
+
+        This is quite detailed but I need more specific UI/workflow information:
+        - Exact location of Projects page
+        - Step-by-step UI interactions
+        - Where exactly to paste content
+        - How file uploads work
+
+        Since these are specific UI elements users will need to follow, I should ask for precise details to ensure the instructions are accurate and easy to follow.
+    </thinking>
     <assistant>
-        &lt;thinking&gt;
-            The user has provided two approaches:
-            1. Custom Claude Project - involves Projects page, creating new project, pasting system.xml, uploading examples.xml
-            2. Regular conversations - paste system.xml directly or use user_facing_prompts
-
-            This is quite detailed but I need more specific UI/workflow information:
-            - Exact location of Projects page
-            - Step-by-step UI interactions
-            - Where exactly to paste content
-            - How file uploads work
-
-            Since these are specific UI elements users will need to follow, I should ask for precise details to ensure the instructions are accurate and easy to follow.
-        &lt;/thinking&gt;
 
         I see! This sounds like there are specific UI elements and workflows in Claude that I should reference accurately.
 
@@ -256,21 +256,21 @@
 
         For regular conversations, they just paste at the start of any Claude chat.
     </user>
+    <thinking>
+        The user has provided very detailed UI steps:
+        - Navigate to claude.ai/projects
+        - Click "New project" 
+        - Enter project name
+        - Edit Project Knowledge section
+        - Copy/paste system.xml
+        - Drag and drop examples.xml
+        - Start conversation
+
+        This is quite comprehensive with multiple setup paths and specific UI interactions. A Quick Start section should be brief and get users started quickly. With this level of detail, including it all would make the section too long and potentially overwhelming.
+
+        Best practice would be to keep the Quick Start minimal and link to a separate, detailed setup guide. This keeps the README clean while still providing users with all the information they need.
+    </thinking>
     <assistant>
-        &lt;thinking&gt;
-            The user has provided very detailed UI steps:
-            - Navigate to claude.ai/projects
-            - Click "New project" 
-            - Enter project name
-            - Edit Project Knowledge section
-            - Copy/paste system.xml
-            - Drag and drop examples.xml
-            - Start conversation
-
-            This is quite comprehensive with multiple setup paths and specific UI interactions. A Quick Start section should be brief and get users started quickly. With this level of detail, including it all would make the section too long and potentially overwhelming.
-
-            Best practice would be to keep the Quick Start minimal and link to a separate, detailed setup guide. This keeps the README clean while still providing users with all the information they need.
-        &lt;/thinking&gt;
 
         Thank you for the detailed steps! This is quite comprehensive with multiple setup paths and specific UI interactions. Given the complexity, I suggest we keep the Quick Start section brief and create a separate `docs/setup-guide.md` file with the full instructions.
 
@@ -286,10 +286,10 @@
     <user>
         Great idea! Yes, let's do that.
     </user>
+    <thinking>
+        {{THINKING_THAT_WE_HAVE_ENOUGH_INFO}}
+    </thinking>
     <assistant>
-        &lt;thinking&gt;
-            {{THINKING_THAT_WE_HAVE_ENOUGH_INFO}}
-        &lt;/thinking&gt;
 
         Ok I'll write the `docs/setup-guide.md` then.
         ```markdown
@@ -327,20 +327,20 @@
     <user>
         That is awesome! Let's continue.
     </user>
+    <thinking>
+        For the Prompt Catalog section, I know:
+        - Three prompts exist: insight_extractor, prompt_generator, readme-writer ✓
+        - Their file structure from the initial tree ✓
+
+        But I don't know:
+        - What each prompt actually does
+        - How to best present them (table, list, cards?)
+        - Whether there's more documentation for each
+        - If there are other prompts not shown in the tree
+
+        I need descriptions of each prompt to create a meaningful catalog that helps users choose the right prompt for their needs.
+    </thinking>
     <assistant>
-        &lt;thinking&gt;
-            For the Prompt Catalog section, I know:
-            - Three prompts exist: insight_extractor, prompt_generator, readme-writer ✓
-            - Their file structure from the initial tree ✓
-
-            But I don't know:
-            - What each prompt actually does
-            - How to best present them (table, list, cards?)
-            - Whether there's more documentation for each
-            - If there are other prompts not shown in the tree
-
-            I need descriptions of each prompt to create a meaningful catalog that helps users choose the right prompt for their needs.
-        &lt;/thinking&gt;
         Ok! Let's proceed with the Prompt Catalog section.
         I can see from your repository structure that you have three prompts:
         - insight_extractor
@@ -365,10 +365,10 @@
         And here's the readme-writer:
         [shares prompts/readme-writer/system.xml content]
     </user>
+    <thinking>
+        {{THINKING_THAT_WE_HAVE_ENOUGH_INFO}}
+    </thinking>
     <assistant>
-        &lt;thinking&gt;
-            {{THINKING_THAT_WE_HAVE_ENOUGH_INFO}}
-        &lt;/thinking&gt;
         Thank you for sharing those system prompts! After reviewing each one, I can see their distinct purposes. Here's the Prompt Catalog section:
 
         ```markdown
@@ -386,20 +386,20 @@
     <user>
         Looks great! Let's proceed.
     </user>
+    <thinking>
+        For the Repository Structure section, I have:
+        - Complete file tree from the user's initial message ✓
+        - Understanding of file types (system.xml, examples.xml, user_facing_prompts) ✓
+        - Knowledge of how these files are used from previous discussions ✓
+
+        I should:
+        - Present the structure clearly
+        - Explain what each file type is for
+        - Help users understand the organization pattern
+
+        I have all the information needed to write this section.
+    </thinking>
     <assistant>
-        &lt;thinking&gt;
-            For the Repository Structure section, I have:
-            - Complete file tree from the user's initial message ✓
-            - Understanding of file types (system.xml, examples.xml, user_facing_prompts) ✓
-            - Knowledge of how these files are used from previous discussions ✓
-
-            I should:
-            - Present the structure clearly
-            - Explain what each file type is for
-            - Help users understand the organization pattern
-
-            I have all the information needed to write this section.
-        &lt;/thinking&gt;
         Now for the Repository Structure section. Based on the tree structure you showed me earlier, here's how the project is organized:
 
         ```markdown
@@ -427,21 +427,21 @@
     <user>
         Perfect! Continue to the next section.
     </user>
+    <thinking>
+        For the Contributing section, I know:
+        - The user wants community contributions ✓
+        - They mentioned this earlier when asked ✓
+
+        But I don't have:
+        - Specific contribution guidelines
+        - Format requirements
+        - Types of prompts accepted
+        - Quality standards
+        - Submission process (PRs, issues, etc.)
+
+        Since this is an important section for a community-driven project, I should ask for these details rather than assuming standard practices.
+    </thinking>
     <assistant>
-        &lt;thinking&gt;
-            For the Contributing section, I know:
-            - The user wants community contributions ✓
-            - They mentioned this earlier when asked ✓
-
-            But I don't have:
-            - Specific contribution guidelines
-            - Format requirements
-            - Types of prompts accepted
-            - Quality standards
-            - Submission process (PRs, issues, etc.)
-
-            Since this is an important section for a community-driven project, I should ask for these details rather than assuming standard practices.
-        &lt;/thinking&gt;
         Moving on to the Contributing section.
 
         You mentioned earlier that you want to encourage contributions from the community. Do you have any specific guidelines for contributions? For example:
@@ -453,21 +453,21 @@
     <user>
         I trust you to use common contribution guidelines. Just make sure it's clear and welcoming!
     </user>
+    <thinking>
+        The user trusts me to create standard contribution guidelines and wants them to be:
+        - Clear ✓
+        - Welcoming ✓
+
+        Contribution sections can include many details:
+        - How to submit (PRs, branches, etc.)
+        - File structure requirements
+        - Testing guidelines
+        - Code of conduct
+        - Review process
+
+        Including all of this in the README would make it lengthy. Best practice is to have a brief, welcoming section in the README that links to detailed guidelines. This follows the same pattern we used for the setup guide.
+    </thinking>
     <assistant>
-        &lt;thinking&gt;
-            The user trusts me to create standard contribution guidelines and wants them to be:
-            - Clear ✓
-            - Welcoming ✓
-
-            Contribution sections can include many details:
-            - How to submit (PRs, branches, etc.)
-            - File structure requirements
-            - Testing guidelines
-            - Code of conduct
-            - Review process
-
-            Including all of this in the README would make it lengthy. Best practice is to have a brief, welcoming section in the README that links to detailed guidelines. This follows the same pattern we used for the setup guide.
-        &lt;/thinking&gt;
         Since contribution guidelines can be quite detailed, I suggest keeping the Contributing section in the README brief and creating a separate `docs/contribution.md` file with comprehensive guidelines. This keeps the README clean while providing contributors with all the information they need.
 
         Would you like me to create both the brief Contributing section for the README and the detailed contribution guidelines file?
@@ -475,26 +475,26 @@
     <user>
         Yes, that's a great idea! Go ahead.
     </user>
+    <thinking>
+        I need to create two things:
+        1. A brief Contributing section for the README - should be welcoming and point to detailed docs
+        2. A detailed contribution.md file with comprehensive guidelines
+
+        For the README section:
+        - Keep it brief and welcoming ✓
+        - Link to detailed documentation ✓
+        - Thank contributors ✓
+
+        For the detailed guidelines, I should include:
+        - Reference to Anthropic's best practices
+        - Clear file structure requirements
+        - Submission process (standard GitHub workflow)
+        - Testing requirements
+        - How to organize new prompts
+
+        I'll use standard open-source contribution practices while keeping the tone welcoming and clear.
+    </thinking>
     <assistant>
-        &lt;thinking&gt;
-            I need to create two things:
-            1. A brief Contributing section for the README - should be welcoming and point to detailed docs
-            2. A detailed contribution.md file with comprehensive guidelines
-
-            For the README section:
-            - Keep it brief and welcoming ✓
-            - Link to detailed documentation ✓
-            - Thank contributors ✓
-
-            For the detailed guidelines, I should include:
-            - Reference to Anthropic's best practices
-            - Clear file structure requirements
-            - Submission process (standard GitHub workflow)
-            - Testing requirements
-            - How to organize new prompts
-
-            I'll use standard open-source contribution practices while keeping the tone welcoming and clear.
-        &lt;/thinking&gt;
         Perfect! First, here's the Contributing section for the README:
 
         ```markdown
@@ -543,23 +543,23 @@
     <user>
         That's perfect! Very clear and welcoming. Let's finish with the License section.
     </user> 
-    <assistant>
-        &lt;thinking&gt;
-            For the License section, I need:
-            - The specific license type - NOT PROVIDED
-            - Any special attribution requirements - NOT PROVIDED
+    <thinking>
+        For the License section, I need:
+        - The specific license type - NOT PROVIDED
+        - Any special attribution requirements - NOT PROVIDED
 
-            I can see from the initial tree structure that there's a LICENSE file in the repository, but I don't know which license it contains. I should ask rather than assume.
-        &lt;/thinking&gt;
+        I can see from the initial tree structure that there's a LICENSE file in the repository, but I don't know which license it contains. I should ask rather than assume.
+    </thinking>
+    <assistant>
         For the final License section, I can see you have a LICENSE file in your repository. What type of license are you using? This will help me write the appropriate text and attribution.
     </assistant>
     <user>
         It's Apache License 2.0
     </user>
+    <thinking>
+        {{THINKING_THAT_WE_HAVE_ENOUGH_INFO}}
+    </thinking>
     <assistant>
-        &lt;thinking&gt;
-            {{THINKING_THAT_WE_HAVE_ENOUGH_INFO}}
-        &lt;/thinking&gt;
         Great! Here's the License section:
 
         ```markdown
@@ -572,24 +572,24 @@
     <user>
         Perfect! That completes our README. Thank you for helping me create this comprehensive documentation!
     </user>
+    <thinking>
+        Let me verify we've completed all sections from our outline:
+        - Project Title and Overview ✓
+        - Purpose ✓
+        - Requirements ✓
+        - Quick Start ✓
+        - Prompt Catalog ✓
+        - Repository Structure ✓
+        - Contributing ✓
+        - License ✓
+
+        We've also created two additional documentation files:
+        - docs/setup-guide.md
+        - docs/contribution.md
+
+        All sections have been written, reviewed, and validated by the user. The README is complete and ready to use.
+    </thinking>
     <assistant>
-        &lt;thinking&gt;
-            Let me verify we've completed all sections from our outline:
-            - Project Title and Overview ✓
-            - Purpose ✓
-            - Requirements ✓
-            - Quick Start ✓
-            - Prompt Catalog ✓
-            - Repository Structure ✓
-            - Contributing ✓
-            - License ✓
-
-            We've also created two additional documentation files:
-            - docs/setup-guide.md
-            - docs/contribution.md
-
-            All sections have been written, reviewed, and validated by the user. The README is complete and ready to use.
-        &lt;/thinking&gt;
         You're welcome! We've successfully created a complete README with all the sections from our outline:
 
         ✓ Project Title and Overview

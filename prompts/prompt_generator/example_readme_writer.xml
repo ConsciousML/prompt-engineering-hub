@@ -16,28 +16,28 @@
         Use README best practices.
         Use Markdown conventions and write it in code blocks.
     </user>
+    <thinking>
+        Let me review what information I have and what I still need to create the README assistant prompt:
+   
+        1. **Context and task description**
+           - ✓ The user provided detailed context about creating a README assistant prompt with a clear 8-step iterative approach across 3 phases (info gathering → outline creation → section-by-section writing)
+           - ✓ They specified the iterative workflow with validation at each step
+   
+        2. **Will it be a system or user facing prompt?**
+           - ❓ Given the complex multi-phase behavior and role definition, this seems like a system prompt, but I should confirm
+   
+        3. **Will chain of thought (CoT) be used?**
+           - ❓ CoT would be valuable for the reflection steps where the assistant evaluates information sufficiency, but I need user confirmation
+   
+        4. **High level instructions or step-by-step guidance?**
+           - ❓ The 8-step workflow suggests two possible approaches: prompt chaining (separate prompts for each phase) or a single comprehensive prompt with high-level instructions. This is a key architectural decision.
+   
+        5. **Do we need examples for the prompt?**
+           - ❓ I need to ask about: iterative verification vs direct incorporation, number of examples, positive/negative examples, and whether to include &lt;thinking&gt; tags
+   
+        I have good context but need to clarify these key structural decisions before creating the optimal prompt.
+    </thinking>
     <assistant>
-        &lt;thinking&gt;
-            Let me review what information I have and what I still need to create the README assistant prompt:
-   
-            1. **Context and task description**
-               - ✓ The user provided detailed context about creating a README assistant prompt with a clear 8-step iterative approach across 3 phases (info gathering → outline creation → section-by-section writing)
-               - ✓ They specified the iterative workflow with validation at each step
-   
-            2. **Will it be a system or user facing prompt?**
-               - ❓ Given the complex multi-phase behavior and role definition, this seems like a system prompt, but I should confirm
-   
-            3. **Will chain of thought (CoT) be used?**
-               - ❓ CoT would be valuable for the reflection steps where the assistant evaluates information sufficiency, but I need user confirmation
-   
-            4. **High level instructions or step-by-step guidance?**
-               - ❓ The 8-step workflow suggests two possible approaches: prompt chaining (separate prompts for each phase) or a single comprehensive prompt with high-level instructions. This is a key architectural decision.
-   
-            5. **Do we need examples for the prompt?**
-               - ❓ I need to ask about: iterative verification vs direct incorporation, number of examples, positive/negative examples, and whether to include &lt;thinking&gt; tags
-   
-            I have good context but need to clarify these key structural decisions before creating the optimal prompt.
-        &lt;/thinking&gt;
         I'll help you create a README assistant prompt with that iterative approach. Let me ask a few clarifying questions:
     
         1. **[System Prompt](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/system-prompts) or user-facing prompt?**
@@ -66,26 +66,26 @@
         3. Prompt chaining
         4. No
     </user>
-    <assistant>
-        &lt;thinking&gt;
-            The user has provided their preferences:
-            - System prompt (not user-facing)
-            - Chain of Thought should be included
-            - Prompt chaining approach (separate prompts for each phase)
-            - No examples needed in the generated prompt
+    <thinking>
+        The user has provided their preferences:
+        - System prompt (not user-facing)
+        - Chain of Thought should be included
+        - Prompt chaining approach (separate prompts for each phase)
+        - No examples needed in the generated prompt
 
-            Before I can create the prompt, I need to understand more about the README requirements. Key information I'm missing:
+        Before I can create the prompt, I need to understand more about the README requirements. Key information I'm missing:
     
-            1. **README structure**: What sections are mandatory vs optional? This will help me design the outline creation phase.
+        1. **README structure**: What sections are mandatory vs optional? This will help me design the outline creation phase.
     
-            2. **Flexibility**: Should the assistant be able to suggest project-specific sections beyond a standard template?
+        2. **Flexibility**: Should the assistant be able to suggest project-specific sections beyond a standard template?
     
-            3. **Writing style**: The tone and style will affect how the assistant writes each section.
+        3. **Writing style**: The tone and style will affect how the assistant writes each section.
     
-            4. **Document management**: Should long sections be split into separate files? This affects the writing phase instructions.
+        4. **Document management**: Should long sections be split into separate files? This affects the writing phase instructions.
     
-            These details are crucial for creating a prompt that produces READMEs aligned with the user's standards and expectations.
-        &lt;/thinking&gt;
+        These details are crucial for creating a prompt that produces READMEs aligned with the user's standards and expectations.
+    </thinking>
+    <assistant>
 
         I need to understand more about the README structure and guidelines:
 
@@ -131,31 +131,31 @@
         - Yes
         - If it hinders the readability of the main README.
     </user>
+    <thinking>
+        Excellent, I now have all the information needed to create the README assistant prompt:
+
+        1. **System prompt** - confirmed
+        2. **Chain of Thought** - yes, I need to include the thinking_behavior section
+        3. **Prompt chaining** - I'll structure this as three distinct phases
+        4. **No examples** - I won't include example interactions
+
+        Key requirements gathered:
+        - Mandatory sections: Project Title/Overview, Getting Started (Requirements, Installation), Usage, Features, License, Contact
+        - Optional sections: ToC, Testing, Configuration, API Docs, Deployment, Contributing, Credits
+        - Project-specific sections allowed (good flexibility)
+        - Writing style: direct, concise, clear for non-native speakers
+        - Long sections can be split into separate files when they hinder readability
+
+        I'll create a system prompt that:
+        - Defines the assistant as a README documentation expert
+        - Implements the 3-phase approach (info gathering → outline → section-by-section writing)
+        - Includes the thinking_behavior section since CoT was requested
+        - Uses proper XML structure with semantic tags
+        - Incorporates all the README requirements and best practices
+        - Ensures the assistant writes in an accessible style
+        - Includes the critical constraint about writing sections in markdown code blocks
+    </thinking>
     <assistant>
-        &lt;thinking&gt;
-            Excellent, I now have all the information needed to create the README assistant prompt:
-
-            1. **System prompt** - confirmed
-            2. **Chain of Thought** - yes, I need to include the thinking_behavior section
-            3. **Prompt chaining** - I'll structure this as three distinct phases
-            4. **No examples** - I won't include example interactions
-
-            Key requirements gathered:
-            - Mandatory sections: Project Title/Overview, Getting Started (Requirements, Installation), Usage, Features, License, Contact
-            - Optional sections: ToC, Testing, Configuration, API Docs, Deployment, Contributing, Credits
-            - Project-specific sections allowed (good flexibility)
-            - Writing style: direct, concise, clear for non-native speakers
-            - Long sections can be split into separate files when they hinder readability
-
-            I'll create a system prompt that:
-            - Defines the assistant as a README documentation expert
-            - Implements the 3-phase approach (info gathering → outline → section-by-section writing)
-            - Includes the thinking_behavior section since CoT was requested
-            - Uses proper XML structure with semantic tags
-            - Incorporates all the README requirements and best practices
-            - Ensures the assistant writes in an accessible style
-            - Includes the critical constraint about writing sections in markdown code blocks
-        &lt;/thinking&gt;
         <system>
             <context>
                 You are a README documentation expert. Your role is to help users create comprehensive, well-structured README files for their projects through an iterative, collaborative process.
