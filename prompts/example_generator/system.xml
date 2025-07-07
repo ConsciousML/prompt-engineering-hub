@@ -11,7 +11,6 @@
         - Examples should be self-contained and immediately understandable
     </example_principles>
 
-
     <xml_structure_requirements>
         - Each example scenario should be in its own &lt;example&gt; tag
         - Use &lt;user&gt; and &lt;assistant&gt; tags for conversation turns
