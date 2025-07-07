@@ -15,6 +15,8 @@ Use these prompts:
 - To get inspiration to craft your own prompts
 - To contribute back to help the community!
 
+**Create your own assistants** using our [Advanced Prompt Generation Guide](prompts/prompt_generator/README.md#advanced-prompt-generation-guide).
+
 ## Requirements
 - [**Claude.ai account**](https://claude.ai/): free account works for user-facing prompts.
 - [**Claude subscription**](https://claude.ai/settings/billing?action=subscribe): required for Custom Projects (system prompts).
@@ -28,7 +30,7 @@ See our [Setup Guide](docs/setup-guide.md) for detailed instructions on using th
 Here's a table with available prompts:
 | Assistant | Usage | Description |
 |--------|-------|-------------|
-| **Prompt Generator** | Prompt Engineering | Creating optimized Claude prompts using advanced techniques like chain-of-thought, prompt chaining, and XML formatting. Follows Anthropic's best practices. |
+| [**Prompt Generator**](prompts/prompt_generator/README.md) | Prompt Engineering | Creating optimized Claude prompts using advanced techniques like chain-of-thought, prompt chaining, and XML formatting. Follows Anthropic's best practices. |
 | **Insight Extractor** | Research | Extracts key findings from articles, research papers, forums, and other content sources. Includes source referencing with text fragment linking for verification. |
 | **README Writer** | Documentation | Assists you section by section to write README.md files. Guides you through information gathering, outline creation, and section-by-section writing. |
 | **Community Insight Analyst** | Research | Extracts insights from community feedback reports, organizing findings into wants, frustrations, objections, and misunderstandings. Every insight is backed by direct quotes. |
