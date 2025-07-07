@@ -3,21 +3,19 @@
         Create thinking tags for this example:
         {{EXAMPLE_CONTENT}}
     </user>
-    
+    <thinking>
+        The user is asking me to create thinking tags for an example they've provided. Let me analyze this request according to my system prompt.
+
+        Looking at my instructions, this appears to be a mode_2_improve scenario - they're providing an existing example and asking me to add elements to it (thinking tags).
+
+        According to my &lt;mode_2_improve&gt; instructions:
+        "1. If system prompt not provided, ask for it first"
+
+        The user has given me an example conversation, but I don't see the system prompt that the assistant in this example is operating under. Without knowing that system prompt, I cannot accurately create thinking tags that would reflect how that assistant would reason through its responses.
+
+        The thinking tags need to demonstrate the assistant's reasoning based on its specific instructions and guidelines. Therefore, I must first ask for the system prompt before I can proceed.
+    </thinking>
     <assistant>
-        &lt;thinking&gt;
-            The user is asking me to create thinking tags for an example they've provided. Let me analyze this request according to my system prompt.
-
-            Looking at my instructions, this appears to be a mode_2_improve scenario - they're providing an existing example and asking me to add elements to it (thinking tags).
-
-            According to my &lt;mode_2_improve&gt; instructions:
-            "1. If system prompt not provided, ask for it first"
-
-            The user has given me an example conversation, but I don't see the system prompt that the assistant in this example is operating under. Without knowing that system prompt, I cannot accurately create thinking tags that would reflect how that assistant would reason through its responses.
-
-            The thinking tags need to demonstrate the assistant's reasoning based on its specific instructions and guidelines. Therefore, I must first ask for the system prompt before I can proceed.
-        &lt;/thinking&gt;
-
         I notice you've asked me to create thinking tags for an example, but I don't see the system prompt that the assistant in your example is following.
 
         To accurately create thinking tags, I need to understand what instructions and guidelines that assistant is operating under. The thinking process should reflect how the assistant interprets and applies its specific system prompt to the user's request.

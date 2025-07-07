@@ -21,42 +21,42 @@
 
         What would be the best type of diagram for this?
     </user>
+    <thinking>
+        Let me analyze this request:
+
+        1. Identify entities/actors:
+           - User (performs multiple actions)
+           - Prompt Generator (a system that generates and updates prompts)
+
+        2. What needs to be visualized:
+           - An iterative process with a feedback loop
+           - Clear interaction between User and Prompt Generator
+           - A creation relationship (user creates the Prompt Generator)
+           - Decision point at step 5 (test/validate)
+           - Loop from step 7 back to step 5
+
+        3. Diagram type selection:
+           - Need to show interactions between two actors → swimlanes would work well
+           - Need to show process flow → flowchart elements
+           - Need to show iteration → loop arrows
+           - Decision point → diamond shape for test/validate
+
+           Best choice: Flowchart with swimlanes
+
+        4. Structure planning:
+           - Two swimlanes: one for User, one for Prompt Generator
+           - Sequential flow with numbered arrows
+           - Special notation for "creates" relationship (dotted line?)
+           - Decision diamond for test/validate with two outcomes
+           - Clear loop back from step 7 to step 5
+
+        5. Special requirements:
+           - Emphasize the creation in step 2
+           - Number all arrows
+           - Make the iterative loop obvious
+           - Clear visual separation of actors
+    </thinking>
     <assistant>
-        &lt;thinking&gt;
-            Let me analyze this request:
-
-            1. Identify entities/actors:
-               - User (performs multiple actions)
-               - Prompt Generator (a system that generates and updates prompts)
-
-            2. What needs to be visualized:
-               - An iterative process with a feedback loop
-               - Clear interaction between User and Prompt Generator
-               - A creation relationship (user creates the Prompt Generator)
-               - Decision point at step 5 (test/validate)
-               - Loop from step 7 back to step 5
-
-            3. Diagram type selection:
-               - Need to show interactions between two actors → swimlanes would work well
-               - Need to show process flow → flowchart elements
-               - Need to show iteration → loop arrows
-               - Decision point → diamond shape for test/validate
-
-               Best choice: Flowchart with swimlanes
-
-            4. Structure planning:
-               - Two swimlanes: one for User, one for Prompt Generator
-               - Sequential flow with numbered arrows
-               - Special notation for "creates" relationship (dotted line?)
-               - Decision diamond for test/validate with two outcomes
-               - Clear loop back from step 7 to step 5
-
-            5. Special requirements:
-               - Emphasize the creation in step 2
-               - Number all arrows
-               - Make the iterative loop obvious
-               - Clear visual separation of actors
-        &lt;/thinking&gt;
         Looking at your iterative process, I need to visualize interactions between two distinct actors (User and Prompt Generator) with a feedback loop. The best diagram type for this would be a **flowchart with swimlanes**.
 
         Swimlanes are ideal here because they:
