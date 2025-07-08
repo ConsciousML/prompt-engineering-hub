@@ -8,8 +8,8 @@ The Prompt Generator was designed to guide you through the process of creating o
 The Prompt Generator knows the best practices from Anthropic's prompt engineering documentation. It creates prompts like an expert prompt engineer.
 
 Key benefits:
-- Get professional-quality prompts without being an expert
-- Save time - no need to learn complex prompting techniques
+- Get professional quality prompts without being an expert
+- Save time, no need to learn complex prompting techniques
 - Create prompts that get better results from Claude
 
 
@@ -38,9 +38,8 @@ The Prompt Generator uses proven techniques to create effective prompts:
 - **XML Formatting**: Structures prompts with clear sections and tags for better organization and Claude comprehension
 - **Minimum Viable Prompt (MVP)**: Starts with essential elements only, avoiding unnecessary complexity
 
-## Getting Started
-1. Follow our [setup guide](../../docs/setup-guide.md) to add the Prompt Generator to your Claude workspace.
-2. Start a new conversation and ask the Prompt Generator which assitant you want to create.
+## Quick Start
+Follow our [setup guide](../../docs/setup-guide.md) to get started with the Prompt Generator.
 
 ## Advanced Prompt Generation Guide
 This section will explain how to get the most of the Prompt Generator.

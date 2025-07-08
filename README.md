@@ -6,6 +6,8 @@
 
 A curated collection of prompts for [Claude](https://claude.ai/), designed to help users get the most out of their favorite AI assistant.
 
+The core contribution of this repository is the [**Prompt Generator**](prompts/prompt_generator/README.md). An assistant designed to help you create the best prompts to optimize your daily tasks.
+
 ## Purpose
 This catalog serves as both a resource and learning hub, providing working examples of [Anthropic's prompt engineering documentation](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview) in action.
 
@@ -15,8 +17,6 @@ Use these prompts:
 - To get inspiration to craft your own prompts
 - To contribute back to help the community!
 
-**Create your own assistants** using our [Advanced Prompt Generation Guide](prompts/prompt_generator/README.md#advanced-prompt-generation-guide).
-
 ## Requirements
 - [**Claude.ai account**](https://claude.ai/): free account works for user-facing prompts.
 - [**Claude subscription**](https://claude.ai/settings/billing?action=subscribe): required for Custom Projects (system prompts).
@@ -24,7 +24,12 @@ Use these prompts:
 **Note**: the prompts of this catalog have been designed specifically for Claude. But feel free to test them with other LLMs.
 
 ## Quick Start
-See our [Setup Guide](docs/setup-guide.md) for detailed instructions on using these prompts.
+See our [setup guide](docs/setup-guide.md) for detailed instructions on using these prompts.
+
+## Advanced Prompt Generation Guide
+**Create your own assistants** using our [advanced prompt generation documentation](prompts/prompt_generator/README.md#advanced-prompt-generation-guide).
+
+This guide walks you through an iterative workflow to create optimized prompts for your specific tasks.
 
 ## Prompt Catalog
 Here's a table with available prompts:
