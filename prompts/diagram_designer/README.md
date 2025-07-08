@@ -25,7 +25,7 @@ Follow our [setup guide](../../docs/setup-guide.md) to add the Diagram Designer 
 
 Once set up, simply describe what you want to visualize.
 
-Here's a [detailed example](examples.xml) on how to best use this assistant.
+Here's a [detailed example](examples/flowchart_custom_prompt.xml) on how to best use this assistant.
 
 ## Tips
 

@@ -41,7 +41,7 @@ Here's a table with available prompts:
 | **Community Insight Analyst** | Research | Extracts insights from community feedback reports, organizing findings into wants, frustrations, objections, and misunderstandings. Every insight is backed by direct quotes. |
 | [**Mermaid Diagram Designer**](prompts/diagram_designer/README.md) | Diagrams | Creates clear, well-structured diagrams using Mermaid syntax. It automatically selects the most appropriate diagram type for your needs and follows best practices for visual clarity. |
 
-For guidance on how to use an assitant, click on the respective link under the `Assistant` tab.
+For guidance on how to use an assistant, click on the respective link under the `Assistant` tab.
 
 ## Repository Structure
 ```
@@ -49,11 +49,13 @@ claude-prompt-catalog/
 ├── prompts/
 │   ├── prompt_generator/
 │   │   ├── system.xml
-│   │   ├── examples.xml
+│   │   ├── examples/                     # Contains examples to guide the assistant's behavior
+│   │   │   └── example_1.xml
+│   │   │   └── ...
 │   │   └── user_facing_prompts/
 │   │       └── evaluate_insights.xml     # User-facing prompt for conversations
 │   ├── community_insight/
-│   │   └── ...                    # Same as previous folder
+│   │   └── ...                           # Same as previous folder
 │   ├── insight_extractor/
 │   │   └── ...
 │   └── readme-writer/
@@ -63,7 +65,7 @@ claude-prompt-catalog/
 Here's a brief description of each file type:
 - `system.xml`: system prompts for Custom Claude Projects. Copy these into Project Instructions.
 - `user_facing_prompts/`: ready-to-use prompts for direct conversation. Copy and paste into Claude chats.
-- `examples.xml`: example files to upload to Custom Projects alongside system prompts.
+- `example_*.xml`: example files to upload to Custom Projects alongside system prompts.
 
 ## Contributing
 We welcome contributions from the community! Help us grow this collection by sharing your prompts.

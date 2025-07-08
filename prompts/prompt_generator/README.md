@@ -47,8 +47,8 @@ This section will explain how to get the most of the Prompt Generator.
 Prompt engineering is an iterative process. Here's an overview of the proposed workflow:
 1. [Create an MVP](#step-1-create-minimum-viable-prompt-mvp): Start with the essential elements.
 2. [Review for issues](#step-2-review-the-prompt): Check adherence to best practices.
-3.  [Refine the prompt](#step-3-improve-the-prompt): Address identified issues.
-4.  [Test in real scenarios](#step-4-test-the-prompt): Use your assistant on actual tasks.
+3. [Refine the prompt](#step-3-improve-the-prompt): Address identified issues.
+4. [Test in real scenarios](#step-4-test-the-prompt): Use your assistant on actual tasks.
 5. [Improve based on results](#step-5-improve-the-prompt-based-on-outputs): Fix any performance gaps.
 6. [Add examples](#step-6-generate-examples): Boost performance with few-shot learning.
 
@@ -77,7 +77,7 @@ Start from scratch to create a new prompt:
 
 By this stage, you should end up with a relatively simple prompt.
 
-Here's an [example conversation](example_readme_writer.xml) illustrating how to generate an MVP.
+Here's an [example conversation](examples/readme_writer.xml) illustrating how to generate an MVP.
 
 ### Step 2: Review the Prompt
 The MVP is rarely perfect out of the box.
@@ -121,7 +121,7 @@ If you successfully performed a task (you achieved the desired outcome) with you
 
 When creating/generating examples, make sure that:
 - The example illustrates how the assistant should function.
-- Use XML formatting with `<user>` and `<assistant>` tags. See this [example](example_readme_writer.xml).
+- Use XML formatting with `<user>` and `<assistant>` tags. See this [example](examples/readme_writer.xml).
 - If your assistant uses Chain of Thought (CoT), make sure to incorporate `<thinking>` tags in your example.
 - The example does not contradict any instruction from its system prompt.
 
