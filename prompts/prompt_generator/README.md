@@ -12,7 +12,6 @@ Key benefits:
 - Save time, no need to learn complex prompting techniques
 - Create prompts that get better results from Claude
 
-
 ## When to Use the Prompt Generator?
 
 The Prompt Generator is most valuable in these situations:
@@ -30,7 +29,17 @@ This will help you understand the techniques the Prompt Generator uses and have 
 
 However, if you're eager to start, you can use the Prompt Generator right away. It will guide you through the process and explain concepts as needed.
 
-## Prompt Techniques
+## Key Features
+### Assistant Capabilities
+The Prompt Generator supports three modes:
+1. **Create from scratch**: Guides you through creating a new prompt with targeted questions about your needs
+2. **Review existing prompts**: Analyzes your prompts to:
+- Follow best practices
+- Avoid redundancies
+- Ensure every instruction is useful
+3. **Improve based on results**: Refines prompts based on real-world outputs and/or user feedback
+
+### Prompt Techniques
 The Prompt Generator uses proven techniques to create effective prompts:
 - **System Prompts**: Creates role-based prompts that define Claude's expertise and context, greatly improving performance for specialized tasks
 - **Chain-of-Thought (CoT)**: Adds thinking space for Claude to break down problems step-by-step, leading to more accurate outputs
@@ -52,7 +61,6 @@ Prompt engineering is an iterative process. Here's an overview of the proposed w
 5. [Improve based on results](#step-5-improve-the-prompt-based-on-outputs): Fix any performance gaps.
 6. [Add examples](#step-6-generate-examples): Boost performance with few-shot learning.
 
-
 ### Configuration Recommendation
 Generating optimal prompts is a complex task.
 To get the most out of this assistant, we recommend using:
@@ -62,18 +70,13 @@ To get the most out of this assistant, we recommend using:
 Here's a screenshot illustrating how to enable extended thinking:
 ![](../../data/extended_thinking.png)
 
-
-The Prompt Generator operates in three modes. Every mode should be used one after the other for best results.
-
-Here's how to use each one in the following order:
-
 ### Step 1: Create Minimum Viable Prompt (MVP)
 Start from scratch to create a new prompt:
 1. Write all the details about the prompt you want to create.
 2. The assistant will ask clarification questions.
 3. Answer the questions.
 4. The assistant will generate an MVP (a first version of your prompt).
-5. Review the MVP carefully. Remove any unecessary instruction.
+5. Review the MVP carefully. Remove any unecessary instructions.
 
 By this stage, you should end up with a relatively simple prompt.
 
@@ -92,21 +95,21 @@ Luckily, this assistant comes with a functionality that allows you to spot the i
 
 ### Step 3: Improve the Prompt
 1. Approve, decline or change suggestions from the previous step.
-2. Feed the revised suggestions to the assistant to an ask him to improve the prompt.
-3. Go back to section 2 (review the prompt) until you are satisfied.
+2. Feed the revised suggestions to the assistant and ask to improve the prompt.
+3. Repeat [step 2](#step-2-review-the-prompt) and [step 3](#step-3-improve-the-prompt) until you are satisfied with your MVP.
 
 **Caution**: By the end of this step. You should end up with a relatively simple prompt. If the prompt is too verbose, there's a high change that it will perform poorly.
 
 ### Step 4: Test the Prompt
 1. Perform the [setup guide](../../docs/setup-guide.md) again with your newly created prompt to add the generated assistant to your workspace.
 2. Start a conversation and perform a real-world task with the assistant.
-3. Note any lack of performance or undesired behavior if any.
+3. Note any lack of performance or undesired behavior.
 
 ### Step 5: Improve the Prompt Based on Outputs
 1. Start a conversation with the Prompt Generator again.
 2. Feed him:
 - The system prompt of your generated assistant.
-- The query (user prompt) that illustrates the issues noticed in `Step 4`.
+- The query (user prompt) that illustrates the issues noticed in [step 4](#step-4-test-the-prompt).
 - Explain the issue and ask the Prompt Generator to suggest improvements.
 4. The Prompt Generator will suggest improvements.
 5. Accept, decline or change any suggested improvements.
@@ -117,7 +120,7 @@ If you want to maximize the performance of your assistant, repeat this step each
 ### Step 6: Generate Examples
 LLMs perform significantly better with examples (few-shot).
 
-If you successfully performed a task (you achieved the desired outcome) with your generated assistant, you can use your queries (user prompts) and the assistant's responses to generate an example.
+If you successfully performed a task (you achieved the desired outcome) with your generated assistant, you can use your queries (user prompts) and the assistant's responses to create an example.
 
 When creating/generating examples, make sure that:
 - The example illustrates how the assistant should function.
@@ -127,4 +130,4 @@ When creating/generating examples, make sure that:
 
 **Note**: If the assistant functions step-by-step, do not feed the final desired outcome. For example, if you create an assistant to write READMEs section by section, emulate this in the example.
 
-To make this process easier, you can use the ADD_LINK(Examples Generator).
+To make this process easier, you can use the [Example Generator](../example_generator/README.md).
