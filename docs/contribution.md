@@ -14,7 +14,9 @@ Please familiarize yourself with [Anthropic's Prompt Engineering Documentation](
 prompts/your_prompt_name/
 ├── system.xml
 └── user_facing_prompts/          # Optional: Conversational examples
-├── examples.xml
+├── examples/
+|   └── example_1.xml
+|   └── ...
 ```
 
 ## How to Submit
