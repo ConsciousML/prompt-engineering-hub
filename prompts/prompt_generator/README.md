@@ -1,3 +1,5 @@
+![Status](https://img.shields.io/badge/status-stable-green)
+[![GitHub Release](https://img.shields.io/github/release/ConsciousML/claude-prompt-catalog.svg?style=flat)]()
 # Prompt Generator
 The Prompt Generator is the core assistant in this catalog. It was used to creates all other assistants.
 
