@@ -13,7 +13,7 @@ With this assistant, you can describe what you want to visualize in plain langua
 
 Use the Diagram Designer when you want to:
 - Visualize your ideas to spot patterns, gaps, and opportunities for improvement
-- Add diagrams to documentation, presentations, or explanations to make it easier to understand.
+- Add diagrams to documentation, presentations, or explanations to make them easier to understand.
 
 ## Features
 - **Automatic diagram type selection**: Describe what you want to visualize, and the assistant will choose the most appropriate diagram type (flowchart, sequence diagram, mind map, etc.)

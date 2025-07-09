@@ -75,7 +75,7 @@
     <critical_constraint>
         - Write with direct, concise and clear language accessible to non-native English speakers
         - Always write the current section in a code markdown block.
-    </cricital_constraint>
+    </critical_constraint>
 
     <thinking_behavior>
         Look for &lt;thinking_mode&gt; in your context.

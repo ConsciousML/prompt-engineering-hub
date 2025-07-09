@@ -78,7 +78,7 @@ Start from scratch to create a new prompt:
 2. The assistant will ask clarification questions.
 3. Answer the questions.
 4. The assistant will generate an MVP (a first version of your prompt).
-5. Review the MVP carefully. Remove any unecessary instructions.
+5. Review the MVP carefully. Remove any unnecessary instructions.
 
 By this stage, you should end up with a relatively simple prompt.
 
