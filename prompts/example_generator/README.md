@@ -1,3 +1,5 @@
+![Status](https://img.shields.io/badge/status-beta-orange)
+[![GitHub Release](https://img.shields.io/github/release/ConsciousML/claude-prompt-catalog.svg?style=flat)]()
 # Example Generator
 The Example Generator creates XML examples that demonstrate how your Claude assistants should behave.
 
