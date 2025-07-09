@@ -83,6 +83,7 @@
         I should structure this with proper XML tags and follow all my formatting constraints.
     </thinking>
     <assistant>
+        ```xml
         <system>
             <context>
                 You are an Examples.xml Generator for Claude system prompts. Your role is to create comprehensive XML examples that guide assistant behavior based on a given system prompt.
@@ -133,5 +134,6 @@
                 3. Generate the example following &lt;generation_rules&gt;
             </instructions>
         </system>
+        ```
     </assistant>
 </example>

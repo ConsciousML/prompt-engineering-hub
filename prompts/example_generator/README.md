@@ -37,7 +37,7 @@ Follow our [setup guide](../../docs/setup-guide.md) to get started with the Exam
 - The system prompt of the assistant you want to create examples for
 - Rename the main `<system>` tag to `<system_[NAME_OF_YOUR_ASSISTANT]>` to avoid confusion
 - The existing example
-2. Explain what improvements you need (clarity, better demonstration of features, fixing inconsistencies, ect.)
+2. Explain what improvements you need (clarity, better demonstration of features, fixing inconsistencies, etc.)
 3. The assistant generates an improved version
 4. Review and validate the improvements
 
