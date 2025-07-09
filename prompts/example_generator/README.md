@@ -1,18 +1,16 @@
-![Status](https://img.shields.io/badge/status-beta-orange)
+![Status](https://img.shields.io/badge/status-stable-green)
 [![GitHub Release](https://img.shields.io/github/release/ConsciousML/claude-prompt-catalog.svg?style=flat)]()
 # Example Generator
 The Example Generator creates XML examples that demonstrate how your Claude assistants should behave.
-
-It helps you transform your real-world conversations into properly formatted examples.
 
 ## Purpose
 Examples (few-short) are one of the most powerful tools for improving the performance of LLMs.
 
 Unfortunately, it can be long and tedious to create them. The Example Generator helps you facilitate this process.
 
-Here's in which context the assistant is most useful:
-1. Notice an undesired behavior of an assistant
-2. Use the Example Generator to create an example that illustrates the desired behavior
+Here's in which context the assistant can be used:
+1. Notice an undesired behavior of an assistant.
+2. Use the Example Generator to create an example that illustrates the desired behavior.
 3. Feed the generated example to the initial assistant and test it again.
 
 This iterative process is part of the broader prompt improvement workflow described in [Prompt Generator step 6](../prompt_generator/README.md#step-6-generate-examples).
@@ -20,22 +18,24 @@ This iterative process is part of the broader prompt improvement workflow descri
 **Pro tip**: The most effective examples come from reformatting real conversations where your assistant performed exactly as intended.
 
 ## Quick Start
-Follow our [setup guide](../../docs/setup-guide.md) to get started with the Examples Generator.
+Follow our [setup guide](../../docs/setup-guide.md) to get started with the Example Generator.
 
 ## How To Use
 ### Mode 1: Create Examples from Scratch
 1. Start a conversation by:
 - Giving the system prompt of the assistant you want to create examples for
+- Rename the main `<system>` tag to `<system_[NAME_OF_YOUR_ASSISTANT]>` to avoid confusion
 - Ask: "Let's create an example for the [NAME_OF_YOUR_ASSISTANT]"
 2. The Examples Generator asks what aspect of the system prompt you want to demonstrate
 3. Specify the behavior or workflow you want to show
-4. The assistant generates one complete user/assistant conversation
+4. The assistant generates one user/assistant interaction
 5. Review and validate the example
-6. Continue with additional examples as needed
+6. Continue with until the complete conversation
 
 ### Mode 2: Improve Existing Examples
 1. Start a new conversation and provide:
 - The system prompt of the assistant you want to create examples for
+- Rename the main `<system>` tag to `<system_[NAME_OF_YOUR_ASSISTANT]>` to avoid confusion
 - The existing example
 2. Explain what improvements you need (clarity, better demonstration of features, fixing inconsistencies, ect.)
 3. The assistant generates an improved version
