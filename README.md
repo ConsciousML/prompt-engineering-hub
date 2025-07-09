@@ -36,7 +36,7 @@ Here's a table with available prompts:
 | Assistant | Usage | Description | Status |
 |--------|-------|-------------|--------|
 | [**Prompt Generator**](prompts/prompt_generator/README.md) | Prompt Engineering | Creating optimized Claude prompts using advanced techniques like chain-of-thought, prompt chaining, and XML formatting. Follows Anthropic's best practices. | ![Stable](https://img.shields.io/badge/status-stable-green) |
-| [**Example Generator**](prompts/example_generator/README.md) | Prompt Engineering | Creates XML examples that demonstrate assistant behavior to improve performance. | ![Beta](https://img.shields.io/badge/status-beta-yellow) |
+| [**Example Generator**](prompts/example_generator/README.md) | Prompt Engineering | Creates XML examples that demonstrate assistant behavior to improve performance. | ![Stable](https://img.shields.io/badge/status-stable-green) |
 | **README Writer** | Documentation | Assists you section by section to write README.md files. Guides you through information gathering, outline creation, and section-by-section writing. | ![Beta](https://img.shields.io/badge/status-beta-yellow) |
 | [**Mermaid Diagram Designer**](prompts/diagram_designer/README.md) | Diagrams | Creates clear, well-structured diagrams using Mermaid syntax. It automatically selects the most appropriate diagram type for your needs and follows best practices for visual clarity. | ![Beta](https://img.shields.io/badge/status-beta-yellow) |
 | **Insight Extractor** | Research | Extracts key findings from articles, research papers, forums, and other content sources. Includes source referencing with text fragment linking for verification. | ![Experimental](https://img.shields.io/badge/status-experimental-red) |
