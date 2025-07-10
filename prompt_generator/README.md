@@ -1,26 +1,28 @@
 ![Status](https://img.shields.io/badge/status-stable-green)
-[![GitHub Release](https://img.shields.io/github/release/ConsciousML/claude-prompt-catalog.svg?style=flat)]()
+[![GitHub Release](https://img.shields.io/github/release/ConsciousML/prompt-engineering-hub.svg?style=flat)]()
 # Prompt Generator
-The Prompt Generator is the core assistant in this catalog. It was used to creates all other assistants.
+The Prompt Generator is the core assistant of this hub. It was used to creates all other assistants.
 
-The Prompt Generator was designed to guide you through the process of creating optimized prompts for your workflow.
+It was designed to guide you through the process of creating optimized prompts for your workflow.
+
+When to start right away? Follow the [quickstart](#quick-start) or [advanced guide](#advanced-prompt-generation-guide).
 
 ## Why Use the Prompt Generator?
 
-The Prompt Generator knows the best practices from Anthropic's prompt engineering documentation. It creates prompts like an expert prompt engineer.
+The Prompt Generator knows the best practices from the prompt engineering documentation of [Anthropic](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview), [OpenAI](https://platform.openai.com/docs/guides/) and [Google's Gemini](https://ai.google.dev/gemini-api/docs/prompting-strategies). It creates prompts like an expert prompt engineer.
 
 Key benefits:
 - Get professional quality prompts without being an expert
 - Save time, no need to learn complex prompting techniques
-- Create prompts that get better results from Claude
+- Create prompts that get better results from LLMs
 
 ## When to Use the Prompt Generator?
 
 The Prompt Generator is most valuable in these situations:
 
 - **For tasks you do regularly with LLMs**: Create a specialized assistant once, then reuse it instead of explaining the task every time
-- **When Claude's default responses aren't good enough**: The Prompt Generator adds techniques that improve Claude's performance on difficult tasks
-- **When you need specific behavior from Claude**: Control the reasoning process, output format, or step-by-step approach Claude should follow
+- **When your LLM default responses aren't good enough**: The Prompt Generator adds techniques that improve LLM performance on difficult tasks
+- **When you need specific behavior from your LLM**: Control the reasoning process, output format, or step-by-step approach the LLM should follow
 - **When your task requires lots of context or specifications**: Instead of providing lengthy instructions each time, create an assistant that remembers all requirements
 
 ## Prerequisites
@@ -31,8 +33,7 @@ This will help you understand the techniques the Prompt Generator uses and have 
 
 However, if you're eager to start, you can use the Prompt Generator right away. It will guide you through the process and explain concepts as needed.
 
-## Key Features
-### Assistant Capabilities
+## How It Works 
 The Prompt Generator supports three modes:
 1. **Create from scratch**: Guides you through creating a new prompt with targeted questions about your needs
 2. **Review existing prompts**: Analyzes your prompts to:
@@ -41,12 +42,12 @@ The Prompt Generator supports three modes:
 - Ensure every instruction is useful
 3. **Improve based on results**: Refines prompts based on real-world outputs and/or user feedback
 
-### Prompt Techniques
+## Prompt Techniques
 The Prompt Generator uses proven techniques to create effective prompts:
-- **System Prompts**: Creates role-based prompts that define Claude's expertise and context, greatly improving performance for specialized tasks
-- **Chain-of-Thought (CoT)**: Adds thinking space for Claude to break down problems step-by-step, leading to more accurate outputs
+- **System Prompts**: Creates role-based prompts that define the LLM's expertise and context, greatly improving performance for specialized tasks
+- **Chain-of-Thought (CoT)**: Adds thinking space for the LLM to break down problems step-by-step, leading to more accurate outputs
 - **Prompt Chaining**: Breaks complex tasks into smaller, manageable subtasks that build on each other
-- **XML Formatting**: Structures prompts with clear sections and tags for better organization and Claude comprehension
+- **XML Formatting**: Structures prompts with clear sections and tags for better context organization
 - **Minimum Viable Prompt (MVP)**: Starts with essential elements only, avoiding unnecessary complexity
 
 ## Quick Start
@@ -65,11 +66,12 @@ Prompt engineering is an iterative process. Here's an overview of the proposed w
 
 ### Configuration Recommendation
 Generating optimal prompts is a complex task.
-To get the most out of this assistant, we recommend using:
-- Claude Opus 4
-- With [extended thinking](https://docs.anthropic.com/en/docs/build-with-claude/extended-thinking).
+To get the most out of this assistant, we recommend using one of these models:
+- Claude Opus 4 with [extended thinking](https://docs.anthropic.com/en/docs/build-with-claude/extended-thinking)
+- ChatGPT o3
+- Gemini 2.5 Pro
 
-Here's a screenshot illustrating how to enable extended thinking:
+Here's a screenshot illustrating how to enable extended thinking on Claude:
 ![](../../data/extended_thinking.png)
 
 ### Step 1: Create Minimum Viable Prompt (MVP)
@@ -103,7 +105,7 @@ Luckily, this assistant comes with a functionality that allows you to spot the i
 **Caution**: By the end of this step. You should end up with a relatively simple prompt. If the prompt is too verbose, there's a high change that it will perform poorly.
 
 ### Step 4: Test the Prompt
-1. Perform the [setup guide](../../docs/setup-guide.md) again with your newly created prompt to add the generated assistant to your workspace.
+1. Perform the [setup guide](../docs/setup-guide.md) again with your newly created prompt to add the generated assistant to your workspace.
 2. Start a conversation and perform a real-world task with the assistant.
 3. Note any lack of performance or undesired behavior.
 
@@ -132,4 +134,4 @@ When creating/generating examples, make sure that:
 
 **Note**: If the assistant functions step-by-step, do not feed the final desired outcome. For example, if you create an assistant to write READMEs section by section, emulate this in the example.
 
-To make this process easier, you can use the [Example Generator](../example_generator/README.md).
+To make this process easier, you can use the [Example Generator](../prompts/example_generator/README.md).
