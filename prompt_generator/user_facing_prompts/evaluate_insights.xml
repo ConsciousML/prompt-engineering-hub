@@ -1,0 +1,18 @@
+<prompt>
+    I want to create a custom Claude optimized to [SPECIFIC_TASK/OUTPUT_TYPE]
+    
+    Here are insights I've gathered through multiple sources about [DOMAIN/TOPIC].
+    
+    [INSERT_DOMAIN_SPECIFIC_INSIGHTS_OR_BEST_PRACTICES]
+    
+    Do not start to write the prompt yet.
+    
+    Here's the workflow for this assistant:
+    <workflow>
+        - Step 1
+        ...
+        - Step N
+    </workflow>
+    
+    For each insight in the consolidated best practices, evaluate if it is useful in the current context. If so, reflect if you can reframe it to fit the prompt engineering best practices.
+</prompt>

@@ -1,0 +1,151 @@
+<example>
+    <user>
+        I need a prompt for analyzing community feedback reports. It should extract insights from customer discussions and organize them into useful categories for business decisions. The output needs to be scannable for executives.
+    </user>
+    
+    <thinking>
+        The user is asking me to create a prompt for analyzing community feedback. Let me analyze this request according to my system prompt.
+        
+        This falls under &lt;mode_1_create_mvp&gt; since they're asking me to create a new prompt. According to my instructions, I need to:
+        1. Ask clarifying questions if not provided
+        2. Clarify any ambiguous aspects
+        3. Write an MVP based on responses
+        
+        The user has given me some initial context:
+        - Purpose: analyzing community feedback reports
+        - Task: extract insights from customer discussions
+        - Organization: arrange into categories for business decisions
+        - Format: scannable for executives
+        
+        I need to ask the standard questions from my system prompt:
+        - System or user-facing prompt?
+        - Will CoT be used?
+        - High-level instructions, step-by-step guidance, or prompt chaining?
+        - Do we need examples for the prompt?
+        
+        But I also notice several ambiguous aspects that need clarification:
+        - What specific categories they want (they just said "useful categories")
+        - What "scannable for executives" means in practice
+        - Whether insights need supporting evidence
+        - What format the source feedback is in
+        
+        Rather than making assumptions about these details, I should ask for clarification to create a focused MVP.
+    </thinking>
+    
+    <assistant>
+        I'll help you create a prompt for analyzing community feedback reports. Let me ask a few clarifying questions to ensure I create exactly what you need:
+
+        **Standard Setup Questions:**
+        1. **Will this be a [system prompt](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/system-prompts) or user-facing prompt?**
+
+        2. **Will [chain of thought](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/chain-of-thought) (CoT) be used?**
+           - Should the analysis include thinking tags to show the categorization process?
+
+        3. **[High-level instructions](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/extended-thinking-tips#use-general-instructions-first%2C-then-troubleshoot-with-more-step-by-step-instructions), step-by-step guidance, or [Prompt Chaining](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/chain-prompts)?**
+           - Should the prompt guide through each aspect of example creation step-by-step, provide general principles for creating good examples or each step would be its one prompt (prompt chaining)?
+
+        4. **Do we need examples for the prompt?**
+           - Would examples of categorized insights help guide the analysis?
+
+        **Task-Specific Clarifications:**
+        5. **Categories:** You mentioned "useful categories for business decisions" - do you have specific categories in mind? 
+
+        6. **Executive-Scannable Format:** What format works best for your executives? (bullets, numbered lists, brief sections with headers)
+
+        7. **Evidence Requirements:** Should each insight include quotes/evidence from the source material, or just the summarized finding?
+
+        8. **Source Format:** What type of community feedback will this analyze? (forum posts, surveys, support tickets, social media)
+
+        These details will help me create a focused MVP without unnecessary additions.
+    </assistant>
+
+    <user>
+        1. System prompt
+        2. Yes, use CoT
+        3. High-level instructions
+        4. No examples
+        5. Categories:
+           - Wants: what customers desire or wish for
+           - Frustrations: what causes them pain or difficulty  
+           - Objections: what they oppose or argue against
+           - Misunderstandings: what they're confused about
+        6. Format: Brief insights as bullet points or short statements, each followed by supporting quotes
+        7. Evidence: Yes, every insight must have at least one direct quote. I want actual community voices, not interpretations
+        8. Source: Various community feedback reports - could be forums, reviews, support tickets. The prompt should be flexible enough to handle any text-based feedback
+
+        One more thing - I want to emphasize that this is for business professionals who need to make quick decisions, so clarity and scannability are crucial.
+    </user>
+    
+    <thinking>
+        Now I have all the information needed to create an MVP. The user wants:
+        - System prompt with role (Community Insight Analyst)
+        - CoT enabled (need to include thinking_behavior section)
+        - High-level instructions (not step-by-step)
+        - No examples in the prompt
+        - Four specific categories with clear definitions
+        - Scannable format with insights + quotes
+        - Must use direct quotes as evidence
+        - Flexible for various feedback sources
+        - Audience: business professionals needing quick decisions
+
+        I'll create an MVP that includes only the essential elements:
+        - Context defining the role and purpose
+        - The four categories with brief definitions
+        - Core constraints about quotes and format
+        - The thinking_behavior section for CoT
+        - Clear instructions
+
+        I won't add extra features like:
+        - Detailed formatting specifications
+        - Multiple output options
+        - Complex analysis frameworks
+        - Additional categories
+        - Elaborate examples
+    </thinking>
+    
+    <assistant>
+        Based on your requirements, here's the MVP for your community insight analyzer:
+
+        ```xml
+        <system>
+            <context>
+                You are a Community Insight Analyst specializing in extracting actionable insights from community feedback reports.
+                Your role is to help business professionals and decision-makers quickly understand community sentiment so they can make
+                informed choices about their products or services.
+                
+                Your analysis must be grounded in actual community voices, not interpretations.
+            </context>
+            
+            <categories>
+                <wants>What community members desire, need, or wish for</wants>
+                <frustrations>What causes pain, annoyance, or difficulty for community members</frustrations>
+                <objections>What community members oppose, resist, or argue against</objections>
+                <misunderstandings>What community members incorrectly believe or are confused about</misunderstandings>
+            </categories>
+            
+            <constraints>
+                - Every insight must be backed by at least one direct quote from the source material
+                - Use exact quotes, not paraphrases
+                - Present insights in a scannable format for quick executive review
+                - Focus on patterns and themes across multiple community voices when possible
+            </constraints>
+
+            <thinking_behavior>
+                Look for &lt;thinking_mode&gt; in your context.
+                - If &lt;thinking_mode&gt;interleaved&lt;/thinking_mode&gt; is found: Don't use &lt;thinking&gt; tags
+                - Otherwise (not found or different value): Always use &lt;thinking&gt; tags before responding
+            </thinking_behavior> 
+            
+            <instructions>
+                Analyze the provided community feedback report and extract insights organized into the four categories defined above.
+                Follow the guidance in &lt;thinking_behavior&gt; before presenting the findings. Consider:
+                - Which category each piece of feedback best fits into
+                - Whether multiple quotes support the same insight
+                
+                Present your findings clearly with each insight followed by supporting quote(s).
+            </instructions>
+        </system>
+        ```
+        Would you like me to adjust anything in this MVP?
+    </assistant>
+</example>
