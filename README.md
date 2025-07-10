@@ -1,27 +1,31 @@
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![GitHub Release](https://img.shields.io/github/release/ConsciousML/claude-prompt-catalog.svg?style=flat)]()
-[![XML Validation](https://github.com/ConsciousML/claude-prompt-catalog/actions/workflows/ci.yaml/badge.svg)](https://github.com/ConsciousML/claude-prompt-catalog/actions/workflows/ci.yaml)
+[![GitHub Release](https://img.shields.io/github/release/ConsciousML/prompt-generator-hub.svg?style=flat)]()
+[![XML Validation](https://github.com/ConsciousML/prompt-generator-hub/actions/workflows/ci.yaml/badge.svg)](https://github.com/ConsciousML/prompt-generator-hub/actions/workflows/ci.yaml)
 [![PR's Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)](http://makeapullrequest.com) 
-# Claude Prompt Catalog
 
-A curated collection of prompts for [Claude](https://claude.ai/), designed to help users get the most out of their favorite AI assistant.
+# Prompt Generator Hub
 
-The core contribution of this repository is the [**Prompt Generator**](prompts/prompt_generator/README.md). An assistant designed to help you create the best prompts to optimize your daily tasks.
+A powerful Prompt Engineering hub to help you get the most out of your favorite LLM by generating (or using ready-made) optimized prompts!
 
-## Purpose
-This catalog serves as both a resource and learning hub, providing working examples of [Anthropic's prompt engineering documentation](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview) in action.
+## What's Inside
 
-Use these prompts:
-- Right off the bat if they fit some of your needs.
-- To learn from their structure
-- To get inspiration to craft your own prompts
-- To contribute back to help the community!
+### The Prompt Generator
+An advanced assistant that helps you create optimized prompts for any task, following the prompt engineering best practices of [Anthropic](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview), [OpenAI](https://platform.openai.com/docs/guides/) and [Google's Gemini](https://ai.google.dev/gemini-api/docs/prompting-strategies).
+
+### Ready-Made Assistants
+A collection of prompts for a variety of tasks. All created using our Prompt Generator
+
+## When to Use
+Use this repository whether you want to:
+- Create your own custom AI assistants (or user prompts)
+- Use our pre-built assistants
+- Learn from prompt engineering examples
+- Contribute your own prompts to help the community!
 
 ## Requirements
-- [**Claude.ai account**](https://claude.ai/): free account works for user-facing prompts.
-- [**Claude subscription**](https://claude.ai/settings/billing?action=subscribe): required for Custom Projects (system prompts).
+Any LLM chat interface (Claude, ChatGPT, Gemini, etc.) or APIs
 
-**Note**: the prompts of this catalog have been designed specifically for Claude. But feel free to test them with other LLMs.
+**Note**: While these prompts work across different LLMs, they were optimized using Claude and may need minor adjustments for other platforms.
 
 ## Quick Start
 See our [setup guide](docs/setup-guide.md) for detailed instructions on using these prompts.
