@@ -1,5 +1,5 @@
 ![Status](https://img.shields.io/badge/status-stable-green)
-[![GitHub Release](https://img.shields.io/github/release/ConsciousML/claude-prompt-catalog.svg?style=flat)]()
+[![GitHub Release](https://img.shields.io/github/release/ConsciousML/prompt-engineering-hub.svg?style=flat)]()
 
 # Diagram Designer
 
@@ -7,7 +7,7 @@
 
 The Diagram Designer is an AI assistant that creates clear, well-structured diagrams using Mermaid syntax.
 
-With this assistant, you can describe what you want to visualize in plain language, and it will generate a Mermaid diagram that renders in Claude's interface.
+With this assistant, you can describe what you want to visualize in plain language, and it will generate a Mermaid diagram that renders in your LLM chat interface.
 
 ## When to Use
 
@@ -20,11 +20,11 @@ Use the Diagram Designer when you want to:
 - **Natural language input**: No need to know Mermaid syntax. Just explain what you want in plain language
 - **Best practices**: Generates clean, well-structured diagrams following Mermaid style conventions
 - **Interactive refinement**: Easily iterate on your diagrams with follow-up requests
-- **Ready-to-render output**: Creates Mermaid code that renders directly in Claude's interface
+- **Ready-to-render output**: Creates Mermaid code that renders directly in your LLM chat interface
 
 ## How to Use
 
-Follow our [setup guide](../../docs/setup-guide.md) to add the Diagram Designer to your Claude workspace.
+Follow our [setup guide](../../docs/setup-guide.md) to add the Diagram Designer to your workspace.
 
 Once set up, simply describe what you want to visualize.
 

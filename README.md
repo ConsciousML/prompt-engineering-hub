@@ -13,7 +13,7 @@ A powerful hub to help you get the most out of your favorite LLM by generating (
 An advanced assistant that helps you create optimized prompts for any task, following the prompt engineering best practices of [Anthropic](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview), [OpenAI](https://platform.openai.com/docs/guides/) and [Google's Gemini](https://ai.google.dev/gemini-api/docs/prompting-strategies).
 
 ### Ready-Made Assistants
-A collection of prompts for a variety of tasks. All created using our Prompt Generator
+A [collection of prompts](#prompt-catalog) for a variety of tasks. All created using our Prompt Generator
 
 ## When to Use
 Use this repository whether you want to:
@@ -39,7 +39,7 @@ This guide walks you through an iterative workflow to create optimized prompts f
 Here's a table with available prompts:
 | Assistant | Usage | Description | Status |
 |--------|-------|-------------|--------|
-| [**Prompt Generator**](prompt_generator/README.md) | Prompt Engineering | Creating optimized Claude prompts using advanced techniques like chain-of-thought, prompt chaining, and XML formatting. Follows Anthropic's best practices. | ![Stable](https://img.shields.io/badge/status-stable-green) |
+| [**Prompt Generator**](prompt_generator/README.md) | Prompt Engineering | Creating optimized prompts using advanced techniques like chain-of-thought, prompt chaining, and XML formatting. Follows Anthropic's best practices. | ![Stable](https://img.shields.io/badge/status-stable-green) |
 | [**Example Generator**](prompts/example_generator/README.md) | Prompt Engineering | Creates XML examples that demonstrate assistant behavior to improve performance. | ![Stable](https://img.shields.io/badge/status-stable-green) |
 | [**README Writer**](prompts/readme_writer/README.md) | Documentation | Assists you section by section to write README.md files. Guides you through information gathering, outline creation, and section-by-section writing. | ![Beta](https://img.shields.io/badge/status-beta-yellow) |
 | [**Mermaid Diagram Designer**](prompts/diagram_designer/README.md) | Diagrams | Creates clear, well-structured diagrams using Mermaid syntax. It automatically selects the most appropriate diagram type for your needs and follows best practices for visual clarity. | ![Beta](https://img.shields.io/badge/status-beta-yellow) |
@@ -75,7 +75,7 @@ prompt-generator-hub/
 ```
 
 Here's a brief description of each file type:
-- `system.xml`: system prompts for Custom Projects (Claude) or API usage. Copy these into Project Instructions or use with your LLM's system prompt feature.
+- `system.xml`: system prompts for Custom Projects or API. Copy these into Project Instructions or use with your LLM's system prompt feature.
 - `user_facing_prompts/`: ready-to-use prompts for direct conversation. Copy and paste into any LLM chat.
 - `example_*.xml`: example files demonstrating the assistant's behavior.
 
@@ -86,7 +86,7 @@ We welcome contributions from the community! Help us grow this collection by sha
 
 See the [contributing documentation](docs/contribution.md) for detailed guidelines.
 
-Thank you for helping make Claude more useful for everyone!
+Thank you for helping make AI assistants more useful for everyone!
 
 ## License
 This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.

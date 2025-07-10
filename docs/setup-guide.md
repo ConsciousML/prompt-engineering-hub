@@ -42,10 +42,10 @@ Use this option for quick one-off tasks or if you don't have a subscription.
 
 For system prompts (without subscription):
 1. Copy the contents of any the `prompt_generator/system.xml` file
-2. Paste directly at the start of a Claude conversation
+2. Paste directly at the start of a conversation
 3. See this [example](../prompt_generator/examples/readme_writer.xml) for guidance on how to use the Prompt Generator.
 
 For user-facing prompts:
 1. Copy the contents of any file in `user_facing_prompts/` folders
-2. Paste directly into a Claude conversation
+2. Paste directly into a conversation
 3. Replace placeholders like `[SPECIFIC_TASK]` with your details
