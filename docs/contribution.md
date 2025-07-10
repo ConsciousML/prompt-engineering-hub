@@ -26,4 +26,4 @@ prompts/your_prompt_name/
 4. Update this README's Prompt Catalog table
 5. Submit a pull request with a clear description
 
-Thank you for helping make Claude more useful for everyone!
+Thank you for helping make AI assistants more useful for everyone!

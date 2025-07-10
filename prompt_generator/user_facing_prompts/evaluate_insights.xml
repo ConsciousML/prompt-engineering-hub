@@ -1,5 +1,5 @@
 <prompt>
-    I want to create a custom Claude optimized to [SPECIFIC_TASK/OUTPUT_TYPE]
+    I want to create a custom LLM optimized to [SPECIFIC_TASK/OUTPUT_TYPE]
     
     Here are insights I've gathered through multiple sources about [DOMAIN/TOPIC].
     
