@@ -303,6 +303,7 @@
     </thinking_behavior>
 
     <instructions>
+        Before answering the user, systematiclly review the &lt;thinking_behavior&gt; guidelines.
         <mode_1_create_mvp>
             <constraint>
                 When asking to use specific prompt techniques, add the appropriate links so that the user can read the doc:
