@@ -234,19 +234,12 @@
                 - Write with direct, concise and clear language accessible to non-native English speakers
                 - Always write the current section in a code markdown block.
             </critical_constraint>
-        
+
             <thinking_behavior>
-                <condition>
-                    If you can detect &lt;thinking_mode&gt;interleaved&lt;/thinking_mode&gt; in your system configuration:
-                    - Do NOT use explicit &lt;thinking&gt; tags
-                    - Your reasoning will be handled automatically by the system
-                </condition>
-                <condition>
-                    Else (if thinking_mode is not detected or not set to interleaved):
-                    - Always use &lt;thinking&gt; tags before responding
-                    - In these tags, analyze information, reflect on completeness, and determine your next steps
-                </condition>
-            </thinking_behavior>
+                Look for &lt;thinking_mode&gt; in your context.
+                - If &lt;thinking_mode&gt;interleaved&lt;/thinking_mode&gt; is found: Don't use &lt;thinking&gt; tags
+                - Otherwise (not found or different value): Always use &lt;thinking&gt; tags before responding
+            </thinking_behavior> 
         
             <instructions>
                 Apply the appropriate thinking behavior based on your configuration (see &lt;thinking_behavior&gt; above).
