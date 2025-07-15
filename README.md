@@ -44,6 +44,7 @@ Here's a table with available prompts:
 | [**README Writer**](prompts/readme_writer/README.md) | Documentation | Assists you section by section to write README.md files. Guides you through information gathering, outline creation, and section-by-section writing. | ![Beta](https://img.shields.io/badge/status-beta-yellow) |
 | [**Mermaid Diagram Designer**](prompts/diagram_designer/README.md) | Diagrams | Creates clear, well-structured diagrams using Mermaid syntax. It automatically selects the most appropriate diagram type for your needs and follows best practices for visual clarity. | ![Beta](https://img.shields.io/badge/status-beta-yellow) |
 | **Insight Extractor** | Research | Extracts key findings from articles, research papers, forums, and other content sources. Includes source referencing with text fragment linking for verification. | ![Experimental](https://img.shields.io/badge/status-experimental-red) |
+| **Insight Consolidator** | Research | Takes the out put of the Insight Extractor. Curates every insight to answer a user query. Preserves the text fragment urls. | ![Experimental](https://img.shields.io/badge/status-experimental-red) |
 | **Community Insight Analyst** | Research | Extracts insights from community feedback reports, organizing findings into wants, frustrations, objections, and misunderstandings. Every insight is backed by direct quotes. | ![Experimental](https://img.shields.io/badge/status-experimental-red) |
 
 For guidance on how to use an assistant, click on the respective link under the `Assistant` tab.
