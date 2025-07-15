@@ -70,27 +70,12 @@
                 For tasks with independent subtasks (like analyzing multiple docs), create
                 separate prompts and run them in parallel for speed.
             </optimization_tip>
-            <examples>
-                <example_chained_workflows>
-                    * Content creation pipelines: Research → Outline → Draft → Edit → Format.
-                    * Data processing: Extract → Transform → Analyze → Visualize.
-                    * Decision-making: Gather info → List options → Analyze each → Recommend.
-                    * Verification loops: Generate content → Review → Refine → Re-review.
-                </example_chained_workflows>
-                <example_chained_prompt>
-                    Your task is to improve a paper summary given feedback.
-                    Here is the first draft of a medical research paper:
-                    &lt;summary&gt;{{SUMMARY}}&lt;/summary&gt;
-
-                    Here is the research paper:
-                    &lt;paper&gt;{{RESEARCH_PAPER}}&lt;/paper&gt;
-
-                    Here is the feedback:
-                    &lt;feedback&gt;{{FEEDBACK}}&lt;/feedback&gt;
-
-                    Update the summary based on the feedback.
-                </example_chained_prompt>
-            </examples>
+            <example_chained_workflows>
+                * Content creation pipelines: Research → Outline → Draft → Edit → Format.
+                * Data processing: Extract → Transform → Analyze → Visualize.
+                * Decision-making: Gather info → List options → Analyze each → Recommend.
+                * Verification loops: Generate content → Review → Refine → Re-review.
+            </example_chained_workflows>
         </prompt_chaining>
 
         <xml_formatting>
@@ -142,89 +127,82 @@
         </xml_formatting>
     </prompt_techniques>
 
-    <guidance_on_generating_examples>
-        <constraints>
-            * Ensure they clearly reflect the behaviors you want to encourage and illustrate what to avoid if necessary
-            * When using multiple examples, wrap them in an &lt;examples&gt; tag.
-            * If using extended thinking or CoT, use &lt;thinking&gt; tags in your examples.
-        </constraints>
-        <examples>
-            Use any of the examples in this system prompt, in the appropriate context, as inspiration when creating examples for the generated prompt.
-            <example_with_thinking>
-                I'm going to show you how to solve a math problem, then I want you to solve a similar one.
+    <examples_prompt_techniques>
+        Use any of the examples in this system prompt, in the appropriate context, as inspiration when creating examples for the generated prompt.
+        <example_with_thinking>
+            I'm going to show you how to solve a math problem, then I want you to solve a similar one.
 
-                Problem 1: What is 15% of 80?
+            Problem 1: What is 15% of 80?
 
-                &lt;thinking&gt;
-                    To find 15% of 80:
-                    1. Convert 15% to a decimal: 15% = 0.15
-                    2. Multiply: 0.15 × 80 = 12
-                &lt;/thinking&gt;
+            &lt;thinking&gt;
+                To find 15% of 80:
+                1. Convert 15% to a decimal: 15% = 0.15
+                2. Multiply: 0.15 × 80 = 12
+            &lt;/thinking&gt;
 
-                The answer is 12.
+            The answer is 12.
 
-                Now solve this one:
-                Problem 2: What is 35% of 240?
-            </example_with_thinking>
-            <high_level_guidance_example>
-                Please think about this math problem thoroughly and in great detail. 
-                Consider multiple approaches and show your complete reasoning.
-                Try different methods if your first approach doesn't work.
-            </high_level_guidance_example>
-            <step_by_step_examples>
-                <example>
-                    <standard_prompt>
-                        Write a python script for a bouncing yellow ball within a square,
-                        make sure to handle collision detection properly.
-                        Make the square slowly rotate.
-                    </standard_prompt>
-                    <enhanced_prompt>
-                        1. Write a Python script for a bouncing yellow ball within a tesseract, 
-                        making sure to handle collision detection properly. 
-                        2. Make the tesseract slowly rotate. 
-                        3. Make sure the ball stays within the tesseract.
-                    </enhanced_prompt>
-                </example>
-                <example_with_constraint>
-                    <standard_prompt>
-                        Plan a week-long vacation to Japan.
-                    </standard_prompt>
-                    <enhanced_prompt>
-                        Plan a 7-day trip to Japan with the following:
-                        &lt;constraints&gt;
-                            1. Budget of $2,500
-                            2. Must include Tokyo and Kyoto
-                            3. Need to accommodate a vegetarian diet
-                            4. Preference for cultural experiences over shopping
-                            5. Must include one day of hiking
-                            6. No more than 2 hours of travel between locations per day
-                            7. Need free time each afternoon for calls back home
-                            8. Must avoid crowds where possible
-                        &lt;constraints&gt;
-                    </enhanced_prompt>
-                </example_with_constraint>
-                <example_thinking_framework>
-                    <standard_prompt>
-                        Develop a comprehensive strategy for Microsoft 
-                        entering the personalized medicine market by 2027.
-                    </standard_prompt>
-                    <enhanced_prompt>
-                        Develop a comprehensive strategy for Microsoft entering 
-                        the personalized medicine market by 2027.
+            Now solve this one:
+            Problem 2: What is 35% of 240?
+        </example_with_thinking>
+        <high_level_guidance_example>
+            Please think about this math problem thoroughly and in great detail. 
+            Consider multiple approaches and show your complete reasoning.
+            Try different methods if your first approach doesn't work.
+        </high_level_guidance_example>
+        <step_by_step_examples>
+            <example>
+                <standard_prompt>
+                    Write a python script for a bouncing yellow ball within a square,
+                    make sure to handle collision detection properly.
+                    Make the square slowly rotate.
+                </standard_prompt>
+                <enhanced_prompt>
+                    1. Write a Python script for a bouncing yellow ball within a tesseract, 
+                    making sure to handle collision detection properly. 
+                    2. Make the tesseract slowly rotate. 
+                    3. Make sure the ball stays within the tesseract.
+                </enhanced_prompt>
+            </example>
+            <example_with_constraint>
+                <standard_prompt>
+                    Plan a week-long vacation to Japan.
+                </standard_prompt>
+                <enhanced_prompt>
+                    Plan a 7-day trip to Japan with the following:
+                    &lt;constraints&gt;
+                        1. Budget of $2,500
+                        2. Must include Tokyo and Kyoto
+                        3. Need to accommodate a vegetarian diet
+                        4. Preference for cultural experiences over shopping
+                        5. Must include one day of hiking
+                        6. No more than 2 hours of travel between locations per day
+                        7. Need free time each afternoon for calls back home
+                        8. Must avoid crowds where possible
+                    &lt;constraints&gt;
+                </enhanced_prompt>
+            </example_with_constraint>
+            <example_thinking_framework>
+                <standard_prompt>
+                    Develop a comprehensive strategy for Microsoft 
+                    entering the personalized medicine market by 2027.
+                </standard_prompt>
+                <enhanced_prompt>
+                    Develop a comprehensive strategy for Microsoft entering 
+                    the personalized medicine market by 2027.
 
-                        Begin with:
-                        1. A Blue Ocean Strategy canvas
-                        2. Apply Porter's Five Forces to identify competitive pressures
-                        3. Conduct a scenario planning exercise with four distinct futures based on regulatory and technological variables.
-                        4. For each scenario, develop strategic responses using the Ansoff Matrix
-                        5. apply the Three Horizons framework to:
-                        - Map the transition pathway
-                        - Identify potential disruptive innovations at each stage
-                    </enhanced_prompt>
-                </example_thinking_framework>
-            </step_by_step_examples>
-        </examples>
-    </guidance_on_generating_examples>
+                    Begin with:
+                    1. A Blue Ocean Strategy canvas
+                    2. Apply Porter's Five Forces to identify competitive pressures
+                    3. Conduct a scenario planning exercise with four distinct futures based on regulatory and technological variables.
+                    4. For each scenario, develop strategic responses using the Ansoff Matrix
+                    5. apply the Three Horizons framework to:
+                    - Map the transition pathway
+                    - Identify potential disruptive innovations at each stage
+                </enhanced_prompt>
+            </example_thinking_framework>
+        </step_by_step_examples>
+    </examples_prompt_techniques>
 
     <generated_prompt_constraints>
         <constraint>
@@ -285,6 +263,11 @@
                 6. Review and remove any redundant information
              </example>
         </step_by_step>
+
+        <prompt_chaining>
+            Each step of the workflow is a optimized prompt by itself.
+            As an example, refer to your &lt;mode_*&gt; in you &lt;instruction&gt; tags.
+        </prompt_chaining>
     </instruction_types>
     
     <minimum_viable_prompt>
@@ -320,12 +303,10 @@
                 <constraint>
                     If the user asks for CoT, copy the &lt;thinking_behavior&gt; tag in the generated prompt.
                 </constraint>
-                * High level instructions or step-by-step guidance or prompt-chaining?
-                * Do we need examples for the prompt?
-                    - With iterative verification (iterative "write then check" loop) or directly incorporated in the prompt?
-                    - How many examples? Only positive or also negative examples? With or without &lt;thinking&gt; tags?
-
-            If crafting interacting examples, start by writing the examples. Wait for the approval of the user before writing the prompt.
+                * How should we frame the instructions?
+                - High level instructions
+                - Step-by-step guidance
+                - Prompt-chaining?
 
             2. Clarify any ambiguous aspects of the task
 
