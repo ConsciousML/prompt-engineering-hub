@@ -6,12 +6,12 @@
 [![PR's Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)](http://makeapullrequest.com) 
 # Prompt Engineering Hub
 
-A powerful hub to help you get the most out of your favorite LLM by generating (or using ready-made) optimized prompts!
+A prompt hub to help you get the most out of your favorite LLM by generating (or using ready-made) optimized prompts!
 
 ## What's Inside
 
 ### The Prompt Generator
-An advanced assistant that helps you create optimized prompts for any task, following the prompt engineering best practices of [Anthropic](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview), [OpenAI](https://platform.openai.com/docs/guides/) and [Google's Gemini](https://ai.google.dev/gemini-api/docs/prompting-strategies).
+An assistant that helps you create optimized prompts for any task, following the prompt engineering best practices of [Anthropic](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview), [OpenAI](https://platform.openai.com/docs/guides/) and [Google's Gemini](https://ai.google.dev/gemini-api/docs/prompting-strategies).
 
 ### Ready-Made Assistants
 A [collection of prompts](#prompt-catalog) for a variety of tasks. All created using our Prompt Generator
@@ -40,10 +40,10 @@ This guide walks you through an iterative workflow to create optimized prompts f
 Here's a table with available prompts:
 | Assistant | Usage | Description | Status |
 |--------|-------|-------------|--------|
-| [**Prompt Generator**](prompt_generator/README.md) | Prompt Engineering | Creating optimized prompts using advanced techniques like chain-of-thought, prompt chaining, and XML formatting. Follows Anthropic's best practices. | ![Stable](https://img.shields.io/badge/status-stable-green) |
+| [**Prompt Generator**](prompt_generator/README.md) | Prompt Engineering | Generates optimized prompts using advanced techniques like chain-of-thought, prompt chaining, and XML formatting. Follows Anthropic's best practices. | ![Stable](https://img.shields.io/badge/status-stable-green) |
 | [**Example Generator**](prompts/example_generator/README.md) | Prompt Engineering | Creates XML examples that demonstrate assistant behavior to improve performance. | ![Stable](https://img.shields.io/badge/status-stable-green) |
 | [**README Writer**](prompts/readme_writer/README.md) | Documentation | Assists you section by section to write README.md files. Guides you through information gathering, outline creation, and section-by-section writing. | ![Beta](https://img.shields.io/badge/status-beta-yellow) |
-| [**Mermaid Diagram Designer**](prompts/diagram_designer/README.md) | Diagrams | Creates clear, well-structured diagrams using Mermaid syntax. It automatically selects the most appropriate diagram type for your needs and follows best practices for visual clarity. | ![Beta](https://img.shields.io/badge/status-beta-yellow) |
+| [**Mermaid Diagram Designer**](prompts/diagram_designer/README.md) | Diagrams | Builds clear, well-structured diagrams using Mermaid syntax. It automatically selects the most appropriate diagram type for your needs and follows best practices for visual clarity. | ![Beta](https://img.shields.io/badge/status-beta-yellow) |
 | **Insight Extractor** | Research | Extracts key findings from articles, research papers, forums, and other content sources. Includes source referencing with text fragment linking for verification. | ![Experimental](https://img.shields.io/badge/status-experimental-red) |
 | **Insight Consolidator** | Research | Takes the out put of the Insight Extractor. Curates every insight to answer a user query. Preserves the text fragment urls. | ![Experimental](https://img.shields.io/badge/status-experimental-red) |
 | **Community Insight Analyst** | Research | Extracts insights from community feedback reports, organizing findings into wants, frustrations, objections, and misunderstandings. Every insight is backed by direct quotes. | ![Experimental](https://img.shields.io/badge/status-experimental-red) |
