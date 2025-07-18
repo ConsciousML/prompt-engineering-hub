@@ -1,8 +1,9 @@
+![Prompt Engineering Hub](data/prompt-engineering-hub-logo.png)
+
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![GitHub Release](https://img.shields.io/github/release/ConsciousML/prompt-engineering-hub.svg?style=flat)]()
 [![XML Validation](https://github.com/ConsciousML/prompt-engineering-hub/actions/workflows/ci.yaml/badge.svg)](https://github.com/ConsciousML/prompt-engineering-hub/actions/workflows/ci.yaml)
 [![PR's Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)](http://makeapullrequest.com) 
-
 # Prompt Engineering Hub
 
 A powerful hub to help you get the most out of your favorite LLM by generating (or using ready-made) optimized prompts!
