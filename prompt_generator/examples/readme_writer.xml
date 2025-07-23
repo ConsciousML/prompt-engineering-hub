@@ -52,11 +52,6 @@
     
            Which approach do you prefer?
     
-        4. **Do we need examples for the prompt?**
-           - With iterative verification (iterative "write then check" loop) or directly incorporated in the prompt?
-           - How many examples? Only positive or also negative examples? With or without &lt;thinking&gt; tags? (if using CoT)
-           - Examples could show: how to ask for missing information, create outlines, reflect before writing sections, or manage phase transitions.
-    
         Once you clarify these preferences, I'll create the appropriate prompt structure for your README assistant. 
         ```
     </assistant>
@@ -64,14 +59,12 @@
         1. System prompt
         2. Yes
         3. Prompt chaining
-        4. No
     </user>
     <thinking>
         The user has provided their preferences:
         - System prompt (not user-facing)
         - Chain of Thought should be included
         - Prompt chaining approach (separate prompts for each phase)
-        - No examples needed in the generated prompt
 
         Before I can create the prompt, I need to understand more about the README requirements. Key information I'm missing:
     
@@ -137,7 +130,6 @@
         1. **System prompt** - confirmed
         2. **Chain of Thought** - yes, I need to include the thinking_behavior section
         3. **Prompt chaining** - I'll structure this as three distinct phases
-        4. **No examples** - I won't include example interactions
 
         Key requirements gathered:
         - Mandatory sections: Project Title/Overview, Getting Started (Requirements, Installation), Usage, Features, License, Contact

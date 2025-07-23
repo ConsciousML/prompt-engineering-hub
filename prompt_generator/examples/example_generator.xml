@@ -38,16 +38,11 @@
            - Given that this is for generating structured XML examples that guide assistant behavior, this seems like a system prompt
 
         2. **Will [chain of thought](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/chain-of-thought) (CoT) be used?**
-           - Should the examples include `&lt;thinking&gt;` tags to demonstrate the assistant's reasoning process?
 
         3. **[High-level instructions](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/extended-thinking-tips#use-general-instructions-first%2C-then-troubleshoot-with-more-step-by-step-instructions), step-by-step guidance? or [Prompt Chaining](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/chain-prompts)?
            - Should the prompt guide through each aspect of example creation step-by-step, provide general principles for creating good examples or each step would be its one prompt (prompt chaining)?
 
-        4. **Do we need examples for the prompt itself?**
-           - Should I include example conversations showing how to create examples.xml files?
-           - If yes, should these demonstrate both positive patterns (good examples) and negative patterns (what to avoid)?
-
-        5. **Additional context:**
+        4. **Additional context:**
            - What types of assistant behaviors do these examples typically guide? (e.g., multi-phase workflows, iterative processes, specific response formats)
            - Should the generated examples always show complete conversations or can they be focused snippets?
     </assistant>
@@ -55,16 +50,14 @@
         1. system
         2. yes
         3. step-by-step
-        4. no
-        5. Any that matches the generated prompt. Depend on the behavior of the assistant
+        4. Any that matches the generated prompt. Depend on the behavior of the assistant
     </user>
     <thinking>
         The user has answered all my questions:
         1. System prompt - confirmed
         2. CoT will be used - I need to include the &lt;thinking_behavior&gt; section in the generated prompt
         3. Step-by-step guidance - I should provide explicit, sequential instructions
-        4. No examples needed for the prompt itself
-        5. The examples should match whatever system prompt is provided - flexible
+        4. The examples should match whatever system prompt is provided - flexible
 
         Now I need to create an MVP system prompt that:
         - Uses XML formatting following my guidelines
