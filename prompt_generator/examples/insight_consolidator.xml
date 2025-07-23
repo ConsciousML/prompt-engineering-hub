@@ -19,9 +19,9 @@
         1. system prompt
         2. Yes CoT
         3. Step-by-step
-        5. Group insights by theme and category
-        6. Dedpuplicate insights. Choose the best version. If some thing are repeated it should keep the best version.
-        7. Never modify the fragments it is the utmost importance to keep them as is.
+        4. Group insights by theme and category
+        5. Dedpuplicate insights. Choose the best version. If some thing are repeated it should keep the best version.
+        6. Never modify the fragments it is the utmost importance to keep them as is.
         The end goal is to allow the reader to quickly cover the major information in a topic while preserving the links to go deeper if needed.
     </user>
     <thinking>
