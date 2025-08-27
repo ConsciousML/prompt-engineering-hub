@@ -1,11 +1,5 @@
 <example_prompt_engineering_hub>
     <root_readme>
-        ![Prompt Engineering Hub](data/prompt-engineering-hub-logo.png)
-
-        [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-        [![GitHub Release](https://img.shields.io/github/release/ConsciousML/prompt-engineering-hub.svg?style=flat)]()
-        [![XML Validation](https://github.com/ConsciousML/prompt-engineering-hub/actions/workflows/ci.yaml/badge.svg)](https://github.com/ConsciousML/prompt-engineering-hub/actions/workflows/ci.yaml)
-        [![PR's Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)](http://makeapullrequest.com) 
         # Prompt Engineering Hub
 
         A prompt hub to help you get the most out of your favorite LLM by generating (or using ready-made) optimized prompts!
@@ -310,8 +304,8 @@
 
         When creating/generating examples, make sure that:
         - The example illustrates how the assistant should function.
-        - Use XML formatting with `<user>` and `<assistant>` tags. See this [example](examples/readme_writer.xml).
-        - If your assistant uses Chain of Thought (CoT), make sure to incorporate `<thinking>` tags in your example.
+        - Use XML formatting with `&lt;user&gt;` and `&lt;assistant&gt;` tags. See this [example](examples/readme_writer.xml).
+        - If your assistant uses Chain of Thought (CoT), make sure to incorporate `&lt;thinking&gt;` tags in your example.
         - The example does not contradict any instruction from its system prompt.
 
         **Note**: If the assistant functions step-by-step, do not feed the final desired outcome. For example, if you create an assistant to write READMEs section by section, emulate this in the example.
@@ -377,7 +371,7 @@
         
         - **Demonstrate complete workflows**: Show the entire process from user request to final output
         - **Use realistic scenarios**: Base examples on actual use cases rather than generated from scratch
-        - **Include thinking tags**: If your assistant uses Chain of Thought (CoT), always include `<thinking>` tags in examples
+        - **Include thinking tags**: If your assistant uses Chain of Thought (CoT), always include `&lt;thinking&gt;` tags in examples
         - **Show edge cases**: Create examples for tricky situations or common user mistakes
         - **Be consistent**: Ensure examples don't contradict any instructions in the system prompt
         - **Keep it focused**: Each example should demonstrate one clear aspect of the assistant's behavior
