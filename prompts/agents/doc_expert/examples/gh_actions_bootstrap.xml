@@ -1,4 +1,3 @@
-<!-- Full README.md produced after the 3 phase &lt;readme_mode&gt; -->
 <example>
     # GitHub Actions GCP Bootstrap
     Enables GitHub Actions deployment to Google Cloud Platform using Terragrunt with minimal manual steps.
