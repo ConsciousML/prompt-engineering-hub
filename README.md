@@ -42,7 +42,7 @@ Here's a table with available prompts:
 |--------|-------|-------------|--------|
 | [**Prompt Generator**](prompt_generator/README.md) | Prompt Engineering | Generates optimized prompts using advanced techniques like chain-of-thought, prompt chaining, and XML formatting. Follows Anthropic's best practices. | ![Stable](https://img.shields.io/badge/status-stable-green) |
 | [**Example Generator**](prompts/example_generator/README.md) | Prompt Engineering | Creates XML examples that demonstrate assistant behavior to improve performance. | ![Stable](https://img.shields.io/badge/status-stable-green) |
-| [**README Writer**](prompts/readme_writer/README.md) | Documentation | Assists you section by section to write README.md files. Guides you through information gathering, outline creation, and section-by-section writing. | ![Beta](https://img.shields.io/badge/status-beta-yellow) |
+| [**Code Documentation Expert**](prompts/doc_expert/README.md) | Documentation | Creates README files and code docstrings through an iterative, collaborative process. Guides you through information gathering, outline creation, and section-by-section writing for READMEs, or generates appropriate docstrings for your code. | ![Beta](https://img.shields.io/badge/status-beta-yellow) |
 | [**Mermaid Diagram Designer**](prompts/diagram_designer/README.md) | Diagrams | Builds clear, well-structured diagrams using Mermaid syntax. It automatically selects the most appropriate diagram type for your needs and follows best practices for visual clarity. | ![Beta](https://img.shields.io/badge/status-beta-yellow) |
 | **Insight Extractor** | Research | Extracts key findings from articles, research papers, forums, and other content sources. Includes source referencing with text fragment linking for verification. | ![Experimental](https://img.shields.io/badge/status-experimental-red) |
 | **Insight Consolidator** | Research | Takes the out put of the Insight Extractor. Curates every insight to answer a user query. Preserves the text fragment urls. | ![Experimental](https://img.shields.io/badge/status-experimental-red) |
@@ -65,7 +65,7 @@ prompt-generator-hub/
 │   │   ├── system.xml
 │   │   ├── examples/
 │   │   └── user_facing_prompts/
-│   ├── readme_writer/
+│   ├── doc_expert/
 │   │   └── ...
 │   ├── diagram_designer/
 │   │   └── ...
