@@ -35,7 +35,7 @@ Use the Code Documentation Expert when you want to:
 - **Best practices**: Follows language-specific docstring conventions and standards
 
 ## How to Use
-Follow our [setup guide](../../docs/setup-guide.md) to add the Code Documentation Expert to your workspace.
+Follow our [setup guide](../../../docs/setup-guide.md) to add the Code Documentation Expert to your workspace.
 
 Once set up, the assistant will ask you to choose between two documentation types:
 
