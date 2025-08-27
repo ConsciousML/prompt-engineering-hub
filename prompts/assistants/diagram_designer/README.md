@@ -24,7 +24,7 @@ Use the Diagram Designer when you want to:
 
 ## How to Use
 
-Follow our [setup guide](../../docs/setup-guide.md) to add the Diagram Designer to your workspace.
+Follow our [setup guide](../../../docs/setup-guide.md) to add the Diagram Designer to your workspace.
 
 Once set up, simply describe what you want to visualize.
 
