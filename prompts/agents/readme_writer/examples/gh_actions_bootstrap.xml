@@ -1,4 +1,4 @@
-<example>
+<example_sub_readme>
     # GitHub Actions GCP Bootstrap
     Enables GitHub Actions deployment to Google Cloud Platform using Terragrunt with minimal manual steps.
 
@@ -131,4 +131,4 @@
     **Interaction**: 
     - Adds public key to target repositories
     - Stores private key as GitHub secret for use in the CI (`webfactory/ssh-agent` github action)
-</example>
+</example_sub_readme>
