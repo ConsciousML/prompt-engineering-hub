@@ -56,7 +56,7 @@ For guidance on how to use an assistant, click on the respective link under the 
 
 ## Repository Structure
 ```bash
-prompt-generator-hub/
+prompt-engineering-hub/
 ├── prompt_generator/                     # The main prompt generation tool
 │   ├── system.xml
 │   ├── examples/
@@ -90,8 +90,6 @@ Here's a brief description of each file type:
 - `system.xml`: system prompts for Custom Projects or API. Copy these into Project Instructions or use with your LLM's system prompt feature.
 - `user_facing_prompts/`: ready-to-use prompts for direct conversation. Copy and paste into any LLM chat.
 - `example_*.xml`: example files demonstrating the assistant's behavior.
-
-Should I continue with the Contributing section?
 
 ## Contributing
 We welcome contributions from the community! Help us grow this collection by sharing your prompts.
