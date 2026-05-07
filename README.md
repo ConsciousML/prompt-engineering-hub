@@ -25,7 +25,7 @@ Use this repository whether you want to:
 
 ## Understanding Assistants vs Agents
 - **Assistants**: Conversational prompts designed for use in LLM web interfaces like Claude.ai, ChatGPT, or Gemini
-- **Agents**: Autonomous prompts designed for use in development tools like Claude Code as [sub-agents](https://docs.anthropic.com/en/docs/claude-code/sub-agents)
+- **Agents**: Autonomous prompts designed for use in development tools like Claude Code as [sub-agents](https://code.claude.com/docs/en/sub-agents)
 
 ## Requirements
 Any LLM chat interface (Claude, ChatGPT, Gemini, etc.) or APIs
@@ -33,7 +33,8 @@ Any LLM chat interface (Claude, ChatGPT, Gemini, etc.) or APIs
 **Note**: While these prompts work across different LLMs, they were optimized using Claude and may need minor adjustments for other platforms.
 
 ## Quick Start
-See our [setup guide](docs/setup-guide.md) for detailed instructions on using these prompts.
+- **Assistants**: See our [assistant setup guide](docs/assistant-setup-guide.md) for instructions on using assistants in LLM web interfaces.
+- **Agents**: See our [agent setup guide](docs/agent-setup-guide.md) for instructions on using agents in Claude Code.
 
 ## Advanced Prompt Generation Guide
 **Create your own assistants** using our [advanced prompt generation documentation](prompts/assistants/prompt_generator/README.md#advanced-prompt-generation-guide).
@@ -41,18 +42,24 @@ See our [setup guide](docs/setup-guide.md) for detailed instructions on using th
 This guide walks you through an iterative workflow to create optimized prompts for your specific tasks.
 
 ## Prompt Catalog
-Here's a table with available prompts:
+
+### Agents
+| Agent | Usage | Description | Status |
+|--------|-------|-------------|--------|
+| [**Prompt Generator**](prompts/agents/prompt_generator/README.md) | Prompt Engineering | Autonomously generates, reviews, and improves prompts in a single pass. Designed for use as a Claude Code sub-agent. | ![Experimental](https://img.shields.io/badge/status-experimental-red) |
+| [**README Documentation Agent**](prompts/agents/readme_writer/README.md) | Documentation | Autonomously generates comprehensive README documentation by analyzing your codebase and project structure. Designed for use as a Claude Code sub-agent. | ![Beta](https://img.shields.io/badge/status-beta-yellow) |
+
+### Assistants
 | Assistant | Usage | Description | Status |
 |--------|-------|-------------|--------|
 | [**Prompt Generator**](prompts/assistants/prompt_generator/README.md) | Prompt Engineering | Generates optimized prompts using advanced techniques like chain-of-thought, prompt chaining, and XML formatting. Follows Anthropic's best practices. | ![Stable](https://img.shields.io/badge/status-stable-green) |
 | [**Example Generator**](prompts/assistants/example_generator/README.md) | Prompt Engineering | Creates XML examples that demonstrate assistant behavior to improve performance. | ![Stable](https://img.shields.io/badge/status-stable-green) |
-| [**README Documentation Agent**](prompts/agents/readme_writer/README.md) | Documentation | Autonomously generates comprehensive README documentation by analyzing your codebase and project structure. Designed for use as a Claude Code sub-agent. | ![Beta](https://img.shields.io/badge/status-beta-yellow) |
 | [**Mermaid Diagram Designer**](prompts/assistants/diagram_designer/README.md) | Diagrams | Builds clear, well-structured diagrams using Mermaid syntax. It automatically selects the most appropriate diagram type for your needs and follows best practices for visual clarity. | ![Beta](https://img.shields.io/badge/status-beta-yellow) |
 | **Insight Extractor** | Research | Extracts key findings from articles, research papers, forums, and other content sources. Includes source referencing with text fragment linking for verification. | ![Experimental](https://img.shields.io/badge/status-experimental-red) |
 | **Insight Consolidator** | Research | Takes the out put of the Insight Extractor. Curates every insight to answer a user query. Preserves the text fragment urls. | ![Experimental](https://img.shields.io/badge/status-experimental-red) |
 | **Community Insight Analyst** | Research | Extracts insights from community feedback reports, organizing findings into wants, frustrations, objections, and misunderstandings. Every insight is backed by direct quotes. | ![Experimental](https://img.shields.io/badge/status-experimental-red) |
 
-For guidance on how to use an assistant, click on the respective link under the `Assistant` tab.
+For guidance on how to use a prompt, click on the respective link in the table.
 
 ## Repository Structure
 ```bash
@@ -79,15 +86,19 @@ prompt-engineering-hub/
 │   │   └── writing_thinking_partner/
 │   │       └── ...
 │   └── agents/                           # Autonomous agents for Claude Code
+│       ├── prompt_generator/
+│       │   └── README.md
+│       │   └── system.xml
 │       └── readme_writer/
 │           └── ...
 └── docs/
-    ├── setup-guide.md
+    ├── assistant-setup-guide.md
+    ├── agent-setup-guide.md
     └── contribution.md
 ```
 
 Here's a brief description of each file type:
-- `system.xml`: system prompts for Custom Projects or API. Copy these into Project Instructions or use with your LLM's system prompt feature.
+- `system.xml`: system prompts for assistants (copy into Project Instructions or paste at the start of a conversation) and agents (paste as the system prompt when registering in Claude Code or calling the API).
 - `user_facing_prompts/`: ready-to-use prompts for direct conversation. Copy and paste into any LLM chat.
 - `example_*.xml`: example files demonstrating the assistant's behavior.
 

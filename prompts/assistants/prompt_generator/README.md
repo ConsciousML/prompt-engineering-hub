@@ -37,7 +37,7 @@ The Prompt Generator uses proven techniques to create effective prompts:
 - **Minimum Viable Prompt (MVP)**: Starts with essential elements only, avoiding unnecessary complexity
 
 ## Quick Start
-Follow our [setup guide](../../../docs/setup-guide.md) to get started with the Prompt Generator.
+Follow our [setup guide](../../../docs/assistant-setup-guide.md) to get started with the Prompt Generator.
 
 ## Advanced Prompt Generation Guide
 This section will explain how to get the most of the Prompt Generator.
@@ -91,7 +91,7 @@ Luckily, this assistant comes with a functionality that allows you to spot the i
 **Caution**: By the end of this step. You should end up with a relatively simple prompt. If the prompt is too verbose, there's a high change that it will perform poorly.
 
 ### Step 4: Test the Prompt
-1. Perform the [setup guide](../../../docs/setup-guide.md) again with your newly created prompt to add the generated assistant to your workspace.
+1. Perform the [setup guide](../../../docs/assistant-setup-guide.md) again with your newly created prompt to add the generated assistant to your workspace.
 2. Start a conversation and perform a real-world task with the assistant.
 3. Note any lack of performance or undesired behavior.
 
