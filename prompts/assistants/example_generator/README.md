@@ -13,7 +13,7 @@ Here's in which context the assistant can be used:
 2. Use the Example Generator to create an example that illustrates the desired behavior.
 3. Feed the generated example to the initial assistant and test it again.
 
-This iterative process is part of the broader prompt improvement workflow described in [Prompt Generator step 6](../../../prompt_generator/README.md#step-6-generate-examples).
+This iterative process is part of the broader prompt improvement workflow described in [Prompt Generator step 6](../prompt_generator/README.md#step-6-generate-examples).
 
 **Pro tip**: The most effective examples come from reformatting real conversations where your assistant performed exactly as intended.
 
