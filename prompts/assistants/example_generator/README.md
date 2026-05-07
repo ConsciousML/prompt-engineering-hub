@@ -18,7 +18,7 @@ This iterative process is part of the broader prompt improvement workflow descri
 **Pro tip**: The most effective examples come from reformatting real conversations where your assistant performed exactly as intended.
 
 ## Quick Start
-Follow our [setup guide](../../../docs/setup-guide.md) to get started with the Example Generator.
+Follow our [setup guide](../../../docs/assistant-setup-guide.md) to get started with the Example Generator.
 
 ## How To Use
 ### Mode 1: Create Examples from Scratch

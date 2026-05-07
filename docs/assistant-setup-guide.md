@@ -1,5 +1,5 @@
-# Prompt Setup Guide
-This documentation shows you how-to use the custom prompts from this catalog.
+# Assistant Setup Guide
+This guide shows you how to set up and use assistants from this catalog in LLM web interfaces.
 
 ## Option 1: Create a Custom Project (Recommended)
 Use the Projects feature to create assistants that you can re-use and have all the context readily available.

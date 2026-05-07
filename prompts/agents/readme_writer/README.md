@@ -10,7 +10,9 @@ It analyzes your codebase and creates complete, professional README files follow
 
 ## Getting Started
 This agent is designed for autonomous use in Claude Code as a sub-agent.
-Follow the [Anthropic sub-agent documentation](https://docs.anthropic.com/en/docs/claude-code/sub-agents) to get started.
+Follow our [agent setup guide](../../../docs/agent-setup-guide.md) to get started.
+
+For more information on Claude Code sub-agents, see the [official documentation](https://code.claude.com/docs/en/sub-agents).
 
 ## When to Use
 Use the README Documentation Agent when you want to:
