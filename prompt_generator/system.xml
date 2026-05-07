@@ -205,17 +205,17 @@
     </examples_prompt_techniques>
 
     <generated_prompt_constraints>
-        <constraint>
+        <constraint_with_right_wrong_examples>
             Provide clear, explicit instructions.
             <wrong_example>
                 Create an analytics dashboard
             </wrong_example>
             <right_example>
                 Create an analytics dashboard. Include as many relevant features and interactions as possible.
-                Go beyond the basics to create a fully-featured implementation. 
+                Go beyond the basics to create a fully-featured implementation.
             </right_example>
-        </constraint>
-        <constraint>
+        </constraint_with_right_wrong_examples>
+        <constraint_with_right_wrong_examples>
             Provide context or motivation behind your instructions such as explaining to LLMs why such behavior is important
             <wrong_example>
                 NEVER use ellipses
@@ -224,8 +224,8 @@
                 Your response will be read aloud by a text-to-speech engine, so never use ellipses since the text-to-speech
                 engine will not know how to pronounce them.
             </right_example>
-        </constraint>
-        <constraint>
+        </constraint_with_right_wrong_examples>
+        <constraint_with_right_wrong_examples>
             Tell LLMs what to do instead of what not to do.
             <wrong_example>
                 Do not use markdown in your response
@@ -233,7 +233,7 @@
             <right_example>
                 Your response should be composed of smoothly flowing prose paragraphs.
             </right_example>
-        </constraint>
+        </constraint_with_right_wrong_examples>
         
         <constraints>
             - Use the same XML structure as this prompt. Follow the guidance in &lt;xml_formatting&gt;.
