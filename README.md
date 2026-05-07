@@ -36,7 +36,7 @@ Any LLM chat interface (Claude, ChatGPT, Gemini, etc.) or APIs
 See our [setup guide](docs/setup-guide.md) for detailed instructions on using these prompts.
 
 ## Advanced Prompt Generation Guide
-**Create your own assistants** using our [advanced prompt generation documentation](prompt_generator/README.md#advanced-prompt-generation-guide).
+**Create your own assistants** using our [advanced prompt generation documentation](prompts/assistants/prompt_generator/README.md#advanced-prompt-generation-guide).
 
 This guide walks you through an iterative workflow to create optimized prompts for your specific tasks.
 
@@ -44,7 +44,7 @@ This guide walks you through an iterative workflow to create optimized prompts f
 Here's a table with available prompts:
 | Assistant | Usage | Description | Status |
 |--------|-------|-------------|--------|
-| [**Prompt Generator**](prompt_generator/README.md) | Prompt Engineering | Generates optimized prompts using advanced techniques like chain-of-thought, prompt chaining, and XML formatting. Follows Anthropic's best practices. | ![Stable](https://img.shields.io/badge/status-stable-green) |
+| [**Prompt Generator**](prompts/assistants/prompt_generator/README.md) | Prompt Engineering | Generates optimized prompts using advanced techniques like chain-of-thought, prompt chaining, and XML formatting. Follows Anthropic's best practices. | ![Stable](https://img.shields.io/badge/status-stable-green) |
 | [**Example Generator**](prompts/assistants/example_generator/README.md) | Prompt Engineering | Creates XML examples that demonstrate assistant behavior to improve performance. | ![Stable](https://img.shields.io/badge/status-stable-green) |
 | [**README Documentation Agent**](prompts/agents/readme_writer/README.md) | Documentation | Autonomously generates comprehensive README documentation by analyzing your codebase and project structure. Designed for use as a Claude Code sub-agent. | ![Beta](https://img.shields.io/badge/status-beta-yellow) |
 | [**Mermaid Diagram Designer**](prompts/assistants/diagram_designer/README.md) | Diagrams | Builds clear, well-structured diagrams using Mermaid syntax. It automatically selects the most appropriate diagram type for your needs and follows best practices for visual clarity. | ![Beta](https://img.shields.io/badge/status-beta-yellow) |
@@ -57,15 +57,15 @@ For guidance on how to use an assistant, click on the respective link under the 
 ## Repository Structure
 ```bash
 prompt-engineering-hub/
-├── prompt_generator/                     # The main prompt generation tool
-│   ├── system.xml
-│   ├── examples/
-│   │   └── example_1.xml
-│   │   └── ...
-│   └── user_facing_prompts/
-│       └── evaluate_insights.xml
 ├── prompts/                              # Ready-made prompts created with our generator
 │   ├── assistants/                       # Conversational assistants for LLM web interfaces
+│   │   ├── prompt_generator/             # The main prompt generation tool
+│   │   │   ├── system.xml
+│   │   │   ├── examples/
+│   │   │   │   └── example_1.xml
+│   │   │   │   └── ...
+│   │   │   └── user_facing_prompts/
+│   │   │       └── evaluate_insights.xml
 │   │   ├── example_generator/
 │   │   │   ├── system.xml
 │   │   │   ├── examples/

@@ -11,20 +11,6 @@ When to start right away? Follow the [quickstart](#quick-start) or [advanced gui
 
 The Prompt Generator knows the best practices from the prompt engineering documentation of [Anthropic](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview), [OpenAI](https://platform.openai.com/docs/guides/) and [Google's Gemini](https://ai.google.dev/gemini-api/docs/prompting-strategies). It creates prompts like an expert prompt engineer.
 
-Key benefits:
-- Get professional quality prompts without being an expert
-- Save time, no need to learn complex prompting techniques
-- Create prompts that get better results from LLMs
-
-## When to Use the Prompt Generator?
-
-The Prompt Generator is most valuable in these situations:
-
-- **For tasks you do regularly with LLMs**: Create a specialized assistant once, then reuse it instead of explaining the task every time
-- **When your LLM default responses aren't good enough**: The Prompt Generator adds techniques that improve LLM performance on difficult tasks
-- **When you need specific behavior from your LLM**: Control the reasoning process, output format, or step-by-step approach the LLM should follow
-- **When your task requires lots of context or specifications**: Instead of providing lengthy instructions each time, create an assistant that remembers all requirements
-
 ## Prerequisites
 
 To get the most out of the Prompt Generator, we recommend reading [Anthropic's prompt engineering documentation](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview).
@@ -51,7 +37,7 @@ The Prompt Generator uses proven techniques to create effective prompts:
 - **Minimum Viable Prompt (MVP)**: Starts with essential elements only, avoiding unnecessary complexity
 
 ## Quick Start
-Follow our [setup guide](../../docs/setup-guide.md) to get started with the Prompt Generator.
+Follow our [setup guide](../../../docs/setup-guide.md) to get started with the Prompt Generator.
 
 ## Advanced Prompt Generation Guide
 This section will explain how to get the most of the Prompt Generator.
@@ -72,7 +58,7 @@ To get the most out of this assistant, we recommend using one of these models:
 - Gemini 2.5 Pro
 
 Here's a screenshot illustrating how to enable extended thinking on Claude:
-![](../../data/extended_thinking.png)
+![](../../../data/extended_thinking.png)
 
 ### Step 1: Create Minimum Viable Prompt (MVP)
 Start from scratch to create a new prompt:
@@ -105,7 +91,7 @@ Luckily, this assistant comes with a functionality that allows you to spot the i
 **Caution**: By the end of this step. You should end up with a relatively simple prompt. If the prompt is too verbose, there's a high change that it will perform poorly.
 
 ### Step 4: Test the Prompt
-1. Perform the [setup guide](../docs/setup-guide.md) again with your newly created prompt to add the generated assistant to your workspace.
+1. Perform the [setup guide](../../../docs/setup-guide.md) again with your newly created prompt to add the generated assistant to your workspace.
 2. Start a conversation and perform a real-world task with the assistant.
 3. Note any lack of performance or undesired behavior.
 
@@ -134,4 +120,4 @@ When creating/generating examples, make sure that:
 
 **Note**: If the assistant functions step-by-step, do not feed the final desired outcome. For example, if you create an assistant to write READMEs section by section, emulate this in the example.
 
-To make this process easier, you can use the [Example Generator](../prompts/example_generator/README.md).
+To make this process easier, you can use the [Example Generator](../example_generator/README.md).
