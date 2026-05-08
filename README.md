@@ -47,7 +47,6 @@ This guide walks you through an iterative workflow to create optimized prompts f
 | Agent | Usage | Description | Status |
 |--------|-------|-------------|--------|
 | [**Prompt Generator**](prompts/agents/prompt_generator/README.md) | Prompt Engineering | Autonomously generates, reviews, and improves prompts in a single pass. Designed for use as a Claude Code sub-agent. | ![Experimental](https://img.shields.io/badge/status-experimental-red) |
-| [**README Documentation Agent**](prompts/agents/readme_writer/README.md) | Documentation | Autonomously generates comprehensive README documentation by analyzing your codebase and project structure. Designed for use as a Claude Code sub-agent. | ![Beta](https://img.shields.io/badge/status-beta-yellow) |
 
 ### Assistants
 | Assistant | Usage | Description | Status |
@@ -58,6 +57,7 @@ This guide walks you through an iterative workflow to create optimized prompts f
 | **Insight Extractor** | Research | Extracts key findings from articles, research papers, forums, and other content sources. Includes source referencing with text fragment linking for verification. | ![Experimental](https://img.shields.io/badge/status-experimental-red) |
 | **Insight Consolidator** | Research | Takes the out put of the Insight Extractor. Curates every insight to answer a user query. Preserves the text fragment urls. | ![Experimental](https://img.shields.io/badge/status-experimental-red) |
 | **Community Insight Analyst** | Research | Extracts insights from community feedback reports, organizing findings into wants, frustrations, objections, and misunderstandings. Every insight is backed by direct quotes. | ![Experimental](https://img.shields.io/badge/status-experimental-red) |
+| [**README Writer**](prompts/assistants/readme_writer/README.md) | Documentation | Generates comprehensive, well-structured README files through an iterative, section-by-section collaborative process. | ![Beta](https://img.shields.io/badge/status-beta-yellow) |
 
 For guidance on how to use a prompt, click on the respective link in the table.
 
@@ -83,14 +83,14 @@ prompt-engineering-hub/
 │   │   │   └── ...
 │   │   ├── insight_extractor/
 │   │   │   └── ...
+│   │   ├── readme_writer/
+│   │   │   └── ...
 │   │   └── writing_thinking_partner/
 │   │       └── ...
 │   └── agents/                           # Autonomous agents for Claude Code
-│       ├── prompt_generator/
-│       │   └── README.md
-│       │   └── system.xml
-│       └── readme_writer/
-│           └── ...
+│       └── prompt_generator/
+│           └── README.md
+│           └── system.xml
 └── docs/
     ├── assistant-setup-guide.md
     ├── agent-setup-guide.md
