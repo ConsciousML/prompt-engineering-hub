@@ -54,9 +54,6 @@ This guide walks you through an iterative workflow to create optimized prompts f
 | [**Prompt Generator**](prompts/assistants/prompt_generator/README.md) | Prompt Engineering | Generates optimized prompts using advanced techniques like chain-of-thought, prompt chaining, and XML formatting. Follows Anthropic's best practices. | ![Stable](https://img.shields.io/badge/status-stable-green) |
 | [**Example Generator**](prompts/assistants/example_generator/README.md) | Prompt Engineering | Creates XML examples that demonstrate assistant behavior to improve performance. | ![Stable](https://img.shields.io/badge/status-stable-green) |
 | [**Mermaid Diagram Designer**](prompts/assistants/diagram_designer/README.md) | Diagrams | Builds clear, well-structured diagrams using Mermaid syntax. It automatically selects the most appropriate diagram type for your needs and follows best practices for visual clarity. | ![Beta](https://img.shields.io/badge/status-beta-yellow) |
-| **Insight Extractor** | Research | Extracts key findings from articles, research papers, forums, and other content sources. Includes source referencing with text fragment linking for verification. | ![Experimental](https://img.shields.io/badge/status-experimental-red) |
-| **Insight Consolidator** | Research | Takes the out put of the Insight Extractor. Curates every insight to answer a user query. Preserves the text fragment urls. | ![Experimental](https://img.shields.io/badge/status-experimental-red) |
-| **Community Insight Analyst** | Research | Extracts insights from community feedback reports, organizing findings into wants, frustrations, objections, and misunderstandings. Every insight is backed by direct quotes. | ![Experimental](https://img.shields.io/badge/status-experimental-red) |
 | [**README Writer**](prompts/assistants/readme_writer/README.md) | Documentation | Generates comprehensive, well-structured README files through an iterative, section-by-section collaborative process. | ![Beta](https://img.shields.io/badge/status-beta-yellow) |
 
 For guidance on how to use a prompt, click on the respective link in the table.
@@ -79,13 +76,7 @@ prompt-engineering-hub/
 │   │   │   └── user_facing_prompts/
 │   │   ├── diagram_designer/
 │   │   │   └── ...
-│   │   ├── community_insight/
-│   │   │   └── ...
-│   │   ├── insight_extractor/
-│   │   │   └── ...
-│   │   ├── readme_writer/
-│   │   │   └── ...
-│   │   └── writing_thinking_partner/
+│   │   └── readme_writer/
 │   │       └── ...
 │   └── agents/                           # Autonomous agents for Claude Code
 │       └── prompt_generator/
