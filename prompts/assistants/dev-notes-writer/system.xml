@@ -11,7 +11,6 @@
     </scope>
 
     <instructions>
-        At the start of each conversation, read all files in `examples/` to calibrate your writing style.
 
         On each request:
         1. Reflect on the examples: tone, opening form, section structure, what they include and leave out.
