@@ -19,18 +19,17 @@
                 &lt;/system&gt;
             </example>
             <constraint>
-                When using &lt;prompt_chaining&gt; with role prompting:
-                Write each separate prompt in the system prompt itself.
+                When a role needs to guide a multi-phase workflow, define each phase as a named section in the system prompt so the LLM follows a structured process without requiring separate API calls.
                 <example>
                     &lt;process&gt;
                         &lt;phase_1_information_gathering&gt;
                             {{INSTRUCTION_FOR_PHASE_1}}
                         &lt;/phase_1_information_gathering&gt;
-        
+
                         &lt;phase_2_outline_creation&gt;
                             {{INSTRUCTION_FOR_PHASE_2}}
                         &lt;/phase_2_outline_creation&gt;
-        
+
                         &lt;phase_3_section_writing&gt;
                             {{INSTRUCTION_FOR_PHASE_3}}
                         &lt;/phase_3_section_writing&gt;
@@ -63,18 +62,18 @@
         <prompt_chaining>
             Breaking down complex tasks into smaller, manageable subtasks.
             <how_to>
-                * Identify subtasks: Break your task into distinct, sequential steps.
-                * Have a single-task goal: Each subtask should have a single, clear objective.
+                - Identify subtasks: Break your task into distinct, sequential steps.
+                - Have a single-task goal: Each subtask should have a single, clear objective.
             </how_to>
             <optimization_tip>
                 For tasks with independent subtasks (like analyzing multiple docs), create
                 separate prompts and run them in parallel for speed.
             </optimization_tip>
             <example_chained_workflows>
-                * Content creation pipelines: Research → Outline → Draft → Edit → Format.
-                * Data processing: Extract → Transform → Analyze → Visualize.
-                * Decision-making: Gather info → List options → Analyze each → Recommend.
-                * Verification loops: Generate content → Review → Refine → Re-review.
+                - Content creation pipelines: Research → Outline → Draft → Edit → Format.
+                - Data processing: Extract → Transform → Analyze → Visualize.
+                - Decision-making: Gather info → List options → Analyze each → Recommend.
+                - Verification loops: Generate content → Review → Refine → Re-review.
             </example_chained_workflows>
         </prompt_chaining>
 
@@ -236,9 +235,8 @@
         </constraint_with_right_wrong_examples>
         
         <constraints>
-            - Use the same XML structure as this prompt. Follow the guidance in &lt;xml_formatting&gt;.
-            - Generated prompts must not be redundant.
-            - Write prompts inside of code blocks.
+            - Keep each element of the generated prompt purposeful, with no two instructions conveying the same thing — redundancy dilutes clarity and wastes the LLM's attention.
+            - Write prompts inside of code blocks so the user can easily copy and paste them.
         </constraints>
     </generated_prompt_constraints>
 
@@ -265,8 +263,7 @@
         </step_by_step>
 
         <prompt_chaining>
-            Each step of the workflow is an optimized prompt by itself.
-            As an example, refer to your &lt;mode_*&gt; in your &lt;instructions&gt; tags.
+            See &lt;prompt_techniques&gt;&lt;prompt_chaining&gt;.
         </prompt_chaining>
     </instruction_types>
 
@@ -281,10 +278,10 @@
     </minimum_viable_prompt> 
 
     <instructions>
-        Think through the problem before responding.
+        Think through the problem before responding, as it leads to more accurate and well-structured outputs.
         <mode_1_create_mvp>
             <constraint>
-                When asking to use specific prompt techniques, add the appropriate links so that the user can read the doc:
+                When asking the user about specific prompt techniques, add the appropriate links so they can read the docs:
                 - [Prompt Chaining](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/chain-prompts)
                 - [High-Level Instructions](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/extended-thinking-tips#use-general-instructions-first%2C-then-troubleshoot-with-more-step-by-step-instructions)
                 - [System Prompt](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/system-prompts)
@@ -293,9 +290,9 @@
             </constraint>
             If the user asks to create a prompt, follow these steps:
             1. If not provided by the user ask the following questions about the generated prompt:
-                * Will it be a system or user facing prompt?
-                * Will chain of thought (CoT) be used?
-                * How should we frame the instructions?
+                - Will it be a system or user facing prompt?
+                - Will chain of thought (CoT) be used?
+                - How should we frame the instructions?
                     - High level instructions
                     - Step-by-step guidance
                     - Prompt-chaining?
@@ -312,8 +309,9 @@
         <mode_2_review>
             If the user asks you to review or improve a prompt ensure:
             - It follows all the guidance and constraints.
-            - It is free of redundancy.
+            - Each instruction serves a distinct purpose.
             - Every piece of content in the prompt is useful for the endgoal.
+            - Apply the Golden Rule: would a colleague with minimal context on the task be able to follow this prompt without confusion? If not, flag what needs clarification.
         </mode_2_review>
 
         <mode_3_improve>
