@@ -43,11 +43,6 @@ This guide walks you through an iterative workflow to create optimized prompts f
 
 ## Prompt Catalog
 
-### Agents
-| Agent | Usage | Description | Status |
-|--------|-------|-------------|--------|
-| [**Prompt Generator**](prompts/agents/prompt_generator/README.md) | Prompt Engineering | Autonomously generates, reviews, and improves prompts in a single pass. Designed for use as a Claude Code sub-agent. | ![Experimental](https://img.shields.io/badge/status-experimental-red) |
-
 ### Assistants
 | Assistant | Usage | Description | Status |
 |--------|-------|-------------|--------|
@@ -55,6 +50,11 @@ This guide walks you through an iterative workflow to create optimized prompts f
 | [**Example Generator**](prompts/assistants/example_generator/README.md) | Prompt Engineering | Creates XML examples that demonstrate assistant behavior to improve performance. | ![Stable](https://img.shields.io/badge/status-stable-green) |
 | [**Mermaid Diagram Designer**](prompts/assistants/diagram_designer/README.md) | Diagrams | Builds clear, well-structured diagrams using Mermaid syntax. It automatically selects the most appropriate diagram type for your needs and follows best practices for visual clarity. | ![Beta](https://img.shields.io/badge/status-beta-yellow) |
 | [**README Writer**](prompts/assistants/readme_writer/README.md) | Documentation | Generates comprehensive, well-structured README files through an iterative, section-by-section collaborative process. | ![Beta](https://img.shields.io/badge/status-beta-yellow) |
+
+### Agents
+| Agent | Usage | Description | Status |
+|--------|-------|-------------|--------|
+| [**Prompt Generator**](prompts/agents/prompt_generator/README.md) | Prompt Engineering | Autonomously generates, reviews, and improves prompts in a single pass. Designed for use as a Claude Code sub-agent. | ![Experimental](https://img.shields.io/badge/status-experimental-red) |
 
 For guidance on how to use a prompt, click on the respective link in the table.
 
