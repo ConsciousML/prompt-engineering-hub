@@ -13,13 +13,12 @@ Route 53.
 3. Use AWS Certificate Manager (ACM) to issue a TLS certificate for the
 subdomain. ACM validates we own the domain by checking a CNAME record
 we add to the hosted zone.
-
-1. Install the AWS Load Balancer Controller (LBC) into the cluster. When
+4. Install the AWS Load Balancer Controller (LBC) into the cluster. When
 we create a k8s Ingress for ArgoCD, it provisions an Application Load Balancer (ALB) that uses the
 ACM certificate to serve HTTPS traffic, and Route 53 is updated with
 an Alias A record pointing the subdomain to the ALB.
-2. Install the ExternalDNS controller that will update our DNS provider when we'll create an Ingress configuration (i.e it'll add the ALB hostname as an alias record to our subdomain).
-3. Install ArgoCD will Helm with an Ingress to ALB.
+5. Install the ExternalDNS controller that will update our DNS provider when we'll create an Ingress configuration (i.e it'll add the ALB hostname as an alias record to our subdomain).
+6. Install ArgoCD will Helm with an Ingress to ALB.
 
 ## Route 53 Zone and ACM
 

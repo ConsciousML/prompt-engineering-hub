@@ -1,3 +1,15 @@
+# Overview
+
+We need a reproducible, version-controlled pipeline to provision an EKS cluster on AWS. Rather than managing Terraform modules directly, we wrap everything in Terragrunt units and stacks so the same pipeline can be promoted across environments without duplicating configuration.
+
+# Components
+
+- **VPC:** two private and two public subnets across separate AZs, with NAT Gateways per AZ and the EKS-required load balancer tags on each subnet tier.
+- **EKS Cluster:** managed Kubernetes control plane sourced from `terraform-aws-modules/eks`, connected to the VPC's private subnets with core add-ons (CoreDNS, kube-proxy, vpc-cni, pod-identity-agent).
+- **Access Entry:** maps IAM identities to Kubernetes RBAC permissions without touching the `aws-auth` ConfigMap.
+- **Terragrunt Unit:** a parameterized wrapper around a Terraform module, sourced once and reused across stacks.
+- **Terragrunt Stack:** composes the VPC and cluster units into a single deployable pipeline with auto-wired dependencies.
+
 # Prerequisites
 
 - AWS account with billing enabled
