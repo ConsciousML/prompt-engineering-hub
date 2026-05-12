@@ -1,13 +1,13 @@
-# **Prerequisites**
+# Prerequisites
 
 - AWS account with billing enabled
 - GitHub account
-- AWS IAM permissions to manage IAM roles, VPC resources, compute resources and S3 (see `policy_arns` in the [bootstrap stack](https://github.com/ConsciousML/terragrunt-template-live-aws/blob/main/live/bootstrap/enable_tg_github_actions/terragrunt.stack.hcl) for a list of the specific IAM policies)
+- `AdministratorAccess` AWS IAM permissions
 
-You’ll also need to be familiar with:
+You'll also need to be familiar with:
 
-- Kubernetes ([my article](https://www.axelmendoza.com/posts/kubernetes-beginner-guide/) cf)
-- Terragrunt ([my article](https://www.axelmendoza.com/posts/terraform-vs-terragrunt/) cf)
+- [Kubernetes](https://www.axelmendoza.com/posts/kubernetes-beginner-guide/)
+- [Terragrunt](https://www.axelmendoza.com/posts/terraform-vs-terragrunt/)
 
 # Installation
 
@@ -21,7 +21,7 @@ Clone the repository:
 git clone git@github.com:ConsciousML/terragrunt-template-catalog-eks.git
 ```
 
-First, `cd` at the root of this repository:
+First, `cd` at the root of this repository:
 
 ```yaml
 cd terragrunt-template-catalog-eks
@@ -30,16 +30,10 @@ cd terragrunt-template-catalog-eks
 Install mise:
 
 ```
-curl https://mise.run | sh
+curl https://mise.run | MISE_VERSION=v2026.4.0 sh
 ```
 
-Add `eksctl` to the tools to install:
-
-```yaml
-echo "eksctl = \"latest\"" >> mise.toml
-```
-
-Then, install all the tools in the `mise.toml` file:
+Then, install all the tools in the `mise.toml` file:
 
 ```
 mise trust
@@ -60,7 +54,7 @@ echo 'eval "$(~/.local/bin/mise activate zsh)"' >> ~/.zshrc && source ~/.zshrc
 echo 'eval "$(~/.local/bin/mise activate bash)"' >> ~/.bashrc && source ~/.bashrc
 ```
 
-For more information on how to use mise, read their [getting started guide](https://mise.jdx.dev/getting-started.html).
+For more information on how to use mise, read their [getting started guide](https://mise.jdx.dev/getting-started.html).
 
 Authenticate to the AWS CLI using your [authentication type](https://docs.aws.amazon.com/cli/v1/userguide/cli-chap-authentication.html) of choice. Then run:
 
@@ -68,7 +62,7 @@ Authenticate to the AWS CLI using your [authentication type](https://docs.aws.am
 aws configure
 ```
 
-For more information, read the [AWS CLI authentication documentation](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html).
+For more information, read the [AWS CLI authentication documentation](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html).
 
 # Feature: EKS Cluster TG Pipeline
 
@@ -78,11 +72,11 @@ Create branch:
 git checkout -b eks
 ```
 
-We’ll create a EKS cluster, but first, we’ll need to create a VPC with at least two subnets in different availability zones.
+We'll create a EKS cluster, but first, we'll need to create a VPC with at least two subnets in different availability zones.
 
 EKS need a VPC with specific requirements.
 
-Here’s a non exhaustive list of requirements:
+Here's a non exhaustive list of requirements:
 
 - sufficient IP addresses for Kubernetes resources
 - must have DNS hostname and DNS resolution support
@@ -90,7 +84,7 @@ Here’s a non exhaustive list of requirements:
 - subnets must have at least two availability zones
 - to deploy load balancers, private subnets need to have the [`kubernetes.io/role/internal-elb`](http://kubernetes.io/role/internal-elb) tag with value `1`, and public subnets need the [`kubernetes.io/role/elb`](http://kubernetes.io/role/elb)  tag with value `1` .
 
-Read [EKS networking requirements for VPC and subnets](https://docs.aws.amazon.com/eks/latest/userguide/network-reqs.html) ****for the full list of VPC and subnets requirements.
+Read [EKS networking requirements for VPC and subnets](https://docs.aws.amazon.com/eks/latest/userguide/network-reqs.html) for the full list of VPC and subnets requirements.
 
 ```hcl
 module "vpc" {
@@ -99,7 +93,7 @@ module "vpc" {
   
   create_vpc = true
 
-  name = "vpc-eks"
+  name = "vpc"
 
   cidr = "10.0.0.0/16"
   azs  = slice(data.aws_availability_zones.available.names, 0, 2)
@@ -124,7 +118,7 @@ module "vpc" {
 }
 ```
 
-This configuration creates the `vpc-eks` resource:
+This configuration creates the `vpc` resource:
 
 - with one NAT Gateway per AZ
 - DNS Hostname and DNS support
@@ -132,7 +126,7 @@ This configuration creates the `vpc-eks` resource:
 - This allows to create subnets of `/24` fixed bytes allowing for 8 bytes for hosts IPs (256)
 - Tag to use Load Balancers in the public and private subnet
 
-In the `examples/region.hcl`  add the AZS for the VPC:
+In `pipelines/region.hcl` add the AZs for the VPC:
 
 ```hcl
 locals {
@@ -141,10 +135,10 @@ locals {
 }
 ```
 
-Create a file into:
+Create the VPC unit:
 
 ```hcl
-# units/eks-vpc/terragrunt.hcl
+# units/vpc/terragrunt.hcl
 include "root" {
   path = find_in_parent_folders("root.hcl")
 }
@@ -157,6 +151,8 @@ locals {
   region_locals = read_terragrunt_config(local.region_hcl).locals
   region        = local.region_locals.region
   azs           = local.region_locals.azs
+
+  vpc_cidr = read_terragrunt_config(find_in_parent_folders("vpc.hcl")).locals.vpc_cidr
 }
 
 terraform {
@@ -168,16 +164,16 @@ inputs = {
 
   name = "${values.name}-${local.environment}"
 
-  cidr = values.cidr
-  azs = local.azs
+  cidr = local.vpc_cidr
+  azs  = local.azs
 
   private_subnets = values.private_subnets
-  public_subnets = values.public_subnets
+  public_subnets  = values.public_subnets
 
-  enable_nat_gateway   = values.enable_nat_gateway
-  single_nat_gateway   = values.single_nat_gateway
+  enable_nat_gateway     = values.enable_nat_gateway
+  single_nat_gateway     = values.single_nat_gateway
   one_nat_gateway_per_az = values.one_nat_gateway_per_az
-  
+
   enable_dns_hostnames = values.enable_dns_hostnames
   enable_dns_support   = values.enable_dns_support
 
@@ -191,39 +187,32 @@ inputs = {
 }
 ```
 
-Next, create an example stack using this unit:
+Next, create a test stack using this unit:
 
 ```hcl
-# examples/stacks/eks/terragrunt.stack.hcl
+# pipelines/examples/stacks/eks/terragrunt.stack.hcl
 locals {
-  # Sets the reference of the source code to:
-  version = coalesce(
-    get_env("GITHUB_HEAD_REF", ""), # PR branch name (only set in PRs)
-    get_env("GITHUB_REF_NAME", ""), # Branch/tag name
-    try(run_cmd("git", "rev-parse", "--abbrev-ref", "HEAD"), ""),
-    "main" # fallback
-  )
+  version = read_terragrunt_config(find_in_parent_folders("version.hcl")).locals.version
 }
 
 unit "vpc" {
-  source = "${get_repo_root()}/units/vpc_eks"
-  path = "vpc"
+  source = "${get_repo_root()}/units/vpc"
+  path   = "vpc"
 
   values = {
     create_vpc = true
-    version = "6.6.0"
+    version    = "6.6.0"
 
-    name = "vpc-eks"
+    name = "vpc"
 
-    cidr = "10.0.0.0/16"
-
+    # For production, use at least 3 subnets
     private_subnets = ["10.0.1.0/24", "10.0.2.0/24"]
     public_subnets  = ["10.0.3.0/24", "10.0.4.0/24"]
 
-    enable_nat_gateway   = true
-    single_nat_gateway   = false
+    enable_nat_gateway     = true
+    single_nat_gateway     = false
     one_nat_gateway_per_az = true
-  
+
     enable_dns_hostnames = true
     enable_dns_support   = true
 
@@ -238,7 +227,7 @@ unit "vpc" {
 }
 ```
 
-Now let’s create the EKS cluster:
+Here's the terraform code for creating an EKS cluster:
 
 ```hcl
 module "eks" {
@@ -291,24 +280,128 @@ module "eks" {
   
   # Disable EKS Auto mode
   compute_config = {
-	  enabled = false
-	}
+    enabled = false
+  }
+}
 ```
 
-We create a unit, then use the unit in `examples/stacks/eks/terragrunt.stack.hcl` stack.
-
-Finally we apply the configuration:
+Create the EKS cluster unit:
 
 ```hcl
-cd examples/stacks/eks
+# units/eks/cluster/terragrunt.hcl
+include "root" {
+  path = find_in_parent_folders("root.hcl")
+}
+
+locals {
+  cluster_hcl       = find_in_parent_folders("cluster_name_env.hcl")
+  cluster_config    = read_terragrunt_config(local.cluster_hcl)
+  cluster_name_full = local.cluster_config.locals.cluster_name_full
+  environment       = local.cluster_config.locals.environment
+}
+
+terraform {
+  source = "tfr:///terraform-aws-modules/eks/aws?version=${values.version}"
+}
+
+dependency "vpc" {
+  config_path = "../../vpc"
+  mock_outputs = {
+    vpc_id          = "mock_vpc_id"
+    private_subnets = ["mock_subnet_id_1", "mock_subnet_id_2"]
+  }
+  mock_outputs_allowed_terraform_commands = ["init", "plan", "validate", "graph", "destroy"]
+}
+
+inputs = {
+  name = local.cluster_name_full
+
+  kubernetes_version = values.kubernetes_version
+
+  endpoint_public_access = values.endpoint_public_access
+
+  # Adds the current caller identity as an administrator via cluster access entry
+  enable_cluster_creator_admin_permissions = values.enable_cluster_creator_admin_permissions
+
+  vpc_id     = dependency.vpc.outputs.vpc_id
+  subnet_ids = dependency.vpc.outputs.private_subnets
+
+  # EKS Provisioned Control Plane configuration
+  control_plane_scaling_config = values.control_plane_scaling_config
+
+  # More info:
+  # https://docs.aws.amazon.com/eks/latest/userguide/workloads-add-ons-available-eks.html
+  addons = values.addons
+
+  # EKS Managed Node Group(s)
+  eks_managed_node_groups = values.eks_managed_node_groups
+
+  # Disable EKS Auto mode
+  compute_config = values.compute_config
+
+  tags = {
+    environment = "${local.environment}"
+  }
+}
+```
+
+Add the cluster unit to the test stack:
+
+```hcl
+# pipelines/examples/stacks/eks/terragrunt.stack.hcl
+unit "cluster" {
+  source = "${get_repo_root()}/units/eks/cluster"
+  path   = "eks/cluster"
+
+  values = {
+    version = "21.15.1"
+
+    kubernetes_version = "1.35"
+
+    endpoint_public_access = true
+
+    enable_cluster_creator_admin_permissions = true
+
+    control_plane_scaling_config = {
+      tier = "standard"
+    }
+
+    addons = {
+      coredns = {}
+      eks-pod-identity-agent = {
+        before_compute = true
+      }
+      kube-proxy = {}
+      vpc-cni = {
+        before_compute = true
+      }
+    }
+
+    eks_managed_node_groups = {
+      example = {
+        ami_type       = "AL2023_x86_64_STANDARD"
+        instance_types = ["t3.medium"]
+
+        min_size     = 2
+        max_size     = 10
+        desired_size = 2
+      }
+    }
+
+    compute_config = {
+      enabled = false
+    }
+  }
+}
+```
+
+Finally, apply the configuration:
+
+```bash
+source .env
+cd pipelines/examples/stacks/eks
 terragrunt stack generate
-terragrunt stack run apply
-```
-
-To destroy you can run:
-
-```hcl
-terragrunt stack run destroy
+terragrunt run --all apply --backend-bootstrap --non-interactive
 ```
 
 Follow the [bootstrap documentation](https://github.com/ConsciousML/terragrunt-template-catalog-eks/blob/main/bootstrap/README.md) to enable CI/CD with GitHub Actions.
@@ -319,41 +412,41 @@ Now merge the PR.
 
 ## Access Entries
 
-In the `terraform-aws-modules/eks/aws` , using the following automatically add the user (us) as a cluster administrator through [access entry](https://docs.aws.amazon.com/eks/latest/userguide/access-entries.html) (maps IAM premissions to k8s permissions):
+In the `terraform-aws-modules/eks/aws` module, using the following adds our IAM user as a cluster administrator through [access entry](https://docs.aws.amazon.com/eks/latest/userguide/access-entries.html) (it maps IAM permissions to k8s permissions):
 
 ```hcl
 enable_cluster_creator_admin_permissions = true
 ```
 
-This means you’ll have access to the cluster as an administrator.
+This means you'll have access to the cluster as an administrator.
 
 To add another user, use the `access_entries` argument following the documentation of the [`aws_eks_access_entry`](https://registry.terraform.io/providers/-/aws/latest/docs/resources/eks_access_entry) and [aws_eks_policy_association](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/eks_access_policy_association) terraform resources.
 
-Tip: the full type definition for `access_entries` is in the module's [`variables.tf`](https://github.com/terraform-aws-modules/terraform-aws-eks/blob/master/variables.tf) 
+Tip: the full type definition for `access_entries` is in the module's [`variables.tf`](https://github.com/terraform-aws-modules/terraform-aws-eks/blob/master/variables.tf)
 
 More information [cluster access entry section.](https://github.com/terraform-aws-modules/terraform-aws-eks?tab=readme-ov-file#cluster-access-entry)
 
 ## Configuring `kubectl`
 
-Create or update a `kubeconfig` file for your cluster. Replace `*region-code*` with the AWS Region that your cluster is in and replace `*my-cluster*` with the name of your cluster:
+Create or update a `kubeconfig` file for your cluster (replace `<region-code>` and `<cluster-name>`):
 
-```hcl
-aws eks update-kubeconfig --region region-code --name my-cluster
+```bash
+aws eks update-kubeconfig --region <region-code> --name <cluster-name>
 ```
 
 For example:
 
-```hcl
-aws eks update-kubeconfig --region eu-west-3 --name example-2-eks-cluster
+```bash
+aws eks update-kubeconfig --region eu-west-3 --name example-eks-cluster
 ```
 
 Now, you should be able to interact with the cluster:
 
-```hcl
-k get pods -n kube-system
+```bash
+kubectl get pods -n kube-system
 ```
 
-```hcl
+```text
 NAME                           READY   STATUS    RESTARTS   AGE
 aws-node-59ld8                 2/2     Running   0          41m
 aws-node-5bvc4                 2/2     Running   0          41m
@@ -363,4 +456,12 @@ eks-pod-identity-agent-9pq6k   1/1     Running   0          41m
 eks-pod-identity-agent-fzfk9   1/1     Running   0          41m
 kube-proxy-khhsj               1/1     Running   0          40m
 kube-proxy-pvh7h               1/1     Running   0          40m
+```
+
+# Destroy the EKS
+
+To destroy (cwd in `pipelines/examples/stacks/eks`):
+
+```bash
+terragrunt run --all destroy --non-interactive
 ```
