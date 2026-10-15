@@ -55,6 +55,7 @@ This guide walks you through an iterative workflow to create optimized prompts f
 | Agent | Usage | Description | Status |
 |--------|-------|-------------|--------|
 | [**Prompt Generator**](prompts/agents/prompt_generator/README.md) | Prompt Engineering | Autonomously generates, reviews, and improves prompts in a single pass. Designed for use as a Claude Code sub-agent. | ![Experimental](https://img.shields.io/badge/status-experimental-red) |
+| [**Mermaid to Canva**](prompts/agents/mermaid_to_canva/README.md) | Diagrams | Converts a Mermaid diagram into a Canva design built from your brand template, with your styled shapes and tool logos. Uses the Canva MCP. | ![Experimental](https://img.shields.io/badge/status-experimental-red) |
 
 For guidance on how to use a prompt, click on the respective link in the table.
 
@@ -79,9 +80,13 @@ prompt-engineering-hub/
 │   │   └── readme_writer/
 │   │       └── ...
 │   └── agents/                           # Autonomous agents for Claude Code
-│       └── prompt_generator/
-│           └── README.md
-│           └── system.xml
+│       ├── prompt_generator/
+│       │   └── README.md
+│       │   └── system.xml
+│       └── mermaid_to_canva/
+│           ├── README.md
+│           ├── system.xml
+│           └── .claude/skills/               # Workflow and Canva MCP skills
 └── docs/
     ├── assistant-setup-guide.md
     ├── agent-setup-guide.md
